@@ -1,0 +1,8 @@
+<Patch>
+    <Operation Class="PatchOperationAdd">
+        <xpath>//ThingDef[defName="TableMachining"]/recipes</xpath>
+        <value>
+            <li>recipeIndustrialComponent</li>
+        </value>
+    </Operation>
+</Patch>
