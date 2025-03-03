@@ -1,5 +1,15 @@
-to-do:
-- industrial component crafting
+# industrial expansion
+Scope of this mod:
+- Rebalance the acquisition and use of industrial materials such as components and cloth
+
+## Additions
+Currently none while the cloth and lumber chains are being rewritten.
+
+## Changes
+### Components
+- Can now be crafted at the machining table at the cost of 20% decreased work speed
+
+### To-do:
 - cotton/devilstrand requires loom
 - debuff wood
 - add buffed lumber
