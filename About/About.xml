@@ -2,7 +2,7 @@
 	<packageId>friedrice.industrial</packageId>
 	<name>industrial expansion</name>
 	<author>boomer</author>
-	<description></description>
+	<description />
 	<supportedVersions>
 		<li>1.5</li>
 	</supportedVersions>

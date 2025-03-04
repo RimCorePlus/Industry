@@ -12,9 +12,9 @@ Currently none while the cloth and lumber chains are being rewritten.
 - Can now be crafted at the machining table at the cost of 20% decreased work speed
 
 ### To-do:
-- cotton/devilstrand requires loom
-- debuff wood
-- add buffed lumber
+- Cotton/devilstrand requires loom
+- Debuff wood
+- Add buffed lumber
 
 [![CC BY-NC-SA 4.0][cc-by-nc-sa-shield]][cc-by-nc-sa]
 
