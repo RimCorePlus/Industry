@@ -19,11 +19,8 @@
 	</modDependencies>
 	<loadBefore />
 	<loadAfter>
-		<li>ludeon.rimworld.royalty</li>
-		<li>ludeon.rimworld.ideology</li>
-		<li>ludeon.rimworld.biotech</li>
-		<li>ludeon.rimworld.anomaly</li>
 		<li>friedrice.patches</li>
+		<li>friedrice.noegg</li>
 	</loadAfter>
 	<incompatibleWith />
 </ModMetaData>
