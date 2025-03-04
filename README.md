@@ -1,4 +1,6 @@
 # industrial expansion
+![](About/Preview.png)
+
 Scope of this mod:
 - Rebalance the acquisition and use of industrial materials such as components and cloth
 
