@@ -24,6 +24,7 @@
 
 Scope of this mod:
 - Rebalance the acquisition and use of industrial materials such as components and cloth
+- Prepatch and potentially provide the framework for add-on modules
 
 ## Additions
 Currently none while the cloth and lumber chains are being rewritten.
@@ -33,9 +34,10 @@ Currently none while the cloth and lumber chains are being rewritten.
 - Can now be crafted at the machining table at the cost of 20% decreased work speed
 
 ### To-do:
-- Cotton/devilstrand requires loom
-- Debuff wood
-- Add buffed lumber
+- Cotton and devilstrand yield raw ingredients that must be processed into fabric at a loom
+- Merge the Simple Chains series into this mod
+- Create neutroamine chain
+- - Use iron from Simple Chains - Steel to facilitate neutroamine synthesis (more details in neutroamine.md)
 
 # Legal
 Portions of the materials used to create this mod are trademarks and/or copyrighted works of Ludeon Studios Inc. All rights reserved by Ludeon. This mod is not official and is not endorsed by Ludeon.
