@@ -27,11 +27,12 @@ Scope of this mod:
 - Prepatch and potentially provide the framework for add-on modules
 
 ## Additions
-Currently none while the cloth and lumber chains are being rewritten.
+- [Simple Chains: Lumber](https://steamcommunity.com/sharedfiles/filedetails/?id=1708709952) updated for game version 1.5, using Vanilla Expanded Framework as a dependency instead of [SYR] Processor Framework
+- [Simple Chains: Steel](https://steamcommunity.com/sharedfiles/filedetails/?id=1702668415) updated for game version 1.5
 
 ## Changes
 ### Components
-- Can now be crafted at the machining table at the cost of 20% decreased work speed
+- Can now be crafted at the machining table with a 20% increased work requirement
 
 ### To-do:
 - Cotton and devilstrand yield raw ingredients that must be processed into fabric at a loom
@@ -46,5 +47,4 @@ Currently none while the cloth and lumber chains are being rewritten.
 # Legal
 Portions of the materials used to create this mod are trademarks and/or copyrighted works of Ludeon Studios Inc. All rights reserved by Ludeon. This mod is not official and is not endorsed by Ludeon.
 
-This mod includes code and textures from [Simple Chains: Lumber](https://github.com/Owlchemist/simple-chains-lumber) by Owlchemist, modified by boomer, used under the GPL-3.0 License.
-This mod includes code and textures from [Simple Chains: Steel](https://github.com/Owlchemist/simple-chains-steel) by Owlchemist, modified by boomer, used under the GPL-3.0 License.
+This mod includes code and textures from [Simple Chains: Lumber](https://github.com/Owlchemist/simple-chains-lumber) and [Simple Chains: Steel](https://github.com/Owlchemist/simple-chains-steel) by Owlchemist, modified by boomer, used under the GPL-3.0 License.

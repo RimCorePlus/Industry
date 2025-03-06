@@ -21,7 +21,7 @@
 					<label>lumber</label>
 					<description>Processed lumber can be used for a wide variety of construction and crafting applications, and is quick to work with.</description>
 					<graphicData>
-						<texPath>Things/Item/Resource/Owl_Lumber</texPath>
+						<texPath>Things/Item/Resource/Lumber</texPath>
 						<graphicClass>Graphic_StackCount</graphicClass>
 						<color>(133,97,67)</color>
 					</graphicData>

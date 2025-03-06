@@ -60,7 +60,7 @@
 		<label>green lumber</label>
 		<description>This lumber has been cut from logs, but has yet to be dried out in a controlled environment.</description>
 		<graphicData>
-			<texPath>Things/Item/Resource/Owl_Lumber</texPath>
+			<texPath>Things/Item/Resource/Lumber</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
 			<color>(140,150,67)</color>
 		</graphicData>

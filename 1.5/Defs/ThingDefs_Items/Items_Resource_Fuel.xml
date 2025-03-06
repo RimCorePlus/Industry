@@ -5,7 +5,7 @@
 		<label>firewood</label>
 		<description>Split wood can be used as a ready-to-use fuel source.</description>
 		<graphicData>
-			<texPath>Things/Item/Resource/Owl_Firewood</texPath>
+			<texPath>Things/Item/Resource/Firewood</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
 		<soundInteract>Wood_Drop</soundInteract>

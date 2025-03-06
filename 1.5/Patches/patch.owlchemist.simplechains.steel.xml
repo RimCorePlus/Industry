@@ -146,7 +146,7 @@
 			<li Class="PatchOperationReplace">
 				<xpath>Defs/ThingDef[defName="Steel"]/graphicData/texPath</xpath>
 				<value>
-					<texPath>Things/Item/Resource/Owl_Steel</texPath>
+					<texPath>Things/Item/Resource/Steel</texPath>
 				</value>
 			</li>
 
@@ -208,7 +208,7 @@
 						<label>coal</label>
 						<description>A piece of hard, black coal. Can be used as fuel for generators, stoves, torches and campfires.</description>
 						<graphicData>
-							<texPath>Things/Item/Resource/Owl_Coal</texPath>
+							<texPath>Things/Item/Resource/Coal</texPath>
 							<graphicClass>Graphic_StackCount</graphicClass>
 						</graphicData>
 						<soundInteract>ChunkRock_Drop</soundInteract>

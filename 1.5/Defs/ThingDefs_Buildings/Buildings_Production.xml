@@ -54,10 +54,10 @@
 		<comps>
 			<li Class="ItemProcessor.CompProperties_ItemProcessor">
 				<isSemiAutomaticMachine>true</isSemiAutomaticMachine>
-				<chooseIngredientsIcon>Things/Item/Resource/Owl_Lumber/owl_lumberc</chooseIngredientsIcon>
-				<bringIngredientsIcon>Things/Item/Resource/Owl_Lumber/owl_lumberc</bringIngredientsIcon>
-				<cancelIngredientsIcon>Things/Item/Resource/Owl_Lumber/owl_lumberc</cancelIngredientsIcon>
-				<resetSemiautomaticIcon>Things/Item/Resource/Owl_Lumber/owl_lumberc</resetSemiautomaticIcon>
+				<chooseIngredientsIcon>Things/Item/Resource/Lumber/owl_lumberc</chooseIngredientsIcon>
+				<bringIngredientsIcon>Things/Item/Resource/Lumber/owl_lumberc</bringIngredientsIcon>
+				<cancelIngredientsIcon>Things/Item/Resource/Lumber/owl_lumberc</cancelIngredientsIcon>
+				<resetSemiautomaticIcon>Things/Item/Resource/Lumber/owl_lumberc</resetSemiautomaticIcon>
 				<buildingOnGraphic>Things/Building/Production/wood_drying_rack_full</buildingOnGraphic>
 				<buildingFinishedGraphic>Things/Building/Production/wood_drying_rack_full</buildingFinishedGraphic>
 				<showFactoryProgressBar>true</showFactoryProgressBar>

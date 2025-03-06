@@ -1,0 +1,12 @@
+<Defs>
+	<stuffCategoryDef>
+		<defName>RawWoody</defName>
+		<label>log</label>
+	</stuffCategoryDef>
+</Defs>
+<Defs>
+	<stuffCategoryDef>
+		<defName>Chunky</defName>
+		<label>chunky</label>
+	</stuffCategoryDef>
+</Defs>
