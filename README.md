@@ -20,7 +20,7 @@
 # industrial expansion
 ![](About/Preview.png)
 
-[[![GPLv3][badge-license]](https://www.gnu.org/licenses/gpl-3.0) ](https://www.gnu.org/licenses/gpl-3.0) ![XML Expansion][badge-xml-expansion]
+[![GPLv3][badge-license]](https://www.gnu.org/licenses/gpl-3.0) ![XML Expansion][badge-xml-expansion]
 
 Scope of this mod:
 - Rebalance the acquisition and use of industrial materials such as components and cloth
@@ -37,12 +37,14 @@ Currently none while the cloth and lumber chains are being rewritten.
 - Cotton and devilstrand yield raw ingredients that must be processed into fabric at a loom
 - Merge the Simple Chains series into this mod
 - - SC - Steel worked almost perfectly out of the box
-- - Leather and Lumber used SYR processor framework as a dependency, and I'd really like to avoid using the community continued version of that mod
-- - I'll check and see if Vanilla Expanded Framework has anything useful (maybe the pipe network update added some processors?)
+- - Porting SC - Lumber to Vanilla Expanded Framework's ItemProcessor was pretty simple
+- - I decided not to keep the rain/light penalty since the only option now is to spoil the item (cancels the recipe and loses the output entirely)
+- - SC - Leather is next, but that will take a little longer since it completely removes and rebalances all leather
 - Create neutroamine chain
 - - Use iron from Simple Chains - Steel to facilitate neutroamine synthesis (more details in neutroamine.md)
 
 # Legal
 Portions of the materials used to create this mod are trademarks and/or copyrighted works of Ludeon Studios Inc. All rights reserved by Ludeon. This mod is not official and is not endorsed by Ludeon.
 
+This mod includes code and textures from [Simple Chains: Lumber](https://github.com/Owlchemist/simple-chains-lumber) by Owlchemist, modified by boomer, used under the GPL-3.0 License.
 This mod includes code and textures from [Simple Chains: Steel](https://github.com/Owlchemist/simple-chains-steel) by Owlchemist, modified by boomer, used under the GPL-3.0 License.

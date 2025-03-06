@@ -1,0 +1,10 @@
+<Defs>
+    <ItemProcessor.ItemAcceptedDef>
+        <defName>Owl_WoodDryingRackFirstItem</defName>
+        <building>Owl_WoodDryingRack</building>
+        <slot>1</slot>
+        <items>
+            <li>Owl_GreenLumber</li>
+        </items>
+    </ItemProcessor.ItemAcceptedDef>
+</Defs>
