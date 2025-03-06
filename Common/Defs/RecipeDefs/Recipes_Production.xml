@@ -1,6 +1,6 @@
-<Defs>
+﻿<Defs>
     <RecipeDef>
-        <defName>recipeIndustrialComponent</defName>
+        <defName>FR_makeComponentIndustrial</defName>
         <label>make component</label>
         <description>Make a component.</description>
         <jobString>Making component.</jobString>
