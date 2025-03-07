@@ -10,8 +10,7 @@
 [badge-dlc-anomaly]: https://img.shields.io/badge/DLC-Anomaly-darkseagreen
 
 # industrial expansion
-![](About/Preview.png)
-
+![](About/Preview.png)\
 [![GPLv3][badge-license]](https://www.gnu.org/licenses/gpl-3.0)
 
 Scope of this mod:
@@ -26,23 +25,21 @@ Scope of this mod:
 ### Metal
 - [Simple Chains: Steel](https://steamcommunity.com/sharedfiles/filedetails/?id=1702668415) (iron and coal prerequisites for steel) updated for 1.5
 ### Neutroamine
-- ~~Can now be synthesized in an expensive three step process~~ (WIP)
+- (WIP) ~~Can now be synthesized in an expensive three step process~~
 ### Textiles
 - Cotton and devilstrand plants now yield raw fiber that must be spun before it can be used for crafting
-- ~~[Simple Chains: Leather](https://steamcommunity.com/workshop/filedetails/?id=1713884017) (leather rework with tanning requirement) updated for 1.5, using Vanilla Expanded Framework~~ (WIP)
+- (WIP) ~~[Simple Chains: Leather](https://steamcommunity.com/workshop/filedetails/?id=1713884017) (leather rework with tanning requirement) updated for 1.5, using Vanilla Expanded Framework~~
 ### Wood
 - [Simple Chains: Lumber](https://steamcommunity.com/sharedfiles/filedetails/?id=1708709952) (wood expansion with lumber drying) updated for 1.5, using Vanilla Expanded Framework
 
-### To-do:
+### Version 1.0:
 - [x] Industrial component crafting
 - [x] Spinning wheel and fiber rework
 - [ ] Electric wheel
 - [x] Implement and update [Simple Chains: Lumber](https://steamcommunity.com/sharedfiles/filedetails/?id=1708709952) for 1.5
-- [ ] Balance test lumber
 - [x] Implement and update [Simple Chains: Steel](https://steamcommunity.com/sharedfiles/filedetails/?id=1702668415) for 1.5
-- [ ] Balance test steel
 - [ ] Implement and update [Simple Chains: Leather](https://steamcommunity.com/workshop/filedetails/?id=1713884017) for 1.5
-- [ ] Balance test leather
+- [ ] Balance test simple chains ports
 - [ ] Neutroamine synthesis (see [doc](neutroamine.md))
 
 # Legal
