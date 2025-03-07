@@ -32,7 +32,7 @@ Scope of this mod:
 ### Wood
 - [Simple Chains: Lumber](https://steamcommunity.com/sharedfiles/filedetails/?id=1708709952) (wood expansion with lumber drying) updated for 1.5, using Vanilla Expanded Framework
 
-### Version 1.0:
+## Version 1.0:
 - [x] Industrial component crafting
 - [x] Spinning wheel and fiber rework
 - [ ] Electric wheel
