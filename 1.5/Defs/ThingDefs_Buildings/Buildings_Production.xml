@@ -1,0 +1,46 @@
+﻿<Defs>
+	<ThingDef ParentName="BenchBase">
+		<defName>CorePlus_SpinningWheel</defName>
+		<label>spinning wheel</label>
+		<description>A crude wooden device for spinning fabric from raw fibers.</description>
+		<thingClass>Building_WorkTable</thingClass>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<graphicData>
+			<texPath>Things/Building/Production/spinningWheel</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(1.5,1.5)</drawSize>
+		</graphicData>
+		<uiIconPath>Things/Building/Production/spinningWheel_north</uiIconPath>
+		<costList>
+			<WoodLog>50</WoodLog>
+		</costList>
+		<altitudeLayer>Building</altitudeLayer>
+		<fillPercent>0.3</fillPercent>
+		<castEdgeShadows>false</castEdgeShadows>
+		<staticSunShadowHeight>0</staticSunShadowHeight>
+		<useHitPoints>True</useHitPoints>
+		<statBases>
+			<Mass>4</Mass>
+			<MaxHitPoints>75</MaxHitPoints>
+			<WorkToBuild>1000</WorkToBuild>
+			<Flammability>1.0</Flammability>
+		</statBases>
+		<designationCategory>Production</designationCategory>
+		<uiOrder>2399</uiOrder>
+		<passability>PassThroughOnly</passability>
+		<pathCost>70</pathCost>
+		<hasInteractionCell>True</hasInteractionCell>
+		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
+		<modExtensions />
+		<comps />
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<inspectorTabs>
+			<li>ITab_Bills</li>
+		</inspectorTabs>
+		<building>
+			<spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+			<uninstallWork>100</uninstallWork>
+		</building>
+	</ThingDef>
+</Defs>
