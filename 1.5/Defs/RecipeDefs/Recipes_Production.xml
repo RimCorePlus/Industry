@@ -204,4 +204,62 @@
 			<li>ElectricSmelter</li>
 		</recipeUsers>
 	</RecipeDef>
+	<!--fiber-->
+	<RecipeDef>
+		<defName>FR_Industrial_SpinCloth</defName>
+		<label>spin cloth</label>
+		<description>Spin raw cotton fiber into workable cloth.</description>
+		<jobString>Spinning cloth.</jobString>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<effectWorking>Tailor</effectWorking>
+		<soundWorking>Recipe_Tailor</soundWorking>
+		<workAmount>1000</workAmount>
+		<recipeUsers>
+			<li>FR_Industrial_SpinningWheel</li>
+		</recipeUsers>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>FR_Industrial_Cotton</li>
+					</thingDefs>
+				</filter>
+				<count>50</count>
+			</li>
+		</ingredients>
+		<products>
+			<Cloth>25</Cloth>
+		</products>
+		<workSkill>Crafting</workSkill>
+		<displayPriority>0</displayPriority>
+	</RecipeDef>
+	<RecipeDef>
+		<defName>FR_Industrial_SpinDevilstrand</defName>
+		<label>spin devilstrand</label>
+		<description>Spin raw cotton fiber into workable cloth.</description>
+		<jobString>Spinning cloth.</jobString>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<effectWorking>Tailor</effectWorking>
+		<soundWorking>Recipe_Tailor</soundWorking>
+		<workAmount>2000</workAmount>
+		<recipeUsers>
+			<li>FR_Industrial_SpinningWheel</li>
+		</recipeUsers>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>FR_Industrial_Devilstrand</li>
+					</thingDefs>
+				</filter>
+				<count>50</count>
+			</li>
+		</ingredients>
+		<products>
+			<DevilstrandCloth>25</DevilstrandCloth>
+		</products>
+		<researchPrerequisite>Devilstrand</researchPrerequisite>
+		<workSkill>Crafting</workSkill>
+		<displayPriority>1</displayPriority>
+	</RecipeDef>
 </Defs>

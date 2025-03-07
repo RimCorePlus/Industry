@@ -1,12 +1,10 @@
 <Defs>
-	<stuffCategoryDef>
+	<StuffCategoryDef>
 		<defName>RawWoody</defName>
 		<label>log</label>
-	</stuffCategoryDef>
-</Defs>
-<Defs>
-	<stuffCategoryDef>
+	</StuffCategoryDef>
+	<StuffCategoryDef>
 		<defName>Chunky</defName>
 		<label>chunky</label>
-	</stuffCategoryDef>
+	</StuffCategoryDef>
 </Defs>
