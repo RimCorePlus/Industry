@@ -2,7 +2,7 @@
     <Operation Class="PatchOperationAdd">
         <xpath>//ThingDef[defName="TableMachining"]/recipes</xpath>
         <value>
-            <li>FR_makeComponentIndustrial</li>
+            <li>CorePlus_MakeComponentIndustrial</li>
         </value>
     </Operation>
 </Patch>

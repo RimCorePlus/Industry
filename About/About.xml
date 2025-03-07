@@ -1,6 +1,6 @@
 ﻿<ModMetaData>
-	<packageId>friedrice.industrial</packageId>
-	<name>industrial expansion</name>
+	<packageId>coreplus.industry</packageId>
+	<name>[Core+] Industry</name>
 	<author>boomer</author>
 	<description />
 	<supportedVersions>
@@ -11,12 +11,6 @@
 	<url>https://github.com/friedriceworld/industrial-expansion</url>
 	<modDependencies>
 		<li>
-			<packageId>friedrice.patches</packageId>
-			<displayName>fried rice</displayName>
-			<steamWorkshopUrl />
-			<downloadUrl>https://github.com/friedriceworld/fried-rice</downloadUrl>
-		</li>
-		<li>
 			<packageId>OskarPotocki.VanillaFactionsExpanded.Core</packageId>
 			<displayName>Vanilla Expanded Framework</displayName>
 			<steamWorkshopUrl>https://steamcommunity.com/workshop/filedetails/?id=2023507013</steamWorkshopUrl>
@@ -25,8 +19,10 @@
 	</modDependencies>
 	<loadBefore />
 	<loadAfter>
-		<li>friedrice.patches</li>
-		<li>friedrice.noegg</li>
+		<li>coreplus.rebalance</li>
+		<li>coreplus.debloat</li>
+		<li>OskarPotocki.VanillaFactionsExpanded.Core</li>
+		<li>ceteam.combatextended</li>
 	</loadAfter>
 	<incompatibleWith />
 </ModMetaData>

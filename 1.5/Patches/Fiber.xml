@@ -5,20 +5,20 @@
             <li Class="PatchOperationAdd">
                 <xpath>//WorkGiverDef[defName="DoBillsMakeApparel"]/fixedBillGiverDefs</xpath>
                 <value>
-                    <li>FR_Industrial_SpinningWheel</li>
+                    <li>CorePlus_SpinningWheel</li>
                 </value>
             </li>
             <!--change cotton and devilstrand yield to fiber-->
             <li Class="PatchOperationReplace">
                 <xpath>//ThingDef[defName="Plant_Cotton"]/plant/harvestedThingDef</xpath>
                 <value>
-                    <harvestedThingDef>FR_Industrial_Cotton</harvestedThingDef>
+                    <harvestedThingDef>CorePlus_Cotton</harvestedThingDef>
                 </value>
             </li>
             <li Class="PatchOperationReplace">
                 <xpath>//ThingDef[defName="Plant_Devilstrand"]/plant/harvestedThingDef</xpath>
                 <value>
-                    <harvestedThingDef>FR_Industrial_Devilstrand</harvestedThingDef>
+                    <harvestedThingDef>CorePlus_Devilstrand</harvestedThingDef>
                 </value>
             </li>
             <!--buff harvest yield by 50% to compensate for 2:1 spinning loss-->

@@ -229,7 +229,7 @@
 	</ThingDef>
 	<!--fiber-->
 	<ThingDef ParentName="BenchBase">
-		<defName>FR_Industrial_SpinningWheel</defName>
+		<defName>CorePlus_SpinningWheel</defName>
 		<label>spinning wheel</label>
 		<description>A crude wooden device for spinning fabric from raw fibers.</description>
 		<thingClass>Building_WorkTable</thingClass>

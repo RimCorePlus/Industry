@@ -1,7 +1,7 @@
 ﻿<Defs>
 	<!--industrial components-->
 	<RecipeDef>
-		<defName>FR_makeComponentIndustrial</defName>
+		<defName>CorePlus_MakeComponentIndustrial</defName>
 		<label>make component</label>
 		<description>Make a component.</description>
 		<jobString>Making component.</jobString>
@@ -206,7 +206,7 @@
 	</RecipeDef>
 	<!--fiber-->
 	<RecipeDef>
-		<defName>FR_Industrial_SpinCloth</defName>
+		<defName>CorePlus_SpinCloth</defName>
 		<label>spin cloth</label>
 		<description>Spin raw cotton fiber into workable cloth.</description>
 		<jobString>Spinning cloth.</jobString>
@@ -215,13 +215,13 @@
 		<soundWorking>Recipe_Tailor</soundWorking>
 		<workAmount>1000</workAmount>
 		<recipeUsers>
-			<li>FR_Industrial_SpinningWheel</li>
+			<li>CorePlus_SpinningWheel</li>
 		</recipeUsers>
 		<ingredients>
 			<li>
 				<filter>
 					<thingDefs>
-						<li>FR_Industrial_Cotton</li>
+						<li>CorePlus_Cotton</li>
 					</thingDefs>
 				</filter>
 				<count>50</count>
@@ -234,7 +234,7 @@
 		<displayPriority>0</displayPriority>
 	</RecipeDef>
 	<RecipeDef>
-		<defName>FR_Industrial_SpinDevilstrand</defName>
+		<defName>CorePlus_SpinDevilstrand</defName>
 		<label>spin devilstrand</label>
 		<description>Spin raw cotton fiber into workable cloth.</description>
 		<jobString>Spinning cloth.</jobString>
@@ -243,13 +243,13 @@
 		<soundWorking>Recipe_Tailor</soundWorking>
 		<workAmount>2000</workAmount>
 		<recipeUsers>
-			<li>FR_Industrial_SpinningWheel</li>
+			<li>CorePlus_SpinningWheel</li>
 		</recipeUsers>
 		<ingredients>
 			<li>
 				<filter>
 					<thingDefs>
-						<li>FR_Industrial_Devilstrand</li>
+						<li>CorePlus_Devilstrand</li>
 					</thingDefs>
 				</filter>
 				<count>50</count>
