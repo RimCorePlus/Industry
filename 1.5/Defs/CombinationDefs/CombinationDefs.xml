@@ -1,0 +1,17 @@
+<Defs>
+	<!--lumber-->
+	<ItemProcessor.CombinationDef>
+		<defName>Owl_GreenLumberIntoLumber</defName>
+		<building>Owl_WoodDryingRack</building>
+		<items>
+			<li>Owl_GreenLumber</li>
+		</items>
+		<result>WoodLog</result>
+		<yield>50</yield>
+		<amount>
+			<li>50</li>
+		</amount>
+		<!--theoretical maximum output per quadrum: 375 lumber-->
+		<singleTimeIfNotQualityIncreasing>2</singleTimeIfNotQualityIncreasing>
+	</ItemProcessor.CombinationDef>
+</Defs>
