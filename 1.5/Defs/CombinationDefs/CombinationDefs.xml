@@ -1,10 +1,9 @@
 <Defs>
-	<!--lumber-->
 	<ItemProcessor.CombinationDef>
-		<defName>Owl_GreenLumberIntoLumber</defName>
-		<building>Owl_WoodDryingRack</building>
+		<defName>CorePlus_GreenLumberIntoLumber</defName>
+		<building>CorePlus_WoodDryingRack</building>
 		<items>
-			<li>Owl_GreenLumber</li>
+			<li>CorePlus_GreenLumber</li>
 		</items>
 		<result>WoodLog</result>
 		<yield>50</yield>

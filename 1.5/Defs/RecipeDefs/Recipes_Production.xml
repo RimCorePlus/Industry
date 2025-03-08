@@ -1,7 +1,7 @@
 ﻿<Defs>
 	<!--simple chains: lumber-->
 	<RecipeDef>
-		<defName>Owl_MakeGreenLumber</defName>
+		<defName>CorePlus_MakeGreenLumber</defName>
 		<label>make green lumber</label>
 		<description>Make a batch of green lumber using wood logs.</description>
 		<jobString>Making green lumber from wood logs.</jobString>
@@ -17,7 +17,7 @@
 			<li>
 				<filter>
 					<thingDefs>
-						<li>Owl_WoodLog</li>
+						<li>CorePlus_WoodLog</li>
 					</thingDefs>
 				</filter>
 				<count>20</count>
@@ -25,19 +25,19 @@
 		</ingredients>
 		<fixedIngredientFilter>
 			<thingDefs>
-				<li>Owl_WoodLog</li>
+				<li>CorePlus_WoodLog</li>
 			</thingDefs>
 		</fixedIngredientFilter>
 		<products>
-			<Owl_GreenLumber>20</Owl_GreenLumber>
+			<CorePlus_GreenLumber>20</CorePlus_GreenLumber>
 		</products>
 		<recipeUsers>
-			<li>Owl_CarpentersTrestle</li>
+			<li>CorePlus_CarpentersTrestle</li>
 			<li>TableMachining</li>
 		</recipeUsers>
 	</RecipeDef>
 	<RecipeDef>
-		<defName>Owl_MakeFirewood</defName>
+		<defName>CorePlus_MakeFirewood</defName>
 		<label>make firewood</label>
 		<description>Make a batch of firewood using available wood.</description>
 		<jobString>Making firewood from wood.</jobString>
@@ -53,8 +53,8 @@
 			<li>
 				<filter>
 					<thingDefs>
-						<li>Owl_WoodLog</li>
-						<li>Owl_GreenLumber</li>
+						<li>CorePlus_WoodLog</li>
+						<li>CorePlus_GreenLumber</li>
 						<li>WoodLog</li>
 					</thingDefs>
 				</filter>
@@ -63,25 +63,25 @@
 		</ingredients>
 		<fixedIngredientFilter>
 			<thingDefs>
-				<li>Owl_WoodLog</li>
-				<li>Owl_GreenLumber</li>
+				<li>CorePlus_WoodLog</li>
+				<li>CorePlus_GreenLumber</li>
 				<li>WoodLog</li>
 			</thingDefs>
 		</fixedIngredientFilter>
 		<defaultIngredientFilter>
 			<thingDefs>
-				<li>Owl_WoodLog</li>
+				<li>CorePlus_WoodLog</li>
 			</thingDefs>
 			<disallowedThingDefs>
-				<li>Owl_GreenLumber</li>
+				<li>CorePlus_GreenLumber</li>
 				<li>WoodLog</li>
 			</disallowedThingDefs>
 		</defaultIngredientFilter>
 		<products>
-			<Owl_Firewood>20</Owl_Firewood>
+			<CorePlus_Firewood>20</CorePlus_Firewood>
 		</products>
 		<recipeUsers>
-			<li>Owl_CarpentersTrestle</li>
+			<li>CorePlus_CarpentersTrestle</li>
 			<li>TableMachining</li>
 			<li>CraftingSpot</li>
 		</recipeUsers>

@@ -1,7 +1,7 @@
 ﻿<Defs>
 	<!--simple chains: lumber-->
 	<ThingDef ParentName="ResourceVerbBase">
-		<defName>Owl_WoodLog</defName>
+		<defName>CorePlus_WoodLog</defName>
 		<label>wood log</label>
 		<description>Wood from trees or other fibrous plants. Useful for building structures and weapons. It is a good fuel for campfires and generators, and can be refined into chemfuel. In a pinch, a piece of wood can be used as a weapon or a leg.</description>
 		<graphicData>
@@ -56,7 +56,7 @@
 		</tools>
 	</ThingDef>
 	<ThingDef ParentName="ResourceBase">
-		<defName>Owl_GreenLumber</defName>
+		<defName>CorePlus_GreenLumber</defName>
 		<label>green lumber</label>
 		<description>This lumber has been cut from logs, but has yet to be dried out in a controlled environment.</description>
 		<graphicData>

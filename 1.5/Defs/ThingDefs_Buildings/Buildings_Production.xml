@@ -1,7 +1,6 @@
 ﻿<Defs>
-	<!--simple chains: lumber-->
 	<ThingDef ParentName="BuildingBase">
-		<defName>Owl_WoodDryingRack</defName>
+		<defName>CorePlus_WoodDryingRack</defName>
 		<label>wood drying rack</label>
 		<description>A drying rack for green lumber.</description>
 		<thingClass>ItemProcessor.Building_ItemProcessor</thingClass>
@@ -54,10 +53,10 @@
 		<comps>
 			<li Class="ItemProcessor.CompProperties_ItemProcessor">
 				<isSemiAutomaticMachine>true</isSemiAutomaticMachine>
-				<chooseIngredientsIcon>Things/Item/Resource/Lumber/owl_lumberc</chooseIngredientsIcon>
-				<bringIngredientsIcon>Things/Item/Resource/Lumber/owl_lumberc</bringIngredientsIcon>
-				<cancelIngredientsIcon>Things/Item/Resource/Lumber/owl_lumberc</cancelIngredientsIcon>
-				<resetSemiautomaticIcon>Things/Item/Resource/Lumber/owl_lumberc</resetSemiautomaticIcon>
+				<chooseIngredientsIcon>Things/Item/Resource/Lumber/CorePlus_lumberc</chooseIngredientsIcon>
+				<bringIngredientsIcon>Things/Item/Resource/Lumber/CorePlus_lumberc</bringIngredientsIcon>
+				<cancelIngredientsIcon>Things/Item/Resource/Lumber/CorePlus_lumberc</cancelIngredientsIcon>
+				<resetSemiautomaticIcon>Things/Item/Resource/Lumber/CorePlus_lumberc</resetSemiautomaticIcon>
 				<buildingOnGraphic>Things/Building/Production/wood_drying_rack_full</buildingOnGraphic>
 				<buildingFinishedGraphic>Things/Building/Production/wood_drying_rack_full</buildingFinishedGraphic>
 				<showFactoryProgressBar>true</showFactoryProgressBar>
@@ -77,7 +76,7 @@
 		</building>
 	</ThingDef>
 	<ThingDef ParentName="BuildingBase">
-		<defName>Owl_CarpentersTrestle</defName>
+		<defName>CorePlus_CarpentersTrestle</defName>
 		<label>carpentry trestle</label>
 		<description>A pair of trestles can be used for basic woodworking tasks.</description>
 		<thingClass>Building_WorkTable</thingClass>
@@ -125,7 +124,7 @@
 				<li>Production</li>
 			</buildingTags>
 			<relatedBuildCommands>
-				<li>Owl_WoodDryingRack</li>
+				<li>CorePlus_WoodDryingRack</li>
 			</relatedBuildCommands>
 		</building>
 		<comps>

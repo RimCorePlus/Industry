@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 	<ThingDef ParentName="ResourceBase">
-		<defName>Owl_Firewood</defName>
+		<defName>CorePlus_Firewood</defName>
 		<label>firewood</label>
 		<description>Split wood can be used as a ready-to-use fuel source.</description>
 		<graphicData>
