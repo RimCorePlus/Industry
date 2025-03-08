@@ -21,13 +21,10 @@ Scope of this mod:
 > Requires [Vanilla Expanded Framework](https://steamcommunity.com/sharedfiles/filedetails/?id=2023507013).
 
 ## Changes
-### Wood
-- Updated for 1.5, using Vanilla Expanded Framework
 
-## Version 1.0:
-- [x] Update for 1.5
-- [x] Replace SYR Processor Framework requirement with Vanilla Expanded Framework
-- [ ] Balance test
+### Wood
+- Lumber production chain
+- Firewood
 
 ## Legal
 Portions of the materials used to create this mod are trademarks and/or copyrighted works of Ludeon Studios Inc. All rights reserved by Ludeon. This mod is not official and is not endorsed by Ludeon.
