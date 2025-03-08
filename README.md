@@ -28,13 +28,6 @@ Scope of this mod:
 - Increase plasteel durability
 - Remove compacted plasteel
 
-## Version 1.0:
-- [x] Update Simple Chains: Steel for 1.5
-- [ ] Expand current steel chain logic to precious metals
-- [ ] Write manufacturing chain for plasteel
-- [x] Port all metal patches from [Core+] Rebalance
-- [ ] Balance test
-
 ## Legal
 Portions of the materials used to create this mod are trademarks and/or copyrighted works of Ludeon Studios Inc. All rights reserved by Ludeon. This mod is not official and is not endorsed by Ludeon.
 
