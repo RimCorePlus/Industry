@@ -18,8 +18,15 @@ Scope of this mod:
 - Spiritual successor to [Simple Chains: Steel](https://steamcommunity.com/sharedfiles/filedetails/?id=1702668415)
 
 ## Changes
-### Metal
 - [Simple Chains: Steel](https://steamcommunity.com/sharedfiles/filedetails/?id=1702668415) (iron and coal prerequisites for steel) updated for 1.5
+
+### Toggable
+- (toggable) Metal is not flammable
+- (toggable) Gold and silver are beautiful
+- (toggable) Increase steel durability
+- (toggable) Increase uranium durability
+- (toggable) Increase plasteel durability
+- (toggable) Remove compacted plasteel
 
 ## Version 1.0:
 - [x] Update Simple Chains: Steel for 1.5

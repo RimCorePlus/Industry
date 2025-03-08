@@ -146,7 +146,13 @@
 			<li Class="PatchOperationReplace">
 				<xpath>Defs/ThingDef[defName="Steel"]/graphicData/texPath</xpath>
 				<value>
-					<texPath>Things/Item/Resource/Steel</texPath>
+					<texPath>Things/Item/Resource/CorePlus_Steel</texPath>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="Steel"]/graphicData</xpath>
+				<value>
+					<color>(105,105,105)</color>
 				</value>
 			</li>
 

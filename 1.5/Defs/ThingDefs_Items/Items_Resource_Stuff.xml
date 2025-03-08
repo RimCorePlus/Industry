@@ -5,8 +5,9 @@
 		<label>iron</label>
 		<description>Raw, natural iron. It can be mined from rock formations, and with the right skills and resources can be refined into steel.</description>
 		<graphicData>
-			<texPath>Things/Item/Resource/Steel</texPath>
+			<texPath>Things/Item/Resource/CorePlus_Steel</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
+			<color>(105,105,105)</color>
 		</graphicData>
 		<soundInteract>Metal_Drop</soundInteract>
 		<soundDrop>Metal_Drop</soundDrop>
