@@ -121,7 +121,7 @@
 			<li Class="PatchOperationReplace">
 				<xpath>Defs/ThingDef[defName="MineableSteel"]/building/mineableThing</xpath>
 				<value>
-					<mineableThing>Owl_Iron</mineableThing>
+					<mineableThing>CorePlus_Iron</mineableThing>
 				</value>
 			</li>
 			<li Class="PatchOperationReplace">
@@ -270,7 +270,7 @@
 						<xpath>Defs</xpath>
 						<value>
 							<RecipeDef>
-								<defName>Owl_MakeCharcoal</defName>
+								<defName>CorePlus_MakeCharcoal</defName>
 								<label>make charcoal</label>
 								<description>Make a batch of charcoal from logs.</description>
 								<jobString>Making charcoal from wood logs.</jobString>
@@ -286,10 +286,10 @@
 									<li>
 										<filter>
 											<thingDefs>
-												<li MayRequire="owlchemist.simplechains.lumber">Owl_WoodLog</li>
-												<li MayRequire="owlchemist.simplechains.lumber">Owl_GreenLumber</li>
+												<li MayRequire="owlchemist.simplechains.lumber">CorePlus_WoodLog</li>
+												<li MayRequire="owlchemist.simplechains.lumber">CorePlus_GreenLumber</li>
 												<li>WoodLog</li>
-												<li MayRequire="owlchemist.simplechains.lumber">Owl_Firewood</li>
+												<li MayRequire="owlchemist.simplechains.lumber">CorePlus_Firewood</li>
 											</thingDefs>
 										</filter>
 										<count>20</count>
@@ -297,27 +297,27 @@
 								</ingredients>
 								<fixedIngredientFilter>
 									<thingDefs>
-										<li MayRequire="owlchemist.simplechains.lumber">Owl_WoodLog</li>
-										<li MayRequire="owlchemist.simplechains.lumber">Owl_GreenLumber</li>
+										<li MayRequire="owlchemist.simplechains.lumber">CorePlus_WoodLog</li>
+										<li MayRequire="owlchemist.simplechains.lumber">CorePlus_GreenLumber</li>
 										<li>WoodLog</li>
-										<li MayRequire="owlchemist.simplechains.lumber">Owl_Firewood</li>
+										<li MayRequire="owlchemist.simplechains.lumber">CorePlus_Firewood</li>
 									</thingDefs>
 								</fixedIngredientFilter>
 								<defaultIngredientFilter>
 									<thingDefs>
-										<li MayRequire="owlchemist.simplechains.lumber">Owl_WoodLog</li>
+										<li MayRequire="owlchemist.simplechains.lumber">CorePlus_WoodLog</li>
 									</thingDefs>
 									<disallowedThingDefs>
-										<li MayRequire="owlchemist.simplechains.lumber">Owl_GreenLumber</li>
+										<li MayRequire="owlchemist.simplechains.lumber">CorePlus_GreenLumber</li>
 										<li>WoodLog</li>
-										<li MayRequire="owlchemist.simplechains.lumber">Owl_Firewood</li>
+										<li MayRequire="owlchemist.simplechains.lumber">CorePlus_Firewood</li>
 									</disallowedThingDefs>
 								</defaultIngredientFilter>
 								<products>
 									<WDCoal>10</WDCoal>
 								</products>
 								<recipeUsers>
-									<li>Owl_Bloomery</li>
+									<li>CorePlus_Bloomery</li>
 									<li>ElectricSmelter</li>
 									<li MayRequire="VanillaExpanded.VFEProduction">VFE_FueledSmelter</li>
 									<li>Campfire</li>
@@ -336,8 +336,8 @@
 		<operations>
 			<li Class="PatchOperationAdd">
 				<success>Always</success>
-				<xpath> /Defs[ThingDef[defName="Coal"]]/*[self::ThingDef[defName="Owl_Bloomery"] or self::RecipeDef[defName="Owl_RefineSteel"] or self::RecipeDef[defName="Owl_RefineSteelBulk"]]
-					//thingDefs[ancestor::fixedIngredientFilter or ancestor::fuelFilter or not(li/text()="Owl_Iron")]
+				<xpath> /Defs[ThingDef[defName="Coal"]]/*[self::ThingDef[defName="CorePlus_Bloomery"] or self::RecipeDef[defName="CorePlus_RefineSteel"] or self::RecipeDef[defName="CorePlus_RefineSteelBulk"]]
+					//thingDefs[ancestor::fixedIngredientFilter or ancestor::fuelFilter or not(li/text()="CorePlus_Iron")]
 				</xpath>
 				<value>
 					<li>Coal</li>
@@ -346,8 +346,8 @@
 			<!-- Simple Coal -->
 			<li Class="PatchOperationAdd">
 				<success>Always</success>
-				<xpath> /Defs[ThingDef[defName="WDCoal"]]/*[self::ThingDef[defName="Owl_Bloomery"] or self::RecipeDef[defName="Owl_RefineSteel"] or self::RecipeDef[defName="Owl_RefineSteelBulk"]]
-					//thingDefs[ancestor::fixedIngredientFilter or ancestor::fuelFilter or not(li/text()="Owl_Iron")]
+				<xpath> /Defs[ThingDef[defName="WDCoal"]]/*[self::ThingDef[defName="CorePlus_Bloomery"] or self::RecipeDef[defName="CorePlus_RefineSteel"] or self::RecipeDef[defName="CorePlus_RefineSteelBulk"]]
+					//thingDefs[ancestor::fixedIngredientFilter or ancestor::fuelFilter or not(li/text()="CorePlus_Iron")]
 				</xpath>
 				<value>
 					<li>WDCoal</li>
@@ -356,8 +356,8 @@
 			<!-- Any mod using the def "charcoal" -->
 			<li Class="PatchOperationAdd">
 				<success>Always</success>
-				<xpath> /Defs[ThingDef[defName="Charcoal"]]/*[self::ThingDef[defName="Owl_Bloomery"] or self::RecipeDef[defName="Owl_RefineSteel"] or self::RecipeDef[defName="Owl_RefineSteelBulk"]]
-					//thingDefs[ancestor::fixedIngredientFilter or ancestor::fuelFilter or not(li/text()="Owl_Iron")]
+				<xpath> /Defs[ThingDef[defName="Charcoal"]]/*[self::ThingDef[defName="CorePlus_Bloomery"] or self::RecipeDef[defName="CorePlus_RefineSteel"] or self::RecipeDef[defName="CorePlus_RefineSteelBulk"]]
+					//thingDefs[ancestor::fixedIngredientFilter or ancestor::fuelFilter or not(li/text()="CorePlus_Iron")]
 				</xpath>
 				<value>
 					<li>Charcoal</li>
@@ -366,8 +366,8 @@
 			<!-- Atlas Materials -->
 			<li Class="PatchOperationAdd">
 				<success>Always</success>
-				<xpath> /Defs[ThingDef[defName="AM_Coal"]]/*[self::ThingDef[defName="Owl_Bloomery"] or self::RecipeDef[defName="Owl_RefineSteel"] or self::RecipeDef[defName="Owl_RefineSteelBulk"]]
-					//thingDefs[ancestor::fixedIngredientFilter or ancestor::fuelFilter or not(li/text()="Owl_Iron")]
+				<xpath> /Defs[ThingDef[defName="AM_Coal"]]/*[self::ThingDef[defName="CorePlus_Bloomery"] or self::RecipeDef[defName="CorePlus_RefineSteel"] or self::RecipeDef[defName="CorePlus_RefineSteelBulk"]]
+					//thingDefs[ancestor::fixedIngredientFilter or ancestor::fuelFilter or not(li/text()="CorePlus_Iron")]
 				</xpath>
 				<value>
 					<li>AM_Coal</li>
@@ -376,8 +376,8 @@
 			<!-- Xenite Industries -->
 			<li Class="PatchOperationAdd">
 				<success>Always</success>
-				<xpath> /Defs[ThingDef[defName="XIcharcoal"]]/*[self::ThingDef[defName="Owl_Bloomery"] or self::RecipeDef[defName="Owl_RefineSteel"] or self::RecipeDef[defName="Owl_RefineSteelBulk"]]
-					//thingDefs[ancestor::fixedIngredientFilter or ancestor::fuelFilter or not(li/text()="Owl_Iron")]
+				<xpath> /Defs[ThingDef[defName="XIcharcoal"]]/*[self::ThingDef[defName="CorePlus_Bloomery"] or self::RecipeDef[defName="CorePlus_RefineSteel"] or self::RecipeDef[defName="CorePlus_RefineSteelBulk"]]
+					//thingDefs[ancestor::fixedIngredientFilter or ancestor::fuelFilter or not(li/text()="CorePlus_Iron")]
 				</xpath>
 				<value>
 					<li>XIcharcoal</li>
@@ -386,8 +386,8 @@
 			<!-- Medieval Times -->
 			<li Class="PatchOperationAdd">
 				<success>Always</success>
-				<xpath> /Defs[ThingDef[defName="MedTimes_Resource_Coal"]]/*[self::ThingDef[defName="Owl_Bloomery"] or self::RecipeDef[defName="Owl_RefineSteel"] or self::RecipeDef[defName="Owl_RefineSteelBulk"]]
-					//thingDefs[ancestor::fixedIngredientFilter or ancestor::fuelFilter or not(li/text()="Owl_Iron")]
+				<xpath> /Defs[ThingDef[defName="MedTimes_Resource_Coal"]]/*[self::ThingDef[defName="CorePlus_Bloomery"] or self::RecipeDef[defName="CorePlus_RefineSteel"] or self::RecipeDef[defName="CorePlus_RefineSteelBulk"]]
+					//thingDefs[ancestor::fixedIngredientFilter or ancestor::fuelFilter or not(li/text()="CorePlus_Iron")]
 				</xpath>
 				<value>
 					<li>MedTimes_Resource_Coal</li>
@@ -396,8 +396,8 @@
 			<!-- Survivalist Additions -->
 			<li Class="PatchOperationAdd">
 				<success>Always</success>
-				<xpath> /Defs[ThingDef[defName="SRV_Charcoal"]]/*[self::ThingDef[defName="Owl_Bloomery"] or self::RecipeDef[defName="Owl_RefineSteel"] or self::RecipeDef[defName="Owl_RefineSteelBulk"]]
-					//thingDefs[ancestor::fixedIngredientFilter or ancestor::fuelFilter or not(li/text()="Owl_Iron")]
+				<xpath> /Defs[ThingDef[defName="SRV_Charcoal"]]/*[self::ThingDef[defName="CorePlus_Bloomery"] or self::RecipeDef[defName="CorePlus_RefineSteel"] or self::RecipeDef[defName="CorePlus_RefineSteelBulk"]]
+					//thingDefs[ancestor::fixedIngredientFilter or ancestor::fuelFilter or not(li/text()="CorePlus_Iron")]
 				</xpath>
 				<value>
 					<li>SRV_Charcoal</li>
@@ -406,8 +406,8 @@
 			<!-- Apothecary -->
 			<li Class="PatchOperationAdd">
 				<success>Always</success>
-				<xpath> /Defs[ThingDef[defName="AYCharcoal"]]/*[self::ThingDef[defName="Owl_Bloomery"] or self::RecipeDef[defName="Owl_RefineSteel"] or self::RecipeDef[defName="Owl_RefineSteelBulk"]]
-					//thingDefs[ancestor::fixedIngredientFilter or ancestor::fuelFilter or not(li/text()="Owl_Iron")]
+				<xpath> /Defs[ThingDef[defName="AYCharcoal"]]/*[self::ThingDef[defName="CorePlus_Bloomery"] or self::RecipeDef[defName="CorePlus_RefineSteel"] or self::RecipeDef[defName="CorePlus_RefineSteelBulk"]]
+					//thingDefs[ancestor::fixedIngredientFilter or ancestor::fuelFilter or not(li/text()="CorePlus_Iron")]
 				</xpath>
 				<value>
 					<li>AYCharcoal</li>
@@ -416,8 +416,8 @@
 			<!-- Rimhammer -->
 			<li Class="PatchOperationAdd">
 				<success>Always</success>
-				<xpath> /Defs[ThingDef[defName="RH_TET_Coal"]]/*[self::ThingDef[defName="Owl_Bloomery"] or self::RecipeDef[defName="Owl_RefineSteel"] or self::RecipeDef[defName="Owl_RefineSteelBulk"]]
-					//thingDefs[ancestor::fixedIngredientFilter or ancestor::fuelFilter or not(li/text()="Owl_Iron")]
+				<xpath> /Defs[ThingDef[defName="RH_TET_Coal"]]/*[self::ThingDef[defName="CorePlus_Bloomery"] or self::RecipeDef[defName="CorePlus_RefineSteel"] or self::RecipeDef[defName="CorePlus_RefineSteelBulk"]]
+					//thingDefs[ancestor::fixedIngredientFilter or ancestor::fuelFilter or not(li/text()="CorePlus_Iron")]
 				</xpath>
 				<value>
 					<li>RH_TET_Coal</li>
@@ -426,8 +426,8 @@
 			<!-- Expanded Materials -->
 			<li Class="PatchOperationAdd">
 				<success>Always</success>
-				<xpath> /Defs[ThingDef[defName="VMEu_Coal"]]/*[self::ThingDef[defName="Owl_Bloomery"] or self::RecipeDef[defName="Owl_RefineSteel"] or self::RecipeDef[defName="Owl_RefineSteelBulk"]]
-					//thingDefs[ancestor::fixedIngredientFilter or ancestor::fuelFilter or not(li/text()="Owl_Iron")]
+				<xpath> /Defs[ThingDef[defName="VMEu_Coal"]]/*[self::ThingDef[defName="CorePlus_Bloomery"] or self::RecipeDef[defName="CorePlus_RefineSteel"] or self::RecipeDef[defName="CorePlus_RefineSteelBulk"]]
+					//thingDefs[ancestor::fixedIngredientFilter or ancestor::fuelFilter or not(li/text()="CorePlus_Iron")]
 				</xpath>
 				<value>
 					<li>VMEu_Coal</li>
@@ -436,8 +436,8 @@
 			<!-- Clockwork and Steam -->
 			<li Class="PatchOperationAdd">
 				<success>Always</success>
-				<xpath> /Defs[ThingDef[defName="CaS_Coal"]]/*[self::ThingDef[defName="Owl_Bloomery"] or self::RecipeDef[defName="Owl_RefineSteel"] or self::RecipeDef[defName="Owl_RefineSteelBulk"]]
-					//thingDefs[ancestor::fixedIngredientFilter or ancestor::fuelFilter or not(li/text()="Owl_Iron")]
+				<xpath> /Defs[ThingDef[defName="CaS_Coal"]]/*[self::ThingDef[defName="CorePlus_Bloomery"] or self::RecipeDef[defName="CorePlus_RefineSteel"] or self::RecipeDef[defName="CorePlus_RefineSteelBulk"]]
+					//thingDefs[ancestor::fixedIngredientFilter or ancestor::fuelFilter or not(li/text()="CorePlus_Iron")]
 				</xpath>
 				<value>
 					<li>CaS_Coal</li>
@@ -472,7 +472,7 @@
 	<Operation Class="PatchOperationAdd">
 		<xpath>/Defs/WorkGiverDef[defName="DoBillsSmelter"]/fixedBillGiverDefs</xpath>
 		<value>
-			<li>Owl_Bloomery</li>
+			<li>CorePlus_Bloomery</li>
 		</value>
 	</Operation>
 </Patch>

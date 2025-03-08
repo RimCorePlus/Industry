@@ -27,7 +27,7 @@
 				<li Class="PatchOperationReplace">
 					<xpath>*/RecipeDef[defName="Excavate_Steel"]/products/Steel</xpath>
 					<value>
-						<Owl_Iron>20</Owl_Iron>
+						<CorePlus_Iron>20</CorePlus_Iron>
 					</value>
 				</li>
 			</operations>

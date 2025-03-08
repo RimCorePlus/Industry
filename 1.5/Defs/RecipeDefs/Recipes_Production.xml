@@ -1,7 +1,7 @@
 ﻿<Defs>
 	<!--simple chains: steel-->
 	<RecipeDef>
-		<defName>Owl_RefineSteel</defName>
+		<defName>CorePlus_RefineSteel</defName>
 		<label>refine steel</label>
 		<description>Make a batch of steel using raw iron ore.</description>
 		<jobString>Refining steel from iron ore.</jobString>
@@ -22,7 +22,7 @@
 			<li>
 				<filter>
 					<thingDefs>
-						<li>Owl_Iron</li>
+						<li>CorePlus_Iron</li>
 					</thingDefs>
 				</filter>
 				<count>15</count>
@@ -30,19 +30,19 @@
 		</ingredients>
 		<fixedIngredientFilter>
 			<thingDefs>
-				<li>Owl_Iron</li>
+				<li>CorePlus_Iron</li>
 			</thingDefs>
 		</fixedIngredientFilter>
 		<products>
 			<Steel>20</Steel>
 		</products>
 		<recipeUsers>
-			<li>Owl_Bloomery</li>
+			<li>CorePlus_Bloomery</li>
 			<li>ElectricSmelter</li>
 		</recipeUsers>
 	</RecipeDef>
 	<RecipeDef>
-		<defName>Owl_RefineSteelBulk</defName>
+		<defName>CorePlus_RefineSteelBulk</defName>
 		<label>refine steel x 4</label>
 		<description>Make four batches of steel using raw iron ore.</description>
 		<jobString>Refining steel from iron ore.</jobString>
@@ -63,7 +63,7 @@
 			<li>
 				<filter>
 					<thingDefs>
-						<li>Owl_Iron</li>
+						<li>CorePlus_Iron</li>
 					</thingDefs>
 				</filter>
 				<count>60</count>
@@ -71,14 +71,14 @@
 		</ingredients>
 		<fixedIngredientFilter>
 			<thingDefs>
-				<li>Owl_Iron</li>
+				<li>CorePlus_Iron</li>
 			</thingDefs>
 		</fixedIngredientFilter>
 		<products>
 			<Steel>80</Steel>
 		</products>
 		<recipeUsers>
-			<li>Owl_Bloomery</li>
+			<li>CorePlus_Bloomery</li>
 			<li>ElectricSmelter</li>
 		</recipeUsers>
 	</RecipeDef>

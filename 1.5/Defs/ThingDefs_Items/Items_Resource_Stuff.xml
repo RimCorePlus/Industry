@@ -1,7 +1,7 @@
 ﻿<Defs>
 	<!--simple chains: steel-->
 	<ThingDef ParentName="ResourceBase">
-		<defName>Owl_Iron</defName>
+		<defName>CorePlus_Iron</defName>
 		<label>iron</label>
 		<description>Raw, natural iron. It can be mined from rock formations, and with the right skills and resources can be refined into steel.</description>
 		<graphicData>

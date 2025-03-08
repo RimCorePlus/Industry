@@ -1,7 +1,7 @@
 ﻿<Defs>
 	<!--simple chains: steel-->
 	<ThingDef ParentName="BuildingBase">
-		<defName>Owl_Bloomery</defName>
+		<defName>CorePlus_Bloomery</defName>
 		<label>bloomery</label>
 		<description>Used to refine steel, but this primitive design is both more labor intensive and less fuel efficient than a proper smelting station.</description>
 		<thingClass>Building_WorkTable</thingClass>
@@ -77,7 +77,7 @@
 				<heatPerSecond>12</heatPerSecond>
 			</li>
 			<li MayRequire="owlchemist.simplefx.smoke2" Class="Flecker.CompProperties_Smoker">
-				<fleckDef>Owl_SmokeHeavy</fleckDef>
+				<fleckDef>CorePlus_SmokeHeavy</fleckDef>
 				<billsOnly>true</billsOnly>
 				<particleOffset>(0,0,0.5)</particleOffset>
 			</li>
