@@ -19,5 +19,7 @@
 		<li>ceteam.combatextended</li>
 		<li>coreplus.genes.elves</li>
 	</loadAfter>
-	<incompatibleWith />
+	<incompatibleWith>
+		<li>argon.expandedmaterials.metals</li>
+	</incompatibleWith>
 </ModMetaData>
