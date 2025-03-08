@@ -22,6 +22,7 @@ Scope of this mod:
 
 ## Changes
 ### Components
+- (toggable) Remove compacted machinery
 - Craftable at the machining table with a 20% increased work requirement compared to fabrication
 ### Neutroamine
 - (WIP) ~~Can now be synthesized in an expensive three step process~~

@@ -5,4 +5,19 @@
             <li>CorePlus_MakeComponentIndustrial</li>
         </value>
     </Operation>
+    <Operation Class="VFECore.PatchOperationToggableSequence">
+        <enabled>True</enabled>
+        <label>remove compacted machinery</label>
+        <operations>
+            <li Class="PatchOperationReplace">
+                <xpath>//ThingDef[defName="MineableComponentsIndustrial"]/building/mineableScatterCommonality</xpath>
+                <value>
+                    <mineableScatterCommonality>0</mineableScatterCommonality>
+                </value>
+            </li>
+            <li Class="PatchOperationRemove">
+                <xpath>//GenStepDef/genStep/mineables/li[text()="MineableComponentsIndustrial"]</xpath>
+            </li>
+        </operations>
+    </Operation>
 </Patch>
