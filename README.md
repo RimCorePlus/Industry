@@ -21,15 +21,10 @@ Scope of this mod:
 > WIP ~~Requires [Vanilla Expanded Framework](https://steamcommunity.com/sharedfiles/filedetails/?id=2023507013).~~
 
 ## Changes
+
 ### Textiles
 - Cotton and devilstrand plants now yield raw fiber that must be spun before it can be used for crafting
 - (WIP) ~~[Simple Chains: Leather](https://steamcommunity.com/workshop/filedetails/?id=1713884017) (leather rework with tanning requirement) updated for 1.5, using Vanilla Expanded Framework~~
-
-## Version 1.0:
-- [x] Industrial component crafting
-- [x] Spinning wheel and fiber rework
-- [ ] Electric wheel
-- [ ] Update Simple Chains: Leather for 1.5
 
 ## Legal
 Portions of the materials used to create this mod are trademarks and/or copyrighted works of Ludeon Studios Inc. All rights reserved by Ludeon. This mod is not official and is not endorsed by Ludeon.
