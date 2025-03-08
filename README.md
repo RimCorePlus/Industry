@@ -21,18 +21,18 @@ Scope of this mod:
 - [Simple Chains: Steel](https://steamcommunity.com/sharedfiles/filedetails/?id=1702668415) (iron and coal prerequisites for steel) updated for 1.5
 
 ### Toggable
-- (toggable) Metal is not flammable
-- (toggable) Gold and silver are beautiful
-- (toggable) Increase steel durability
-- (toggable) Increase uranium durability
-- (toggable) Increase plasteel durability
-- (toggable) Remove compacted plasteel
+- Metal is not flammable
+- Gold and silver are beautiful
+- Increase steel durability
+- Increase uranium durability
+- Increase plasteel durability
+- Remove compacted plasteel
 
 ## Version 1.0:
 - [x] Update Simple Chains: Steel for 1.5
 - [ ] Expand current steel chain logic to precious metals
 - [ ] Write manufacturing chain for plasteel
-- [ ] Port all metal patches from [Core+] Rebalance
+- [x] Port all metal patches from [Core+] Rebalance
 - [ ] Balance test
 
 ## Legal
