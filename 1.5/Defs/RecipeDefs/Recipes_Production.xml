@@ -1,5 +1,4 @@
 ﻿<Defs>
-	<!--simple chains: steel-->
 	<RecipeDef>
 		<defName>CorePlus_RefineSteel</defName>
 		<label>refine steel</label>
