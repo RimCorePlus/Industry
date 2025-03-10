@@ -60,6 +60,7 @@
 				<buildingOnGraphic>Things/Building/Production/wood_drying_rack_full</buildingOnGraphic>
 				<buildingFinishedGraphic>Things/Building/Production/wood_drying_rack_full</buildingFinishedGraphic>
 				<showFactoryProgressBar>true</showFactoryProgressBar>
+				<destroyIngredientsAtStartOfProcess>true</destroyIngredientsAtStartOfProcess>
 			</li>
 		</comps>
 		<tickerType>Rare</tickerType>
