@@ -14,6 +14,9 @@
             <Flammability>0.4</Flammability>
             <DeteriorationRate>3</DeteriorationRate>
         </statBases>
+        <thingCategories>
+            <li>PlantMatter</li>
+        </thingCategories>
         <burnableByRecipe>true</burnableByRecipe>
         <healthAffectsPrice>false</healthAffectsPrice>
         <minRewardCount>30</minRewardCount>
@@ -34,6 +37,9 @@
             <Flammability>0.4</Flammability>
             <DeteriorationRate>3</DeteriorationRate>
         </statBases>
+        <thingCategories>
+            <li>PlantMatter</li>
+        </thingCategories>
         <burnableByRecipe>true</burnableByRecipe>
         <healthAffectsPrice>false</healthAffectsPrice>
         <minRewardCount>30</minRewardCount>
