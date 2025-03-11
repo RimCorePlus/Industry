@@ -3,7 +3,7 @@
         <operations>
             <!--make spinning wheel a workgiver-->
             <li Class="PatchOperationAdd">
-                <xpath>//WorkGiverDef[defName="DoBillsMakeApparel"]/fixedBillGiverDefs</xpath>
+                <xpath>//WorkGiverDef[defName="DoBillsUseCraftingSpot"]/fixedBillGiverDefs</xpath>
                 <value>
                     <li>CorePlus_SpinningWheel</li>
                 </value>

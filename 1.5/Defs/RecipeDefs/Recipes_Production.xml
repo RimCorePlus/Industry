@@ -1,7 +1,35 @@
 ﻿<Defs>
 	<RecipeDef>
 		<defName>CorePlus_SpinCloth</defName>
-		<label>spin cloth</label>
+		<label>spin cloth x5</label>
+		<description>Spin raw cotton fiber into workable cloth.</description>
+		<jobString>Spinning cloth.</jobString>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<effectWorking>Tailor</effectWorking>
+		<soundWorking>Recipe_Tailor</soundWorking>
+		<workAmount>200</workAmount>
+		<recipeUsers>
+			<li>CorePlus_SpinningWheel</li>
+		</recipeUsers>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>CorePlus_Cotton</li>
+					</thingDefs>
+				</filter>
+				<count>10</count>
+			</li>
+		</ingredients>
+		<products>
+			<Cloth>5</Cloth>
+		</products>
+		<workSkill>Crafting</workSkill>
+		<displayPriority>0</displayPriority>
+	</RecipeDef>
+	<RecipeDef>
+		<defName>CorePlus_SpinClothBulk</defName>
+		<label>spin cloth x25</label>
 		<description>Spin raw cotton fiber into workable cloth.</description>
 		<jobString>Spinning cloth.</jobString>
 		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
@@ -25,11 +53,40 @@
 			<Cloth>25</Cloth>
 		</products>
 		<workSkill>Crafting</workSkill>
-		<displayPriority>0</displayPriority>
+		<displayPriority>1</displayPriority>
 	</RecipeDef>
 	<RecipeDef>
 		<defName>CorePlus_SpinDevilstrand</defName>
-		<label>spin devilstrand</label>
+		<label>spin devilstrand x5</label>
+		<description>Spin raw cotton fiber into workable cloth.</description>
+		<jobString>Spinning cloth.</jobString>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<effectWorking>Tailor</effectWorking>
+		<soundWorking>Recipe_Tailor</soundWorking>
+		<workAmount>400</workAmount>
+		<recipeUsers>
+			<li>CorePlus_SpinningWheel</li>
+		</recipeUsers>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>CorePlus_Devilstrand</li>
+					</thingDefs>
+				</filter>
+				<count>10</count>
+			</li>
+		</ingredients>
+		<products>
+			<DevilstrandCloth>5</DevilstrandCloth>
+		</products>
+		<researchPrerequisite>Devilstrand</researchPrerequisite>
+		<workSkill>Crafting</workSkill>
+		<displayPriority>10</displayPriority>
+	</RecipeDef>
+	<RecipeDef>
+		<defName>CorePlus_SpinDevilstrandBulk</defName>
+		<label>spin devilstrand x25</label>
 		<description>Spin raw cotton fiber into workable cloth.</description>
 		<jobString>Spinning cloth.</jobString>
 		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
@@ -54,6 +111,6 @@
 		</products>
 		<researchPrerequisite>Devilstrand</researchPrerequisite>
 		<workSkill>Crafting</workSkill>
-		<displayPriority>1</displayPriority>
+		<displayPriority>11</displayPriority>
 	</RecipeDef>
 </Defs>
