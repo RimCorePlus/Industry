@@ -24,5 +24,7 @@
 		<li>coreplus.industry</li>
 		<li>OskarPotocki.VanillaFactionsExpanded.Core</li>
 	</loadAfter>
-	<incompatibleWith />
+	<incompatibleWith>
+		<li>dankpyon.medieval.overhaul</li>
+	</incompatibleWith>
 </ModMetaData>
