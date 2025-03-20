@@ -21,5 +21,6 @@
 	</loadAfter>
 	<incompatibleWith>
 		<li>argon.expandedmaterials.metals</li>
+		<li>dankpyon.medieval.overhaul</li>
 	</incompatibleWith>
 </ModMetaData>
