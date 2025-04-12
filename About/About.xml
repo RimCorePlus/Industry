@@ -20,7 +20,7 @@
 	<loadBefore />
 	<loadAfter>
 		<li>coreplus.rebalance</li>
-		<li>coreplus.debloat</li>
+		<li>boomer.debloat</li>
 		<li>OskarPotocki.VanillaFactionsExpanded.Core</li>
 	</loadAfter>
 	<incompatibleWith>
