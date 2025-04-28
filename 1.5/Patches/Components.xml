@@ -10,10 +10,8 @@
         <label>remove compacted machinery</label>
         <operations>
             <li Class="PatchOperationReplace">
-                <xpath>//ThingDef[defName="MineableComponentsIndustrial"]/building/mineableScatterCommonality</xpath>
-                <value>
-                    <mineableScatterCommonality>0</mineableScatterCommonality>
-                </value>
+                <xpath>//ThingDef[defName="MineableComponentsIndustrial"]/building/mineableScatterCommonality/text()</xpath>
+                <value>0</value>
             </li>
             <li Class="PatchOperationRemove">
                 <xpath>//GenStepDef/genStep/mineables/li[text()="MineableComponentsIndustrial"]</xpath>
