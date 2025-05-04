@@ -1,0 +1,11 @@
+<loadFolders>
+    <v1.5>
+        <li>/</li>
+        <li>1.5</li>
+        <li>Common</li>
+        <!--DLC-->
+        <li IfModActive="Ludeon.Rimworld.Ideology">DLC/Ideology/1.5</li>
+        <!--mods-->
+        <li IfModActive="coreplus.empire">Mods/CorePlus Empire/1.5</li>
+    </v1.5>
+</loadFolders>
