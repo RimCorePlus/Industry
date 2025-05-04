@@ -21,6 +21,7 @@
 	<loadAfter>
 		<li>coreplus.rebalance</li>
 		<li>boomer.debloat</li>
+		<li>coreplus.empire</li>
 		<li>coreplus.industry</li>
 		<li>OskarPotocki.VanillaFactionsExpanded.Core</li>
 	</loadAfter>
