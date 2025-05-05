@@ -12,12 +12,13 @@
 		<workSkill>Crafting</workSkill>
 		<workSkillLearnFactor>0.25</workSkillLearnFactor>
 		<targetCountAdjustment>20</targetCountAdjustment>
-		<allowMixingIngredients>false</allowMixingIngredients>
+		<allowMixingIngredients>true</allowMixingIngredients>
 		<ingredients>
 			<li>
 				<filter>
 					<thingDefs>
 						<li>CorePlus_WoodLog</li>
+						<li MayRequire="sirmashedpotato.ashlands">Mashed_Ashlands_ParasolWoodLog</li>
 					</thingDefs>
 				</filter>
 				<count>20</count>
@@ -26,6 +27,7 @@
 		<fixedIngredientFilter>
 			<thingDefs>
 				<li>CorePlus_WoodLog</li>
+				<li MayRequire="sirmashedpotato.ashlands">Mashed_Ashlands_ParasolWoodLog</li>
 			</thingDefs>
 		</fixedIngredientFilter>
 		<products>
