@@ -4,11 +4,9 @@
 		<label>metal is not flammable</label>
 		<operations>
 			<li Class="PatchOperationReplace">
-				<xpath>//ThingDef/stuffProps[categories/li[text()="Metallic"]]/statFactors/Flammability</xpath>
+				<xpath>//ThingDef/stuffProps[categories/li[text()="Metallic"]]/statFactors/Flammability/text()</xpath>
 				<!--should affect all metals added by all DLC and mods loaded before this mod-->
-				<value>
-					<Flammability>0.0</Flammability>
-				</value>
+				<value>0</value>
 			</li>
 		</operations>
 	</Operation>
@@ -29,18 +27,14 @@
 		<label>increase steel durability</label>
 		<operations>
 			<li Class="PatchOperationReplace">
-				<xpath>//ThingDef[defName="Steel"]/stuffProps/statFactors/MaxHitPoints</xpath>
-				<value>
-					<MaxHitPoints>2</MaxHitPoints>
-				</value>
+				<xpath>//ThingDef[defName="Steel"]/stuffProps/statFactors/MaxHitPoints/text()</xpath>
+				<value>2</value>
 			</li>
 			<li Class="PatchOperationConditional">
 				<xpath>//ThingDef[defName="CorePlus_ElvenSteel"]</xpath>
 				<match Class="PatchOperationReplace">
-					<xpath>//ThingDef[defName="CorePlus_ElvenSteel"]/stuffProps/statFactors/MaxHitPoints</xpath>
-					<value>
-						<MaxHitPoints>2</MaxHitPoints>
-					</value>
+					<xpath>//ThingDef[defName="CorePlus_ElvenSteel"]/stuffProps/statFactors/MaxHitPoints/text()</xpath>
+					<value>2</value>
 				</match>
 			</li>
 		</operations>
@@ -50,10 +44,8 @@
 		<label>increase uranium durability</label>
 		<operations>
 			<li Class="PatchOperationReplace">
-				<xpath>//ThingDef[defName="Uranium"]/stuffProps/statFactors/MaxHitPoints</xpath>
-				<value>
-					<MaxHitPoints>2.6</MaxHitPoints>
-				</value>
+				<xpath>//ThingDef[defName="Uranium"]/stuffProps/statFactors/MaxHitPoints/text()</xpath>
+				<value>2.6</value>
 			</li>
 		</operations>
 	</Operation>
@@ -62,10 +54,8 @@
 		<label>increase plasteel durability</label>
 		<operations>
 			<li Class="PatchOperationReplace">
-				<xpath>//ThingDef[defName="Plasteel"]/stuffProps/statFactors/MaxHitPoints</xpath>
-				<value>
-					<MaxHitPoints>3</MaxHitPoints>
-				</value>
+				<xpath>//ThingDef[defName="Plasteel"]/stuffProps/statFactors/MaxHitPoints/text()</xpath>
+				<value>3</value>
 			</li>
 		</operations>
 	</Operation>
@@ -74,10 +64,8 @@
 		<label>remove compacted plasteel</label>
 		<operations>
 			<li Class="PatchOperationReplace">
-				<xpath>//ThingDef[defName="MineablePlasteel"]/building/mineableScatterCommonality</xpath>
-				<value>
-					<mineableScatterCommonality>0</mineableScatterCommonality>
-				</value>
+				<xpath>//ThingDef[defName="MineablePlasteel"]/building/mineableScatterCommonality/text()</xpath>
+				<value>0</value>
 			</li>
 			<li Class="PatchOperationReplace">
 				<xpath>//ThingDef[defName="Plasteel"]/deepCommonality</xpath>

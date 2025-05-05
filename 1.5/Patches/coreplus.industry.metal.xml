@@ -16,7 +16,7 @@
 				<value>Rock containing iron ore.</value>
 			</li>
 			<li Class="PatchOperationRemove">
-				<xpath> //ThingDef[defName="Steel"]/deepCommonality | //ThingDef[defName="Steel"]/deepCountPerPortion | //ThingDef[defName="Steel"]/deepLumpSizeRange</xpath>
+				<xpath>//ThingDef[defName="Steel"]/deepCommonality | //ThingDef[defName="Steel"]/deepCountPerPortion | //ThingDef[defName="Steel"]/deepLumpSizeRange</xpath>
 			</li>
 		</operations>
 	</Operation>
@@ -41,6 +41,14 @@
 				</value>
 			</li>
 		</operations>
+	</Operation>
+	<!--reduce steel work speed (1->0.9)-->
+	<Operation Class="PatchOperationAdd">
+		<xpath>//ThingDef[defName="Steel"]/stuffProps/statFactors</xpath>
+		<value>
+			<WorkToBuild>0.9</WorkToBuild>
+			<WorkToMake>0.9</WorkToMake>
+		</value>
 	</Operation>
 	<!--add bloomery to workgiver-->
 	<Operation Class="PatchOperationAdd">
