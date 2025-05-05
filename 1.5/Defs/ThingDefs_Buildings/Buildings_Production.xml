@@ -87,6 +87,13 @@
 				<shortCircuitInRain>true</shortCircuitInRain>
 				<basePowerConsumption>50</basePowerConsumption>
 			</li>
+			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_Facility">
+				<statOffsets>
+					<WorkTableWorkSpeedFactor>0.06</WorkTableWorkSpeedFactor>
+				</statOffsets>
+				<maxSimultaneous>3</maxSimultaneous>
+			</li>
 		</comps>
 		<minifiedDef>MinifiedThing</minifiedDef>
 		<inspectorTabs>

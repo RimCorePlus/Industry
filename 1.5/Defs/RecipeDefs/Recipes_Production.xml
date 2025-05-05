@@ -1,7 +1,7 @@
 ﻿<Defs>
 	<RecipeDef>
 		<defName>CorePlus_SpinCloth</defName>
-		<label>spin cloth x5</label>
+		<label>spin cloth</label>
 		<description>Spin raw cotton fiber into workable cloth.</description>
 		<jobString>Spinning cloth.</jobString>
 		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
@@ -59,7 +59,7 @@
 	</RecipeDef>
 	<RecipeDef>
 		<defName>CorePlus_SpinDevilstrand</defName>
-		<label>spin devilstrand x5</label>
+		<label>spin devilstrand</label>
 		<description>Spin raw cotton fiber into workable cloth.</description>
 		<jobString>Spinning cloth.</jobString>
 		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>

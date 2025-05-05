@@ -1,0 +1,40 @@
+<Patch>
+    <!--make spinning wheel a workgiver-->
+    <Operation Class="PatchOperationAdd">
+        <xpath>//WorkGiverDef[defName="DoBillsUseCraftingSpot"]/fixedBillGiverDefs</xpath>
+        <value>
+            <li>CorePlus_SpinningWheel</li>
+            <li>CorePlus_ElectricSpinningWheel</li>
+        </value>
+    </Operation>
+    <!--make electric spnning wheel a linkable building for tailoring bench-->
+    <Operation Class="PatchOperationAdd">
+        <xpath>//ThingDef[contains(label, "tailor bench")]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
+        <value>
+            <li>CorePlus_ElectricSpinningWheel</li>
+        </value>
+    </Operation>
+    <!--change cotton and devilstrand yield to fiber-->
+    <Operation Class="PatchOperationReplace">
+        <xpath>//ThingDef[defName="Plant_Cotton"]/plant/harvestedThingDef/text()</xpath>
+        <value>CorePlus_Cotton</value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>//ThingDef[defName="Plant_Devilstrand"]/plant/harvestedThingDef/text()</xpath>
+        <value>CorePlus_Devilstrand</value>
+    </Operation>
+    <!--buff harvest yield by 50% to compensate for 2:1 spinning loss-->
+    <Operation Class="PatchOperationReplace">
+        <xpath>//ThingDef[defName="Plant_Cotton"]/plant/harvestYield/text()</xpath>
+        <value>15</value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>//ThingDef[defName="Plant_Devilstrand"]/plant/harvestYield/text()</xpath>
+        <value>10</value>
+    </Operation>
+    <!--update devilstrand research description-->
+    <Operation Class="PatchOperationReplace">
+        <xpath>//ResearchProjectDef[defName="Devilstrand"]/description/text()</xpath>
+        <value>Grow and spin devilstrand, a slow-growing mushroom that yields an exceptionally tough, heat-resistant plant fiber.</value>
+    </Operation>
+</Patch>
