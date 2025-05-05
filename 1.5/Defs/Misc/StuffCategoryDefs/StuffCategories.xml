@@ -3,8 +3,4 @@
 		<defName>RawWoody</defName>
 		<label>log</label>
 	</StuffCategoryDef>
-	<StuffCategoryDef>
-		<defName>Chunky</defName>
-		<label>chunky</label>
-	</StuffCategoryDef>
 </Defs>

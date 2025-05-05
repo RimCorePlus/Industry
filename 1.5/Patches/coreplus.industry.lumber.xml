@@ -28,7 +28,7 @@
 			</li>
 		</operations>
 	</Operation>
-	<!--add trestle to the workgiver-->
+	<!--add trestle to workgiver-->
 	<Operation Class="PatchOperationAdd">
 		<xpath>Defs/WorkGiverDef[defName="DoBillsUseCraftingSpot"]/fixedBillGiverDefs</xpath>
 		<value>
