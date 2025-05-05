@@ -1,0 +1,28 @@
+<Defs>
+    <ThingDef ParentName="RockBase">
+        <defName>CorePlus_MineableCoal</defName>
+        <label>coal</label>
+        <description>Rock containing bits of coal.</description>
+        <graphicData>
+            <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>CutoutComplex</shaderType>
+            <color>(126,104,94)</color>
+            <colorTwo>(30,30,30)</colorTwo>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>1200</MaxHitPoints>
+        </statBases>
+        <building>
+            <isResourceRock>true</isResourceRock>
+            <mineableThing>CorePlus_Coal</mineableThing>
+            <mineableYield>35</mineableYield>
+            <mineableScatterCommonality>0.3</mineableScatterCommonality>
+            <mineableScatterLumpSizeRange>
+                <min>20</min>
+                <max>40</max>
+            </mineableScatterLumpSizeRange>
+            <veinMineable>true</veinMineable>
+        </building>
+    </ThingDef>
+</Defs>

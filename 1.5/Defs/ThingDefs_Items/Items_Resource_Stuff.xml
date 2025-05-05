@@ -1,13 +1,11 @@
 ﻿<Defs>
-	<!--simple chains: steel-->
 	<ThingDef ParentName="ResourceBase">
 		<defName>CorePlus_Iron</defName>
 		<label>iron</label>
 		<description>Raw, natural iron. It can be mined from rock formations, and with the right skills and resources can be refined into steel.</description>
 		<graphicData>
-			<texPath>Things/Item/Resource/CorePlus_Steel</texPath>
+			<texPath>Things/Item/Resource/Steel</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
-			<color>(105,105,105)</color>
 		</graphicData>
 		<soundInteract>Metal_Drop</soundInteract>
 		<soundDrop>Metal_Drop</soundDrop>
@@ -28,27 +26,54 @@
 		</thingCategories>
 		<deepCommonality>4</deepCommonality>
 		<deepCountPerPortion>35</deepCountPerPortion>
+		<smeltable>true</smeltable>
 		<deepLumpSizeRange>
 			<min>20</min>
 			<max>40</max>
 		</deepLumpSizeRange>
 		<stuffProps>
-			<stuffAdjective>iron</stuffAdjective>
 			<categories>
 				<li>Metallic</li>
 			</categories>
+			<appearance>Metal</appearance>
 			<commonality>0.1</commonality>
 			<constructEffect>ConstructMetal</constructEffect>
 			<color>(95,85,85)</color>
 			<soundImpactBullet>BulletImpact_Metal</soundImpactBullet>
 			<soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
 			<soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
+			<soundImpactMelee>Pawn_Melee_Punch_HitBuilding_Metal</soundImpactMelee>
 			<statFactors>
 				<MaxHitPoints>0.8</MaxHitPoints>
 				<Beauty>0.6</Beauty>
 				<Flammability>0.4</Flammability>
 			</statFactors>
 		</stuffProps>
-		<smeltable>true</smeltable>
+	</ThingDef>
+	<ThingDef ParentName="ResourceBase">
+		<defName>CorePlus_Coal</defName>
+		<label>coal</label>
+		<description>A piece of hard, black coal. Can be used as fuel for generators, stoves, torches and campfires.</description>
+		<graphicData>
+			<texPath>Things/Item/Resource/Coal</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<soundInteract>ChunkRock_Drop</soundInteract>
+		<soundDrop>ChunkRock_Drop</soundDrop>
+		<statBases>
+			<MarketValue>1.0</MarketValue>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+			<Mass>0.5</Mass>
+		</statBases>
+		<thingCategories>
+			<li>ResourcesRaw</li>
+		</thingCategories>
+		<deepCommonality>1.5</deepCommonality>
+		<deepCountPerPortion>35</deepCountPerPortion>
+		<deepLumpSizeRange>
+			<min>20</min>
+			<max>50</max>
+		</deepLumpSizeRange>
 	</ThingDef>
 </Defs>

@@ -14,7 +14,9 @@
 		<ingredients>
 			<li>
 				<filter>
-					<thingDefs />
+					<thingDefs>
+						<li>CorePlus_Coal</li>
+					</thingDefs>
 				</filter>
 				<count>5</count>
 			</li>
@@ -29,6 +31,7 @@
 		</ingredients>
 		<fixedIngredientFilter>
 			<thingDefs>
+				<li>CorePlus_Coal</li>
 				<li>CorePlus_Iron</li>
 			</thingDefs>
 		</fixedIngredientFilter>
@@ -55,7 +58,9 @@
 		<ingredients>
 			<li>
 				<filter>
-					<thingDefs />
+					<thingDefs>
+						<li>CorePlus_Coal</li>
+					</thingDefs>
 				</filter>
 				<count>20</count>
 			</li>
@@ -70,6 +75,7 @@
 		</ingredients>
 		<fixedIngredientFilter>
 			<thingDefs>
+				<li>CorePlus_Coal</li>
 				<li>CorePlus_Iron</li>
 			</thingDefs>
 		</fixedIngredientFilter>
@@ -79,6 +85,60 @@
 		<recipeUsers>
 			<li>CorePlus_Bloomery</li>
 			<li>ElectricSmelter</li>
+		</recipeUsers>
+	</RecipeDef>
+	<RecipeDef>
+		<defName>CorePlus_MakeCharcoal</defName>
+		<label>make charcoal</label>
+		<description>Make a batch of charcoal from logs.</description>
+		<jobString>Making charcoal from wood logs.</jobString>
+		<effectWorking>Smelt</effectWorking>
+		<soundWorking>Recipe_Smelt</soundWorking>
+		<workAmount>900</workAmount>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<workSkill>Crafting</workSkill>
+		<workSkillLearnFactor>0.25</workSkillLearnFactor>
+		<targetCountAdjustment>20</targetCountAdjustment>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li MayRequire="coreplus.industry.lumber">CorePlus_WoodLog</li>
+						<li MayRequire="coreplus.industry.lumber">CorePlus_GreenLumber</li>
+						<li>WoodLog</li>
+						<li MayRequire="coreplus.industry.lumber">CorePlus_Firewood</li>
+					</thingDefs>
+				</filter>
+				<count>20</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li MayRequire="coreplus.industry.lumber">CorePlus_WoodLog</li>
+				<li MayRequire="coreplus.industry.lumber">CorePlus_GreenLumber</li>
+				<li>WoodLog</li>
+				<li MayRequire="coreplus.industry.lumber">CorePlus_Firewood</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<defaultIngredientFilter>
+			<thingDefs>
+				<li MayRequire="coreplus.industry.lumber">CorePlus_WoodLog</li>
+			</thingDefs>
+			<disallowedThingDefs>
+				<li MayRequire="coreplus.industry.lumber">CorePlus_GreenLumber</li>
+				<li>WoodLog</li>
+				<li MayRequire="coreplus.industry.lumber">CorePlus_Firewood</li>
+			</disallowedThingDefs>
+		</defaultIngredientFilter>
+		<products>
+			<CorePlus_Coal>10</CorePlus_Coal>
+		</products>
+		<recipeUsers>
+			<li>CorePlus_Bloomery</li>
+			<li>ElectricSmelter</li>
+			<li MayRequire="VanillaExpanded.VFEProduction">VFE_FueledSmelter</li>
+			<li>Campfire</li>
 		</recipeUsers>
 	</RecipeDef>
 </Defs>

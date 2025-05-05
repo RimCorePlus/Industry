@@ -1,49 +1,109 @@
 <Patch>
-	<!-- Buildable chunks -->
+	<!--==========core patches==========-->
+	<!--replace mineable steel with iron-->
 	<Operation Class="PatchOperationSequence">
-		<success>Always</success>
 		<operations>
-			<!-- Remove and replace the resourceReadoutPriority -->
+			<li Class="PatchOperationReplace">
+				<xpath>//ThingDef[defName="MineableSteel"]/building/mineableThing/text()</xpath>
+				<value>CorePlus_Iron</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>//ThingDef[defName="MineableSteel"]/label/text()</xpath>
+				<value>iron ore</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>//ThingDef[defName="MineableSteel"]/description/text()</xpath>
+				<value>Rock containing iron ore.</value>
+			</li>
 			<li Class="PatchOperationRemove">
-				<success>Always</success>
-				<xpath>Defs/ThingDef[defName="ChunkGranite" or defName="ChunkSlate" or defName="ChunkLimestone" or defName="ChunkMarble" or defName="ChunkSandstone"]/resourceReadoutPriority
-				</xpath>
+				<xpath> //ThingDef[defName="Steel"]/deepCommonality | //ThingDef[defName="Steel"]/deepCountPerPortion | //ThingDef[defName="Steel"]/deepLumpSizeRange</xpath>
+			</li>
+		</operations>
+	</Operation>
+	<!--add mineable coal to mapgen-->
+	<Operation Class="PatchOperationAdd">
+		<xpath>//GenStepDef[defName="PreciousLump"]/genStep/mineables</xpath>
+		<value>
+			<li>CorePlus_MineableCoal</li>
+		</value>
+	</Operation>
+	<!--adjust steel graphicData-->
+	<Operation Class="PatchOperationSequence">
+		<operations>
+			<li Class="PatchOperationReplace">
+				<xpath>//ThingDef[defName="Steel"]/graphicData/texPath/text()</xpath>
+				<value>Things/Item/Resource/CorePlus_Steel</value>
 			</li>
 			<li Class="PatchOperationAdd">
-				<success>Always</success>
-				<xpath>Defs/ThingDef[defName="ChunkGranite" or defName="ChunkSlate" or defName="ChunkLimestone" or defName="ChunkMarble" or defName="ChunkSandstone"]
-				</xpath>
+				<xpath>//ThingDef[defName="Steel"]/graphicData</xpath>
+				<value>
+					<color>(105,105,105)</color>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+	<!--add bloomery to workgiver-->
+	<Operation Class="PatchOperationAdd">
+		<xpath>//WorkGiverDef[defName="DoBillsSmelter"]/fixedBillGiverDefs</xpath>
+		<value>
+			<li>CorePlus_Bloomery</li>
+		</value>
+	</Operation>
+
+	<!--==========bloomery chunk adjustments==========-->
+	<!--fix resourceReadoutPriority for vanilla and modded stone chunks using ChunkRockBase-->
+	<Operation Class="PatchOperationSequence">
+		<operations>
+			<li Class="PatchOperationAdd">
+				<xpath>//ThingDef[@ParentName="ChunkRockBase" and not(resourceReadoutPriority)]</xpath>
 				<value>
 					<resourceReadoutPriority>Middle</resourceReadoutPriority>
 				</value>
 			</li>
-			<!-- Add missing stuffProps, remove first if it's already there -->
-			<li Class="PatchOperationRemove">
-				<success>Always</success>
-				<xpath>Defs/ThingDef[defName="ChunkGranite" or defName="ChunkSlate" or defName="ChunkLimestone" or defName="ChunkMarble" or defName="ChunkSandstone"]/stuffProps
-				</xpath>
+			<li Class="PatchOperationReplace">
+				<xpath>//ThingDef[@ParentName="ChunkRockBase" and resourceReadoutPriority]/resourceReadoutPriority/text()</xpath>
+				<value>Middle</value>
 			</li>
-			<!-- Add common generic information first -->
-			<li Class="PatchOperationAdd">
-				<success>Always</success>
-				<xpath>Defs/ThingDef[defName="ChunkGranite" or defName="ChunkSlate" or defName="ChunkLimestone" or defName="ChunkMarble" or defName="ChunkSandstone"]
-				</xpath>
-				<value>
-					<stuffProps>
-						<categories>
-							<li>Chunky</li>
-						</categories>
-						<statOffsets>
-							<WorkToBuild>140</WorkToBuild>
-						</statOffsets>
-						<soundImpactBullet>BulletImpact_Ground</soundImpactBullet>
-						<soundImpactMelee>Pawn_Melee_Punch_HitBuilding_Stone</soundImpactMelee>
-						<soundMeleeHitSharp>MeleeHit_Stone</soundMeleeHitSharp>
-						<soundMeleeHitBlunt>MeleeHit_Stone</soundMeleeHitBlunt>
-					</stuffProps>
-				</value>
-			</li>
-			<!-- Add remaining, specific information -->
+		</operations>
+	</Operation>
+	<!--add generic stuffProps-->
+	<Operation Class="PatchOperationAdd">
+		<xpath>//ThingDef[@ParentName="ChunkRockBase" and not(stuffProps)]</xpath>
+		<value>
+			<stuffProps>
+				<categories>
+					<li>Chunky</li>
+				</categories>
+				<statOffsets>
+					<WorkToBuild>140</WorkToBuild>
+				</statOffsets>
+				<soundImpactBullet>BulletImpact_Ground</soundImpactBullet>
+				<soundImpactMelee>Pawn_Melee_Punch_HitBuilding_Stone</soundImpactMelee>
+				<soundMeleeHitSharp>MeleeHit_Stone</soundMeleeHitSharp>
+				<soundMeleeHitBlunt>MeleeHit_Stone</soundMeleeHitBlunt>
+			</stuffProps>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ThingDef[@ParentName="ChunkRockBase" and stuffProps]/stuffProps</xpath>
+		<value>
+			<stuffProps>
+				<categories>
+					<li>Chunky</li>
+				</categories>
+				<statOffsets>
+					<WorkToBuild>140</WorkToBuild>
+				</statOffsets>
+				<soundImpactBullet>BulletImpact_Ground</soundImpactBullet>
+				<soundImpactMelee>Pawn_Melee_Punch_HitBuilding_Stone</soundImpactMelee>
+				<soundMeleeHitSharp>MeleeHit_Stone</soundMeleeHitSharp>
+				<soundMeleeHitBlunt>MeleeHit_Stone</soundMeleeHitBlunt>
+			</stuffProps>
+		</value>
+	</Operation>
+	<!--add specific stuffProps based on their stone block counterparts-->
+	<Operation Class="PatchOperationSequence">
+		<operations>
 			<li Class="PatchOperationAdd">
 				<xpath>Defs/ThingDef[defName="ChunkGranite"]/stuffProps</xpath>
 				<value>
@@ -113,367 +173,41 @@
 		</operations>
 	</Operation>
 
-	<!-- Replace natural steel -->
-	<Operation Class="PatchOperationSequence">
-		<success>Always</success>
-		<operations>
-			<!-- Change mineable steel to iron -->
-			<li Class="PatchOperationReplace">
-				<xpath>Defs/ThingDef[defName="MineableSteel"]/building/mineableThing</xpath>
-				<value>
-					<mineableThing>CorePlus_Iron</mineableThing>
-				</value>
-			</li>
-			<li Class="PatchOperationReplace">
-				<xpath>Defs/ThingDef[defName="MineableSteel"]/label</xpath>
-				<value>
-					<label>iron ore</label>
-				</value>
-			</li>
-			<li Class="PatchOperationReplace">
-				<xpath>Defs/ThingDef[defName="MineableSteel"]/description</xpath>
-				<value>
-					<description>Rock containing iron ore.</description>
-				</value>
-			</li>
-
-			<!-- Change steel def to look like iron -->
-			<li Class="PatchOperationRemove">
-				<success>Always</success>
-				<xpath> Defs/ThingDef[defName="Steel"]/deepCommonality | Defs/ThingDef[defName="Steel"]/deepCountPerPortion | Defs/ThingDef[defName="Steel"]/deepLumpSizeRange
-				</xpath>
-			</li>
-			<li Class="PatchOperationReplace">
-				<xpath>Defs/ThingDef[defName="Steel"]/graphicData/texPath</xpath>
-				<value>
-					<texPath>Things/Item/Resource/CorePlus_Steel</texPath>
-				</value>
-			</li>
-			<li Class="PatchOperationAdd">
-				<xpath>Defs/ThingDef[defName="Steel"]/graphicData</xpath>
-				<value>
-					<color>(105,105,105)</color>
-				</value>
-			</li>
-
-			<!-- chunks -->
-			<li Class="PatchOperationRemove">
-				<success>Always</success>
-				<xpath>Defs/ThingDef[defName="ShipChunk"]/costList/Steel</xpath>
-			</li>
-			<li Class="PatchOperationAdd">
-				<success>Always</success>
-				<xpath>Defs/ThingDef[defName="ShipChunk"]/costList</xpath>
-				<value>
-					<ChunkSlagSteel>3</ChunkSlagSteel>
-				</value>
-			</li>
-		</operations>
-	</Operation>
-
-	<!-- Add coal is no coal defs are found -->
-	<Operation Class="PatchOperationSequence">
-		<success>Always</success>
-		<operations>
-			<!-- Coal Expanded, Atlas Materials, Simple Coal, Early Times, Rimhammer, Expanded Materials -->
-			<li Class="PatchOperationTest">
-				<xpath>Defs/ThingDef[defName="Coal" or defName="AM_Coal" or defName="WDCoal" or defName="Resource_Coal" or defName="RH_TET_Coal" or defName="VMEu_Coal" or defName="CaS_Coal"]</xpath>
-				<success>Invert</success>
-			</li>
-			<li Class="PatchOperationAdd">
-				<xpath>Defs</xpath>
-				<value>
-					<ThingDef ParentName="RockBase">
-						<defName>WDMineableCoal</defName>
-						<label>coal</label>
-						<description>Rock containing bits of coal.</description>
-						<graphicData>
-							<texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
-							<graphicClass>Graphic_Single</graphicClass>
-							<shaderType>CutoutComplex</shaderType>
-							<color>(126,104,94)</color>
-							<colorTwo>(30,30,30)</colorTwo>
-						</graphicData>
-						<statBases>
-							<MaxHitPoints>1200</MaxHitPoints>
-						</statBases>
-						<building>
-							<isResourceRock>true</isResourceRock>
-							<mineableThing>WDCoal</mineableThing>
-							<mineableYield>35</mineableYield>
-							<mineableScatterCommonality>0.3</mineableScatterCommonality>
-							<mineableScatterLumpSizeRange>
-								<min>20</min>
-								<max>40</max>
-							</mineableScatterLumpSizeRange>
-							<veinMineable>true</veinMineable>
-						</building>
-					</ThingDef>
-
-					<ThingDef ParentName="ResourceBase">
-						<defName>WDCoal</defName>
-						<label>coal</label>
-						<description>A piece of hard, black coal. Can be used as fuel for generators, stoves, torches and campfires.</description>
-						<graphicData>
-							<texPath>Things/Item/Resource/Coal</texPath>
-							<graphicClass>Graphic_StackCount</graphicClass>
-						</graphicData>
-						<soundInteract>ChunkRock_Drop</soundInteract>
-						<soundDrop>ChunkRock_Drop</soundDrop>
-						<statBases>
-							<MarketValue>1.0</MarketValue>
-							<MaxHitPoints>100</MaxHitPoints>
-							<Flammability>1.0</Flammability>
-							<Mass>0.5</Mass>
-						</statBases>
-						<thingCategories>
-							<li>ResourcesRaw</li>
-						</thingCategories>
-						<deepCommonality>1.5</deepCommonality>
-						<deepCountPerPortion>35</deepCountPerPortion>
-						<deepLumpSizeRange>
-							<min>20</min>
-							<max>50</max>
-						</deepLumpSizeRange>
-					</ThingDef>
-				</value>
-			</li>
-			<li Class="PatchOperationAdd">
-				<xpath>Defs/GenStepDef[defName="PreciousLump"]/genStep/mineables</xpath>
-				<value>
-					<li>WDMineableCoal</li>
-				</value>
-			</li>
-			<li Class="PatchOperationAdd">
-				<xpath>Defs/*[self::ThingDef[defName="FueledStove"] or self::ThingDef[defName="WoodFiredGenerator"] or self::ThingDef[defName="TorchLamp"] or self::ThingDef[defName="Campfire"] or self::ThingDef[defName="FueledSmithy"]]/comps/li[contains(@Class,'CompProperties_Refuelable')]/fuelFilter/thingDefs</xpath>
-				<value>
-					<li>WDCoal</li>
-				</value>
-			</li>
-			<li Class="PatchOperationAdd">
-				<xpath>Defs/*[self::TraderKindDef[defName="Base_Neolithic_Standard"] or self::TraderKindDef[defName="Base_Outlander_Standard"] or self::TraderKindDef[defName="Caravan_Outlander_BulkGoods"] or self::TraderKindDef[defName="Caravan_Neolithic_BulkGoods"] or self::TraderKindDef[defName="Orbital_BulkGoods"]]/stockGenerators</xpath>
-				<value>
-					<li Class="StockGenerator_SingleDef">
-						<thingDef>WDCoal</thingDef>
-						<countRange>200~300</countRange>
-					</li>
-				</value>
-			</li>
-			<!-- Add charcoal is no charcoal defs are found -->
-			<li Class="PatchOperationSequence">
-				<success>Always</success>
-				<operations>
-					<li Class="PatchOperationTest">
-						<xpath>Defs/ThingDef[defName="Charcoal" or defName="XIcharcoal" or defName="SRV_Charcoal" or defName="AYCharcoal" or defName="RH_TET_Coal" or defName="VMEu_Coal" or defName="CaS_Coal"]</xpath>
-						<success>Invert</success>
-					</li>
-					<li Class="PatchOperationAdd">
-						<xpath>Defs</xpath>
-						<value>
-							<RecipeDef>
-								<defName>CorePlus_MakeCharcoal</defName>
-								<label>make charcoal</label>
-								<description>Make a batch of charcoal from logs.</description>
-								<jobString>Making charcoal from wood logs.</jobString>
-								<effectWorking>Smelt</effectWorking>
-								<soundWorking>Recipe_Smelt</soundWorking>
-								<workAmount>900</workAmount>
-								<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
-								<workSkill>Crafting</workSkill>
-								<workSkillLearnFactor>0.25</workSkillLearnFactor>
-								<targetCountAdjustment>20</targetCountAdjustment>
-								<allowMixingIngredients>true</allowMixingIngredients>
-								<ingredients>
-									<li>
-										<filter>
-											<thingDefs>
-												<li MayRequire="owlchemist.simplechains.lumber">CorePlus_WoodLog</li>
-												<li MayRequire="owlchemist.simplechains.lumber">CorePlus_GreenLumber</li>
-												<li>WoodLog</li>
-												<li MayRequire="owlchemist.simplechains.lumber">CorePlus_Firewood</li>
-											</thingDefs>
-										</filter>
-										<count>20</count>
-									</li>
-								</ingredients>
-								<fixedIngredientFilter>
-									<thingDefs>
-										<li MayRequire="owlchemist.simplechains.lumber">CorePlus_WoodLog</li>
-										<li MayRequire="owlchemist.simplechains.lumber">CorePlus_GreenLumber</li>
-										<li>WoodLog</li>
-										<li MayRequire="owlchemist.simplechains.lumber">CorePlus_Firewood</li>
-									</thingDefs>
-								</fixedIngredientFilter>
-								<defaultIngredientFilter>
-									<thingDefs>
-										<li MayRequire="owlchemist.simplechains.lumber">CorePlus_WoodLog</li>
-									</thingDefs>
-									<disallowedThingDefs>
-										<li MayRequire="owlchemist.simplechains.lumber">CorePlus_GreenLumber</li>
-										<li>WoodLog</li>
-										<li MayRequire="owlchemist.simplechains.lumber">CorePlus_Firewood</li>
-									</disallowedThingDefs>
-								</defaultIngredientFilter>
-								<products>
-									<WDCoal>10</WDCoal>
-								</products>
-								<recipeUsers>
-									<li>CorePlus_Bloomery</li>
-									<li>ElectricSmelter</li>
-									<li MayRequire="VanillaExpanded.VFEProduction">VFE_FueledSmelter</li>
-									<li>Campfire</li>
-								</recipeUsers>
-							</RecipeDef>
-						</value>
-					</li>
-				</operations>
-			</li>
-		</operations>
-	</Operation>
-
-	<!-- Universal coal patch -->
-	<Operation Class="PatchOperationSequence">
-		<success>Always</success>
-		<operations>
-			<li Class="PatchOperationAdd">
-				<success>Always</success>
-				<xpath> /Defs[ThingDef[defName="Coal"]]/*[self::ThingDef[defName="CorePlus_Bloomery"] or self::RecipeDef[defName="CorePlus_RefineSteel"] or self::RecipeDef[defName="CorePlus_RefineSteelBulk"]]
-					//thingDefs[ancestor::fixedIngredientFilter or ancestor::fuelFilter or not(li/text()="CorePlus_Iron")]
-				</xpath>
-				<value>
-					<li>Coal</li>
-				</value>
-			</li>
-			<!-- Simple Coal -->
-			<li Class="PatchOperationAdd">
-				<success>Always</success>
-				<xpath> /Defs[ThingDef[defName="WDCoal"]]/*[self::ThingDef[defName="CorePlus_Bloomery"] or self::RecipeDef[defName="CorePlus_RefineSteel"] or self::RecipeDef[defName="CorePlus_RefineSteelBulk"]]
-					//thingDefs[ancestor::fixedIngredientFilter or ancestor::fuelFilter or not(li/text()="CorePlus_Iron")]
-				</xpath>
-				<value>
-					<li>WDCoal</li>
-				</value>
-			</li>
-			<!-- Any mod using the def "charcoal" -->
-			<li Class="PatchOperationAdd">
-				<success>Always</success>
-				<xpath> /Defs[ThingDef[defName="Charcoal"]]/*[self::ThingDef[defName="CorePlus_Bloomery"] or self::RecipeDef[defName="CorePlus_RefineSteel"] or self::RecipeDef[defName="CorePlus_RefineSteelBulk"]]
-					//thingDefs[ancestor::fixedIngredientFilter or ancestor::fuelFilter or not(li/text()="CorePlus_Iron")]
-				</xpath>
-				<value>
-					<li>Charcoal</li>
-				</value>
-			</li>
-			<!-- Atlas Materials -->
-			<li Class="PatchOperationAdd">
-				<success>Always</success>
-				<xpath> /Defs[ThingDef[defName="AM_Coal"]]/*[self::ThingDef[defName="CorePlus_Bloomery"] or self::RecipeDef[defName="CorePlus_RefineSteel"] or self::RecipeDef[defName="CorePlus_RefineSteelBulk"]]
-					//thingDefs[ancestor::fixedIngredientFilter or ancestor::fuelFilter or not(li/text()="CorePlus_Iron")]
-				</xpath>
-				<value>
-					<li>AM_Coal</li>
-				</value>
-			</li>
-			<!-- Xenite Industries -->
-			<li Class="PatchOperationAdd">
-				<success>Always</success>
-				<xpath> /Defs[ThingDef[defName="XIcharcoal"]]/*[self::ThingDef[defName="CorePlus_Bloomery"] or self::RecipeDef[defName="CorePlus_RefineSteel"] or self::RecipeDef[defName="CorePlus_RefineSteelBulk"]]
-					//thingDefs[ancestor::fixedIngredientFilter or ancestor::fuelFilter or not(li/text()="CorePlus_Iron")]
-				</xpath>
-				<value>
-					<li>XIcharcoal</li>
-				</value>
-			</li>
-			<!-- Medieval Times -->
-			<li Class="PatchOperationAdd">
-				<success>Always</success>
-				<xpath> /Defs[ThingDef[defName="MedTimes_Resource_Coal"]]/*[self::ThingDef[defName="CorePlus_Bloomery"] or self::RecipeDef[defName="CorePlus_RefineSteel"] or self::RecipeDef[defName="CorePlus_RefineSteelBulk"]]
-					//thingDefs[ancestor::fixedIngredientFilter or ancestor::fuelFilter or not(li/text()="CorePlus_Iron")]
-				</xpath>
-				<value>
-					<li>MedTimes_Resource_Coal</li>
-				</value>
-			</li>
-			<!-- Survivalist Additions -->
-			<li Class="PatchOperationAdd">
-				<success>Always</success>
-				<xpath> /Defs[ThingDef[defName="SRV_Charcoal"]]/*[self::ThingDef[defName="CorePlus_Bloomery"] or self::RecipeDef[defName="CorePlus_RefineSteel"] or self::RecipeDef[defName="CorePlus_RefineSteelBulk"]]
-					//thingDefs[ancestor::fixedIngredientFilter or ancestor::fuelFilter or not(li/text()="CorePlus_Iron")]
-				</xpath>
-				<value>
-					<li>SRV_Charcoal</li>
-				</value>
-			</li>
-			<!-- Apothecary -->
-			<li Class="PatchOperationAdd">
-				<success>Always</success>
-				<xpath> /Defs[ThingDef[defName="AYCharcoal"]]/*[self::ThingDef[defName="CorePlus_Bloomery"] or self::RecipeDef[defName="CorePlus_RefineSteel"] or self::RecipeDef[defName="CorePlus_RefineSteelBulk"]]
-					//thingDefs[ancestor::fixedIngredientFilter or ancestor::fuelFilter or not(li/text()="CorePlus_Iron")]
-				</xpath>
-				<value>
-					<li>AYCharcoal</li>
-				</value>
-			</li>
-			<!-- Rimhammer -->
-			<li Class="PatchOperationAdd">
-				<success>Always</success>
-				<xpath> /Defs[ThingDef[defName="RH_TET_Coal"]]/*[self::ThingDef[defName="CorePlus_Bloomery"] or self::RecipeDef[defName="CorePlus_RefineSteel"] or self::RecipeDef[defName="CorePlus_RefineSteelBulk"]]
-					//thingDefs[ancestor::fixedIngredientFilter or ancestor::fuelFilter or not(li/text()="CorePlus_Iron")]
-				</xpath>
-				<value>
-					<li>RH_TET_Coal</li>
-				</value>
-			</li>
-			<!-- Expanded Materials -->
-			<li Class="PatchOperationAdd">
-				<success>Always</success>
-				<xpath> /Defs[ThingDef[defName="VMEu_Coal"]]/*[self::ThingDef[defName="CorePlus_Bloomery"] or self::RecipeDef[defName="CorePlus_RefineSteel"] or self::RecipeDef[defName="CorePlus_RefineSteelBulk"]]
-					//thingDefs[ancestor::fixedIngredientFilter or ancestor::fuelFilter or not(li/text()="CorePlus_Iron")]
-				</xpath>
-				<value>
-					<li>VMEu_Coal</li>
-				</value>
-			</li>
-			<!-- Clockwork and Steam -->
-			<li Class="PatchOperationAdd">
-				<success>Always</success>
-				<xpath> /Defs[ThingDef[defName="CaS_Coal"]]/*[self::ThingDef[defName="CorePlus_Bloomery"] or self::RecipeDef[defName="CorePlus_RefineSteel"] or self::RecipeDef[defName="CorePlus_RefineSteelBulk"]]
-					//thingDefs[ancestor::fixedIngredientFilter or ancestor::fuelFilter or not(li/text()="CorePlus_Iron")]
-				</xpath>
-				<value>
-					<li>CaS_Coal</li>
-				</value>
-			</li>
-		</operations>
-	</Operation>
-
-	<!-- If using WDCoal, patch some mods -->
-	<Operation Class="PatchOperationSequence">
-		<success>Always</success>
-		<operations>
-			<li Class="PatchOperationTest">
-				<xpath>Defs/ThingDef[defName="WDCoal"]</xpath>
-			</li>
-			<!-- Ancient Rim - Core
-				No Water, No Life
-				VGP Garden Gourmet
-				GloomyFurniture
-				Lord of the Rims - Dwarves
-			Lord of the Rims - Elves -->
-			<li Class="PatchOperationAdd">
-				<xpath>Defs/ThingDef[defName="AR_Smelter" or defName="Mizu_FueledWaterCleaner" or defName="Oven" or defName="HandCanningstove" or defName="FueledCandyTable" or defName="RGK_EndTableWithLamp" or defName="RGK_Fireplace" or defName="RGK_lamp" or defName="RGK_LampM" or defName="RGK_Street_Lamp_L" or defName="RGK_Street_Lamp_Seven" or defName="GL_Wall_Lamp" or defName="RGK_FueledStove" or defName="GL_FueledSmithy" or defName="LotRD_Chandelier" or defName="LotRD_DwarvenCandelabra" or defName="LotRD_Brazier" or defName="LotRE_ElvenCandelabra" or defName="Brazier"]/comps/li[contains(@Class,'CompProperties_Refuelable')]/fuelFilter/thingDefs</xpath>
-				<value>
-					<li>WDCoal</li>
-				</value>
-			</li>
-		</operations>
-	</Operation>
-
-	<!-- Misc -->
-	<Operation Class="PatchOperationAdd">
-		<xpath>/Defs/WorkGiverDef[defName="DoBillsSmelter"]/fixedBillGiverDefs</xpath>
+	<!--==========recipes==========-->
+	<!--ship chunks and crashed shuttles yield slags instead of raw steel-->
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ThingDef[defName="ShipChunk" or defName="ShuttleCrashed"]/costList/Steel</xpath>
 		<value>
-			<li>CorePlus_Bloomery</li>
+			<ChunkSlagSteel>3</ChunkSlagSteel>
+		</value>
+	</Operation>
+	<!--allow coal to be used in vanilla and modded wood fueled benches (must use WoodLog as a fuel and also use either @ParentName="BenchBase", have a "recipes" node, or a bills tab)-->
+	<Operation Class="PatchOperationAdd">
+		<xpath>//ThingDef[@ParentName="BenchBase" and (comps/li[@Class="CompProperties_Refuelable"]//li[text()="WoodLog" or text()="CorePlus_Firewood"] or recipes or inspectorTabs/li[text()="ITab_Bills"])]/comps/li[@Class="CompProperties_Refuelable"]/fuelFilter/thingDefs</xpath>
+		<value>
+			<li>CorePlus_Coal</li>
+		</value>
+	</Operation>
+
+	<!--==========traders==========-->
+	<!--outlander caravans carry coal-->
+	<Operation Class="PatchOperationAdd">
+		<xpath>//TraderKindDef[defName="Caravan_Outlander_BulkGoods"]/stockGenerators</xpath>
+		<value>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>CorePlus_Coal</thingDef>
+				<countRange>150~300</countRange>
+			</li>
+		</value>
+	</Operation>
+	<!--orbital bulk goods trader carries coal-->
+	<Operation Class="PatchOperationAdd">
+		<xpath>//TraderKindDef[defName="Orbital_BulkGoods"]/stockGenerators</xpath>
+		<value>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>CorePlus_Coal</thingDef>
+				<countRange>300~450</countRange>
+			</li>
 		</value>
 	</Operation>
 </Patch>
