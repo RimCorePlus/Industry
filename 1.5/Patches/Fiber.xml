@@ -6,6 +6,7 @@
                 <xpath>//WorkGiverDef[defName="DoBillsUseCraftingSpot"]/fixedBillGiverDefs</xpath>
                 <value>
                     <li>CorePlus_SpinningWheel</li>
+                    <li>CorePlus_ElectricSpinningWheel</li>
                 </value>
             </li>
             <!--change cotton and devilstrand yield to fiber-->

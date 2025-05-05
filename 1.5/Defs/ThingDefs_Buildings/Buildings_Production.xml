@@ -10,10 +10,57 @@
 			<graphicClass>Graphic_Multi</graphicClass>
 			<shaderType>CutoutComplex</shaderType>
 			<drawSize>(1.5,1.5)</drawSize>
+			<drawOffsetNorth>(0,0,0.11)</drawOffsetNorth>
 		</graphicData>
 		<uiIconPath>Things/Building/Production/spinningWheel_north</uiIconPath>
 		<costList>
 			<WoodLog>50</WoodLog>
+		</costList>
+		<altitudeLayer>Building</altitudeLayer>
+		<fillPercent>0.3</fillPercent>
+		<castEdgeShadows>false</castEdgeShadows>
+		<staticSunShadowHeight>0</staticSunShadowHeight>
+		<useHitPoints>True</useHitPoints>
+		<statBases>
+			<Mass>4</Mass>
+			<MaxHitPoints>75</MaxHitPoints>
+			<WorkToBuild>1000</WorkToBuild>
+			<Flammability>1.0</Flammability>
+			<WorkTableWorkSpeedFactor>0.75</WorkTableWorkSpeedFactor>
+		</statBases>
+		<designationCategory>Production</designationCategory>
+		<uiOrder>2399</uiOrder>
+		<passability>PassThroughOnly</passability>
+		<pathCost>70</pathCost>
+		<hasInteractionCell>True</hasInteractionCell>
+		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
+		<modExtensions />
+		<comps />
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<inspectorTabs>
+			<li>ITab_Bills</li>
+		</inspectorTabs>
+		<building>
+			<spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+			<uninstallWork>100</uninstallWork>
+		</building>
+	</ThingDef>
+	<ThingDef ParentName="BenchBase">
+		<defName>CorePlus_ElectricSpinningWheel</defName>
+		<label>electric spinning wheel</label>
+		<description>A small table mounted with a fully electric spinng wheel for spinning fabric from raw fibers.</description>
+		<thingClass>Building_WorkTable</thingClass>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<graphicData>
+			<texPath>Things/Building/Production/electricWheel</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(2,2)</drawSize>
+		</graphicData>
+		<uiIconPath>Things/Building/Production/electricWheel_north</uiIconPath>
+		<costList>
+			<Steel>50</Steel>
+			<ComponentIndustrial>1</ComponentIndustrial>
 		</costList>
 		<altitudeLayer>Building</altitudeLayer>
 		<fillPercent>0.3</fillPercent>
@@ -30,10 +77,17 @@
 		<uiOrder>2399</uiOrder>
 		<passability>PassThroughOnly</passability>
 		<pathCost>70</pathCost>
+		<size>(2,1)</size>
 		<hasInteractionCell>True</hasInteractionCell>
-		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
+		<interactionCellOffset>(0,1,-1)</interactionCellOffset>
 		<modExtensions />
-		<comps />
+		<comps>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<shortCircuitInRain>true</shortCircuitInRain>
+				<basePowerConsumption>50</basePowerConsumption>
+			</li>
+		</comps>
 		<minifiedDef>MinifiedThing</minifiedDef>
 		<inspectorTabs>
 			<li>ITab_Bills</li>

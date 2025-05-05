@@ -10,6 +10,7 @@
 		<workAmount>200</workAmount>
 		<recipeUsers>
 			<li>CorePlus_SpinningWheel</li>
+			<li>CorePlus_ElectricSpinningWheel</li>
 		</recipeUsers>
 		<ingredients>
 			<li>
@@ -38,6 +39,7 @@
 		<workAmount>1000</workAmount>
 		<recipeUsers>
 			<li>CorePlus_SpinningWheel</li>
+			<li>CorePlus_ElectricSpinningWheel</li>
 		</recipeUsers>
 		<ingredients>
 			<li>
@@ -66,6 +68,7 @@
 		<workAmount>400</workAmount>
 		<recipeUsers>
 			<li>CorePlus_SpinningWheel</li>
+			<li>CorePlus_ElectricSpinningWheel</li>
 		</recipeUsers>
 		<ingredients>
 			<li>
@@ -95,6 +98,7 @@
 		<workAmount>2000</workAmount>
 		<recipeUsers>
 			<li>CorePlus_SpinningWheel</li>
+			<li>CorePlus_ElectricSpinningWheel</li>
 		</recipeUsers>
 		<ingredients>
 			<li>
