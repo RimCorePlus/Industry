@@ -1,5 +1,4 @@
 ﻿<Defs>
-	<!--industrial components-->
 	<RecipeDef>
 		<defName>CorePlus_MakeComponentIndustrial</defName>
 		<label>make component</label>
