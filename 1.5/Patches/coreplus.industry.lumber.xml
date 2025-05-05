@@ -1,11 +1,11 @@
 <Patch>
 	<!--==========core patches==========-->
-	<!--trees drop wood logs-->
+	<!--trees drop new wood logs-->
 	<Operation Class="PatchOperationReplace">
 		<xpath>//ThingDef/plant/harvestedThingDef[text()="WoodLog"]/text()</xpath>
 		<value>CorePlus_WoodLog</value>
 	</Operation>
-	<!--restyle vanilla wood as lumber-->
+	<!--convert vanilla wood log to lumber-->
 	<Operation Class="PatchOperationSequence">
 		<operations>
 			<li Class="PatchOperationReplace">
@@ -27,6 +27,11 @@
 				</value>
 			</li>
 		</operations>
+	</Operation>
+	<!--reduce wood work speed (0.7->0.6)-->
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ThingDef[defName="WoodLog"]//WorkToMake/text() | //ThingDef[defName="WoodLog"]//WorkToBuild/text()</xpath>
+		<value>0.6</value>
 	</Operation>
 	<!--add trestle to workgiver-->
 	<Operation Class="PatchOperationAdd">
