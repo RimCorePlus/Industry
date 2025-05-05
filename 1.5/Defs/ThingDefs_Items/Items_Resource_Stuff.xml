@@ -4,6 +4,10 @@
 		<defName>CorePlus_WoodLog</defName>
 		<label>wood log</label>
 		<description>Wood from trees or other fibrous plants. Useful for building structures and weapons. It is a good fuel for campfires and generators, and can be refined into chemfuel. In a pinch, a piece of wood can be used as a weapon or a leg.</description>
+		<descriptionHyperlinks>
+			<RecipeDef>CorePlus_MakeFirewood</RecipeDef>
+			<RecipeDef>CorePlus_MakeGreenLumber</RecipeDef>
+		</descriptionHyperlinks>
 		<graphicData>
 			<texPath>Things/Item/Resource/WoodLog</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
