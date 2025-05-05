@@ -1,0 +1,138 @@
+<Patch>
+    <Operation Class="VFECore.PatchOperationToggableSequence">
+        <enabled>True</enabled>
+        <label>enable chocolate production chain</label>
+        <operations>
+            <!--add new defs-->
+            <li Class="PatchOperationAdd">
+                <xpath>Defs</xpath>
+                <value>
+                    <ThingDef ParentName="ResourceBase">
+                        <defName>CorePlus_Cocoa</defName>
+                        <label>cocoa</label>
+                        <description>Raw cocoa beans harvested from a cocoa tree. Yields delicious chocolate when mixed with milk at a stove.</description>
+                        <descriptionHyperlinks>
+                            <ThingDef>Plant_TreeCocoa</ThingDef>
+                            <RecipeDef>CorePlus_MakeChocolate</RecipeDef>
+                        </descriptionHyperlinks>
+                        <resourceReadoutPriority>Last</resourceReadoutPriority>
+                        <statBases>
+                            <MaxHitPoints>100</MaxHitPoints>
+                            <MarketValue>0.5</MarketValue>
+                            <Mass>0.075</Mass>
+                            <Flammability>1.0</Flammability>
+                            <DeteriorationRate>1</DeteriorationRate>
+                        </statBases>
+                        <graphicData>
+                            <texPath>Things/Item/Resource/Cocoa</texPath>
+                            <graphicClass>Graphic_StackCount</graphicClass>
+                            <drawSize>0.6</drawSize>
+                        </graphicData>
+                        <thingCategories>
+                            <li>PlantMatter</li>
+                        </thingCategories>
+                    </ThingDef>
+                    <RecipeDef>
+                        <defName>CorePlus_MakeChocolate</defName>
+                        <label>make chocolate</label>
+                        <description>Make chocolate.</description>
+                        <jobString>Making chocolate.</jobString>
+                        <workSpeedStat>CookSpeed</workSpeedStat>
+                        <workSkill>Cooking</workSkill>
+                        <effectWorking>Cook</effectWorking>
+                        <soundWorking>Recipe_CookMeal</soundWorking>
+                        <workAmount>500</workAmount>
+                        <targetCountAdjustment>1</targetCountAdjustment>
+                        <ingredients>
+                            <li>
+                                <filter>
+                                    <thingDefs>
+                                        <li>CorePlus_Cocoa</li>
+                                    </thingDefs>
+                                </filter>
+                                <count>3</count>
+                            </li>
+                            <li>
+                                <filter>
+                                    <thingDefs>
+                                        <li>Milk</li>
+                                    </thingDefs>
+                                </filter>
+                                <count>1</count>
+                            </li>
+                        </ingredients>
+                        <fixedIngredientFilter>
+                            <thingDefs>
+                                <li>CorePlus_Cocoa</li>
+                                <li>Milk</li>
+                            </thingDefs>
+                        </fixedIngredientFilter>
+                        <products>
+                            <Chocolate>4</Chocolate>
+                        </products>
+                    </RecipeDef>
+                    <RecipeDef>
+                        <defName>CorePlus_MakeChocolateBulk</defName>
+                        <label>make chocolate x20</label>
+                        <description>Make chocolate.</description>
+                        <jobString>Making chocolate.</jobString>
+                        <workSpeedStat>CookSpeed</workSpeedStat>
+                        <workSkill>Cooking</workSkill>
+                        <effectWorking>Cook</effectWorking>
+                        <soundWorking>Recipe_CookMeal</soundWorking>
+                        <workAmount>2000</workAmount>
+                        <targetCountAdjustment>1</targetCountAdjustment>
+                        <ingredients>
+                            <li>
+                                <filter>
+                                    <thingDefs>
+                                        <li>CorePlus_Cocoa</li>
+                                    </thingDefs>
+                                </filter>
+                                <count>15</count>
+                            </li>
+                            <li>
+                                <filter>
+                                    <thingDefs>
+                                        <li>Milk</li>
+                                    </thingDefs>
+                                </filter>
+                                <count>5</count>
+                            </li>
+                        </ingredients>
+                        <fixedIngredientFilter>
+                            <thingDefs>
+                                <li>CorePlus_Cocoa</li>
+                                <li>Milk</li>
+                            </thingDefs>
+                        </fixedIngredientFilter>
+                        <products>
+                            <Chocolate>20</Chocolate>
+                        </products>
+                    </RecipeDef>
+                </value>
+            </li>
+            <!--add chocolate recipe to all stove benches-->
+            <li Class="PatchOperationAdd">
+                <xpath>//ThingDef[@ParentName="BenchBase" and contains(label, "stove")]/recipes</xpath>
+                <value>
+                    <li>CorePlus_MakeChocolate</li>
+                </value>
+            </li>
+            <!--change harvestedThingDef for cocoa tree-->
+            <li Class="PatchOperationReplace">
+                <xpath>//ThingDef[defName="Plant_TreeCocoa"]//harvestYield/text()</xpath>
+                <value>40</value>
+            </li>
+            <li Class="PatchOperationReplace">
+                <xpath>//ThingDef[defName="Plant_TreeCocoa"]//harvestedThingDef/text()</xpath>
+                <value>CorePlus_Cocoa</value>
+            </li>
+            <!--buff market value to compensate for increased cost (milk + 2x cocoa is worth 2.9, vanilla chocolate is worth 3)-->
+            <li Class="PatchOperationReplace">
+                <xpath>//ThingDef[defName="Chocolate"]/statBases/MarketValue/text()</xpath>
+                <value>5</value>
+            </li>
+        </operations>
+    </Operation>
+</Patch>
