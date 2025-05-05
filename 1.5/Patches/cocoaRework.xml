@@ -128,10 +128,10 @@
                 <xpath>//ThingDef[defName="Plant_TreeCocoa"]//harvestedThingDef/text()</xpath>
                 <value>CorePlus_Cocoa</value>
             </li>
-            <!--buff market value to compensate for increased cost (milk + 2x cocoa is worth 2.9, vanilla chocolate is worth 3)-->
+            <!--buff market value to compensate for increased cost (1x milk + 2x cocoa is worth 2.9, vanilla chocolate is worth 3)-->
             <li Class="PatchOperationReplace">
                 <xpath>//ThingDef[defName="Chocolate"]/statBases/MarketValue/text()</xpath>
-                <value>5</value>
+                <value>6</value>
             </li>
         </operations>
     </Operation>
