@@ -1,0 +1,57 @@
+<Defs>
+    <ThingDef ParentName="BuildingBase">
+        <defName>CorePlus_StonecutterSpot</defName>
+        <label>stonecutter's spot</label>
+        <description>A place for smashing large rocks together to create blocks.</description>
+        <thingClass>Building_WorkTable</thingClass>
+        <graphicData>
+            <texPath>Things/Building/Production/ButcherSpot</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(1,1)</drawSize>
+        </graphicData>
+        <altitudeLayer>FloorEmplacement</altitudeLayer>
+        <statBases>
+            <WorkToBuild>0</WorkToBuild>
+            <WorkTableEfficiencyFactor>0.7</WorkTableEfficiencyFactor>
+        </statBases>
+        <scatterableOnMapGen>false</scatterableOnMapGen>
+        <useHitPoints>false</useHitPoints>
+        <size>(1,1)</size>
+        <designationCategory>Production</designationCategory>
+        <uiOrder>1999</uiOrder>
+        <passability>PassThroughOnly</passability>
+        <pathCost>50</pathCost>
+        <hasInteractionCell>True</hasInteractionCell>
+        <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+        <surfaceType>Item</surfaceType>
+        <inspectorTabs>
+            <li>ITab_Bills</li>
+        </inspectorTabs>
+        <building>
+            <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+            <sowTag>SupportPlantsOnly</sowTag>
+            <canPlaceOverImpassablePlant>false</canPlaceOverImpassablePlant>
+            <ai_chillDestination>false</ai_chillDestination>
+            <wakeDormantPawnsOnConstruction>false</wakeDormantPawnsOnConstruction>
+            <artificialForMeditationPurposes>false</artificialForMeditationPurposes>
+            <buildingTags>
+                <li>Production</li>
+            </buildingTags>
+        </building>
+        <comps>
+            <li Class="CompProperties_AffectedByFacilities">
+                <linkableFacilities>
+                    <li>ToolCabinet</li>
+                </linkableFacilities>
+            </li>
+        </comps>
+        <researchPrerequisites>
+            <li>Stonecutting</li>
+        </researchPrerequisites>
+        <designationHotKey>Misc9</designationHotKey>
+        <placeWorkers>
+            <li>PlaceWorker_ShowFacilitiesConnections</li>
+            <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+        </placeWorkers>
+    </ThingDef>
+</Defs>
