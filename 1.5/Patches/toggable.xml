@@ -1,6 +1,6 @@
 <Patch>
 	<Operation Class="VFECore.PatchOperationToggableSequence">
-		<enabled>True</enabled>
+		<enabled>true</enabled>
 		<label>metal is not flammable</label>
 		<operations>
 			<li Class="PatchOperationReplace">
@@ -11,7 +11,7 @@
 		</operations>
 	</Operation>
 	<Operation Class="VFECore.PatchOperationToggableSequence">
-		<enabled>True</enabled>
+		<enabled>true</enabled>
 		<label>gold and silver are beautiful</label>
 		<operations>
 			<li Class="PatchOperationAdd">
@@ -23,7 +23,7 @@
 		</operations>
 	</Operation>
 	<Operation Class="VFECore.PatchOperationToggableSequence">
-		<enabled>True</enabled>
+		<enabled>true</enabled>
 		<label>increase steel durability</label>
 		<operations>
 			<li Class="PatchOperationReplace">
@@ -40,7 +40,7 @@
 		</operations>
 	</Operation>
 	<Operation Class="VFECore.PatchOperationToggableSequence">
-		<enabled>True</enabled>
+		<enabled>true</enabled>
 		<label>increase uranium durability</label>
 		<operations>
 			<li Class="PatchOperationReplace">
@@ -50,7 +50,7 @@
 		</operations>
 	</Operation>
 	<Operation Class="VFECore.PatchOperationToggableSequence">
-		<enabled>True</enabled>
+		<enabled>true</enabled>
 		<label>increase plasteel durability</label>
 		<operations>
 			<li Class="PatchOperationReplace">
@@ -60,7 +60,7 @@
 		</operations>
 	</Operation>
 	<Operation Class="VFECore.PatchOperationToggableSequence">
-		<enabled>True</enabled>
+		<enabled>true</enabled>
 		<label>remove compacted plasteel</label>
 		<operations>
 			<li Class="PatchOperationReplace">

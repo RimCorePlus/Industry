@@ -43,7 +43,7 @@
 		<designationCategory>Production</designationCategory>
 		<passability>PassThroughOnly</passability>
 		<pathCost>70</pathCost>
-		<hasInteractionCell>True</hasInteractionCell>
+		<hasInteractionCell>true</hasInteractionCell>
 		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
 		<surfaceType>Item</surfaceType>
 		<inspectorTabs>
