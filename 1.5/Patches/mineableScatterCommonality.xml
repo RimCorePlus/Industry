@@ -6,7 +6,7 @@
         </value>
     </Operation>
     <Operation Class="VFECore.PatchOperationToggableSequence">
-        <enabled>True</enabled>
+        <enabled>true</enabled>
         <label>remove compacted machinery</label>
         <operations>
             <li Class="PatchOperationReplace">

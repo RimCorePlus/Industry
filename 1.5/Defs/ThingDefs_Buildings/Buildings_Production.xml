@@ -21,7 +21,7 @@
         <uiOrder>1999</uiOrder>
         <passability>PassThroughOnly</passability>
         <pathCost>50</pathCost>
-        <hasInteractionCell>True</hasInteractionCell>
+        <hasInteractionCell>true</hasInteractionCell>
         <interactionCellOffset>(0,0,-1)</interactionCellOffset>
         <surfaceType>Item</surfaceType>
         <inspectorTabs>
