@@ -13,7 +13,7 @@
 		<soundInteract>Metal_Drop</soundInteract>
 		<soundDrop>Metal_Drop</soundDrop>
 		<statBases>
-			<MarketValue>0.85</MarketValue>
+			<MarketValue>0.8</MarketValue>
 			<Mass>0.5</Mass>
 			<StuffPower_Armor_Sharp>0.6</StuffPower_Armor_Sharp>
 			<StuffPower_Armor_Blunt>0.35</StuffPower_Armor_Blunt>
@@ -29,11 +29,7 @@
 		</thingCategories>
 		<deepCommonality>4</deepCommonality>
 		<deepCountPerPortion>35</deepCountPerPortion>
-		<smeltable>true</smeltable>
-		<deepLumpSizeRange>
-			<min>20</min>
-			<max>40</max>
-		</deepLumpSizeRange>
+		<deepLumpSizeRange>20~40</deepLumpSizeRange>
 		<stuffProps>
 			<categories>
 				<li>Metallic</li>
@@ -63,20 +59,17 @@
 		</graphicData>
 		<soundInteract>ChunkRock_Drop</soundInteract>
 		<soundDrop>ChunkRock_Drop</soundDrop>
+		<stackLimit>500</stackLimit>
 		<statBases>
-			<MarketValue>1.0</MarketValue>
-			<MaxHitPoints>100</MaxHitPoints>
+			<MarketValue>0.5</MarketValue>
 			<Flammability>1.0</Flammability>
-			<Mass>0.5</Mass>
+			<Mass>0.1</Mass>
 		</statBases>
 		<thingCategories>
 			<li>ResourcesRaw</li>
 		</thingCategories>
 		<deepCommonality>1.5</deepCommonality>
-		<deepCountPerPortion>35</deepCountPerPortion>
-		<deepLumpSizeRange>
-			<min>20</min>
-			<max>50</max>
-		</deepLumpSizeRange>
+		<deepCountPerPortion>50</deepCountPerPortion>
+		<deepLumpSizeRange>20~50</deepLumpSizeRange>
 	</ThingDef>
 </Defs>

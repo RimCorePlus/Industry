@@ -16,12 +16,9 @@
         <building>
             <isResourceRock>true</isResourceRock>
             <mineableThing>CorePlus_Coal</mineableThing>
-            <mineableYield>35</mineableYield>
+            <mineableYield>50</mineableYield>
             <mineableScatterCommonality>0.3</mineableScatterCommonality>
-            <mineableScatterLumpSizeRange>
-                <min>20</min>
-                <max>40</max>
-            </mineableScatterLumpSizeRange>
+            <mineableScatterLumpSizeRange>20~40</mineableScatterLumpSizeRange>
             <veinMineable>true</veinMineable>
         </building>
     </ThingDef>
