@@ -37,7 +37,7 @@
 		<fillPercent>0.3</fillPercent>
 		<castEdgeShadows>true</castEdgeShadows>
 		<staticSunShadowHeight>0</staticSunShadowHeight>
-		<useHitPoints>True</useHitPoints>
+		<useHitPoints>true</useHitPoints>
 		<statBases>
 			<Mass>4</Mass>
 			<MaxHitPoints>75</MaxHitPoints>
@@ -100,7 +100,7 @@
 		</costList>
 		<altitudeLayer>Building</altitudeLayer>
 		<fillPercent>0.2</fillPercent>
-		<useHitPoints>True</useHitPoints>
+		<useHitPoints>true</useHitPoints>
 		<statBases>
 			<Mass>3</Mass>
 			<MaxHitPoints>100</MaxHitPoints>
@@ -112,7 +112,7 @@
 		<designationCategory>Production</designationCategory>
 		<passability>PassThroughOnly</passability>
 		<pathCost>70</pathCost>
-		<hasInteractionCell>True</hasInteractionCell>
+		<hasInteractionCell>true</hasInteractionCell>
 		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
 		<surfaceType>Item</surfaceType>
 		<inspectorTabs>

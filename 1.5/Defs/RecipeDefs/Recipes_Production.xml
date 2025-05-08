@@ -58,6 +58,7 @@
 						<li>CorePlus_WoodLog</li>
 						<li>CorePlus_GreenLumber</li>
 						<li>WoodLog</li>
+						<li MayRequire="sirmashedpotato.ashlands">Mashed_Ashlands_ParasolWoodLog</li>
 					</thingDefs>
 				</filter>
 				<count>20</count>
@@ -68,6 +69,7 @@
 				<li>CorePlus_WoodLog</li>
 				<li>CorePlus_GreenLumber</li>
 				<li>WoodLog</li>
+				<li MayRequire="sirmashedpotato.ashlands">Mashed_Ashlands_ParasolWoodLog</li>
 			</thingDefs>
 		</fixedIngredientFilter>
 		<defaultIngredientFilter>
