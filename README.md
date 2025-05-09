@@ -29,16 +29,16 @@ Spiritual successor to [Simple Chains: Steel](https://github.com/Owlchemist/simp
 ### Analysis
 Production chains add tedium to the game. This is good for immersion, but (in my experience) detracts from the overall experience when there's no benefit. Accordingly, the refining recipes have been balanced to maximize output per job and create a stream of income for mining colonies that doesn't break the economy.
 
-Here's how refining jobs compare to vanilla money making activities. The per hour profit is based on added value.
-|  | Profit/hour |
+Here's how refining jobs compare to vanilla money making activities.
+|  | Value added per hour |
 |---:|:---:|
 | Rolling smokeleaf joints | 25 |
 | **Steel refining** | **35** |
 | Making tribalwear | 43 |
 | **Silver refining** | **50** |
-| Go-juice production | 55 |
+| Go-juice synthesis | 55 |
 | **Gold refining** | **60** |
-| Flake production | 64 |
+| Flake synthesis | 64 |
 
 Wealth management is another upside of refining chains over vanilla mining. Since raw materials are worth less than their refined counterparts, mining large veins doesn't drastically inflate your colony's wealth. Refining bills can be managed to meet the colony's needs without creating excess wealth.
 

@@ -44,7 +44,7 @@
 		<products>
 			<Steel>15</Steel>
 		</products>
-		<displayPriority>960</displayPriority>
+		<displayPriority>1</displayPriority>
 	</RecipeDef>
 	<RecipeDef ParentName="CorePlus_RefineRecipeBase">
 		<defName>CorePlus_RefineSteelBulk</defName>
@@ -79,7 +79,7 @@
 		<products>
 			<Steel>60</Steel>
 		</products>
-		<displayPriority>961</displayPriority>
+		<displayPriority>2</displayPriority>
 	</RecipeDef>
 	<RecipeDef>
 		<defName>CorePlus_MakeCharcoal</defName>
@@ -137,6 +137,6 @@
 			<li MayRequire="VanillaExpanded.VFEProduction">VFE_FueledSmelter</li>
 			<li>Campfire</li>
 		</recipeUsers>
-		<displayPriority>999</displayPriority>
+		<displayPriority>0</displayPriority>
 	</RecipeDef>
 </Defs>

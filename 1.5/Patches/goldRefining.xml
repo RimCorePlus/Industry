@@ -58,7 +58,7 @@
                         <products>
                             <Gold>10</Gold>
                         </products>
-                        <displayPriority>990</displayPriority>
+                        <displayPriority>7</displayPriority>
                     </RecipeDef>
                     <RecipeDef ParentName="CorePlus_RefineRecipeBase">
                         <defName>CorePlus_RefineGoldBulk</defName>
@@ -84,7 +84,7 @@
                         <products>
                             <Gold>40</Gold>
                         </products>
-                        <displayPriority>991</displayPriority>
+                        <displayPriority>8</displayPriority>
                     </RecipeDef>
                 </value>
             </li>

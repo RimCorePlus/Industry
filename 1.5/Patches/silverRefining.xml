@@ -67,7 +67,7 @@
                         <products>
                             <Silver>50</Silver>
                         </products>
-                        <displayPriority>980</displayPriority>
+                        <displayPriority>5</displayPriority>
                     </RecipeDef>
                     <RecipeDef ParentName="CorePlus_RefineRecipeBase">
                         <defName>CorePlus_RefineSilverBulk</defName>
@@ -102,7 +102,7 @@
                         <products>
                             <Silver>200</Silver>
                         </products>
-                        <displayPriority>981</displayPriority>
+                        <displayPriority>6</displayPriority>
                     </RecipeDef>
                 </value>
             </li>
