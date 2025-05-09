@@ -141,6 +141,13 @@
                     </li>
                 </operations>
             </li>
+            <!--add description hyperlink to coal-->
+            <li Class="PatchOperationAdd">
+                <xpath>//ThingDef[defName="CorePlus_Coal"]/descriptionHyperlinks</xpath>
+                <value>
+                    <RecipeDef>CorePlus_RefineSilver</RecipeDef>
+                </value>
+            </li>
         </operations>
     </Operation>
 </Patch>

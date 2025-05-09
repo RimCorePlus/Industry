@@ -63,24 +63,22 @@
 		<enabled>true</enabled>
 		<label>remove compacted plasteel</label>
 		<operations>
-			<li Class="PatchOperationReplace">
-				<xpath>//ThingDef[defName="MineablePlasteel"]/building/mineableScatterCommonality/text()</xpath>
-				<value>0</value>
-			</li>
-			<li Class="PatchOperationReplace">
-				<xpath>//ThingDef[defName="Plasteel"]/deepCommonality</xpath>
-				<value>
-					<deepCommonality />
-				</value>
-			</li>
-			<li Class="PatchOperationReplace">
-				<xpath>//ThingDef[defName="Plasteel"]/deepLumpSizeRange</xpath>
-				<value>
-					<deepLumpSizeRange />
-				</value>
-			</li>
 			<li Class="PatchOperationRemove">
-				<xpath>//GenStepDef/genStep/mineables/li[text()="MineablePlasteel"]</xpath>
+				<xpath>//ThingDef[defName="Plasteel"]/deepCommonality | //ThingDef[defName="Plasteel"]/deepCountPerPortion | //ThingDef[defName="Plasteel"]/deepLumpSizeRange</xpath>
+			</li>
+			<li Class="PatchOperationConditional">
+				<xpath>//ThingDef[defName="CorePlus_Polyshale"]</xpath>
+				<nomatch Class="PatchOperationSequence">
+					<operations>
+						<li Class="PatchOperationReplace">
+							<xpath>//ThingDef[defName="MineablePlasteel"]/building/mineableScatterCommonality/text()</xpath>
+							<value>0</value>
+						</li>
+						<li Class="PatchOperationRemove">
+							<xpath>//GenStepDef/genStep/mineables/li[text()="MineablePlasteel"]</xpath>
+						</li>
+					</operations>
+				</nomatch>
 			</li>
 		</operations>
 	</Operation>

@@ -22,7 +22,7 @@
                         <soundDrop>Metal_Drop</soundDrop>
                         <stackLimit>500</stackLimit>
                         <statBases>
-                            <MarketValue>7</MarketValue>
+                            <MarketValue>6.5</MarketValue>
                             <Mass>0.1</Mass>
                         </statBases>
                         <useHitPoints>false</useHitPoints>

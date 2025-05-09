@@ -53,6 +53,9 @@
 		<defName>CorePlus_Coal</defName>
 		<label>coal</label>
 		<description>A piece of hard, black coal. Can be used as fuel for generators, stoves, torches and campfires.</description>
+		<descriptionHyperlinks>
+			<RecipeDef>CorePlus_RefineSteel</RecipeDef>
+		</descriptionHyperlinks>
 		<graphicData>
 			<texPath>Things/Item/Resource/Coal</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>

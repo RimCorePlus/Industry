@@ -1,0 +1,116 @@
+<Patch>
+    <Operation Class="VFECore.PatchOperationToggableSequence">
+        <enabled>true</enabled>
+        <label>[Production Chain] Plasteel</label>
+        <operations>
+            <li Class="PatchOperationConditional">
+                <xpath>//ThingDef[defName="CorePlus_Polyshale"]</xpath>
+                <match Class="PatchOperationSequence">
+                    <operations>
+                        <!--add plasteel refining recipes-->
+                        <li Class="PatchOperationAdd">
+                            <xpath>Defs</xpath>
+                            <value>
+                                <RecipeDef ParentName="CorePlus_RefineRecipeBase">
+                                    <defName>CorePlus_RefinePlasteel</defName>
+                                    <label>refine plasteel</label>
+                                    <description>Make a batch of plasteel using polyshale.</description>
+                                    <jobString>Refining plasteel from polyshale.</jobString>
+                                    <workAmount>2000</workAmount>
+                                    <ingredients>
+                                        <li>
+                                            <filter>
+                                                <thingDefs>
+                                                    <li>CorePlus_Polyshale</li>
+                                                </thingDefs>
+                                            </filter>
+                                            <count>12</count>
+                                        </li>
+                                        <li>
+                                            <filter>
+                                                <thingDefs>
+                                                    <li>CorePlus_Iron</li>
+                                                </thingDefs>
+                                            </filter>
+                                            <count>3</count>
+                                        </li>
+                                        <li>
+                                            <filter>
+                                                <thingDefs>
+                                                    <li>CorePlus_Coal</li>
+                                                </thingDefs>
+                                            </filter>
+                                            <count>1</count>
+                                        </li>
+                                    </ingredients>
+                                    <fixedIngredientFilter>
+                                        <thingDefs>
+                                            <li>CorePlus_Coal</li>
+                                            <li>CorePlus_Iron</li>
+                                            <li>CorePlus_Polyshale</li>
+                                        </thingDefs>
+                                    </fixedIngredientFilter>
+                                    <products>
+                                        <Plasteel>15</Plasteel>
+                                    </products>
+                                    <displayPriority>3</displayPriority>
+                                </RecipeDef>
+                                <RecipeDef ParentName="CorePlus_RefineRecipeBase">
+                                    <defName>CorePlus_RefinePlasteelBulk</defName>
+                                    <label>refine plasteel x4</label>
+                                    <description>Make a batch of plasteel using polyshale.</description>
+                                    <jobString>Refining plasteel from polyshale.</jobString>
+                                    <workAmount>8000</workAmount>
+                                    <ingredients>
+                                        <li>
+                                            <filter>
+                                                <thingDefs>
+                                                    <li>CorePlus_Polyshale</li>
+                                                </thingDefs>
+                                            </filter>
+                                            <count>48</count>
+                                        </li>
+                                        <li>
+                                            <filter>
+                                                <thingDefs>
+                                                    <li>CorePlus_Iron</li>
+                                                </thingDefs>
+                                            </filter>
+                                            <count>12</count>
+                                        </li>
+                                        <li>
+                                            <filter>
+                                                <thingDefs>
+                                                    <li>CorePlus_Coal</li>
+                                                </thingDefs>
+                                            </filter>
+                                            <count>4</count>
+                                        </li>
+                                    </ingredients>
+                                    <fixedIngredientFilter>
+                                        <thingDefs>
+                                            <li>CorePlus_Coal</li>
+                                            <li>CorePlus_Iron</li>
+                                            <li>CorePlus_Polyshale</li>
+                                        </thingDefs>
+                                    </fixedIngredientFilter>
+                                    <products>
+                                        <Plasteel>60</Plasteel>
+                                    </products>
+                                    <displayPriority>4</displayPriority>
+                                </RecipeDef>
+                            </value>
+                        </li>
+                        <!--add description hyperlink to coal-->
+                        <li Class="PatchOperationAdd">
+                            <xpath>//ThingDef[defName="CorePlus_Coal"]/descriptionHyperlinks</xpath>
+                            <value>
+                                <RecipeDef>CorePlus_RefinePlasteel</RecipeDef>
+                            </value>
+                        </li>
+                    </operations>
+                </match>
+            </li>
+        </operations>
+    </Operation>
+</Patch>

@@ -6,5 +6,6 @@
         <!--DLC-->
         <!--mods-->
         <li IfModActive="ceteam.combatextended">Mods/Combat Extended/1.5</li>
+        <li IfModActive="coreplus.industry">Mods/CorePlus Industry/1.5</li>
     </v1.5>
 </loadFolders>
