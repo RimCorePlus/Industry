@@ -13,14 +13,25 @@
 			<drawOffsetNorth>(0,0,0.11)</drawOffsetNorth>
 		</graphicData>
 		<uiIconPath>Things/Building/Production/spinningWheel_north</uiIconPath>
+		<altitudeLayer>Building</altitudeLayer>
+		<building>
+			<spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+			<uninstallWork>100</uninstallWork>
+		</building>
+		<castEdgeShadows>false</castEdgeShadows>
 		<costList>
 			<WoodLog>50</WoodLog>
 		</costList>
-		<altitudeLayer>Building</altitudeLayer>
+		<designationCategory>Production</designationCategory>
 		<fillPercent>0.3</fillPercent>
-		<castEdgeShadows>false</castEdgeShadows>
-		<staticSunShadowHeight>0</staticSunShadowHeight>
-		<useHitPoints>true</useHitPoints>
+		<hasInteractionCell>true</hasInteractionCell>
+		<inspectorTabs>
+			<li>ITab_Bills</li>
+		</inspectorTabs>
+		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<passability>PassThroughOnly</passability>
+		<pathCost>50</pathCost>
 		<statBases>
 			<Mass>4</Mass>
 			<MaxHitPoints>75</MaxHitPoints>
@@ -28,22 +39,10 @@
 			<Flammability>1.0</Flammability>
 			<WorkTableWorkSpeedFactor>0.75</WorkTableWorkSpeedFactor>
 		</statBases>
-		<designationCategory>Production</designationCategory>
-		<uiOrder>2399</uiOrder>
-		<passability>PassThroughOnly</passability>
-		<pathCost>70</pathCost>
-		<hasInteractionCell>true</hasInteractionCell>
-		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
-		<modExtensions />
-		<comps />
-		<minifiedDef>MinifiedThing</minifiedDef>
-		<inspectorTabs>
-			<li>ITab_Bills</li>
-		</inspectorTabs>
-		<building>
-			<spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
-			<uninstallWork>100</uninstallWork>
-		</building>
+		<staticSunShadowHeight>0</staticSunShadowHeight>
+		<surfaceType>Item</surfaceType>
+		<uiOrder>2398</uiOrder>
+		<useHitPoints>true</useHitPoints>
 	</ThingDef>
 	<ThingDef ParentName="BenchBase">
 		<defName>CorePlus_ElectricSpinningWheel</defName>
@@ -58,29 +57,12 @@
 			<drawSize>(2,2)</drawSize>
 		</graphicData>
 		<uiIconPath>Things/Building/Production/electricWheel_north</uiIconPath>
-		<costList>
-			<Steel>50</Steel>
-			<ComponentIndustrial>1</ComponentIndustrial>
-		</costList>
 		<altitudeLayer>Building</altitudeLayer>
-		<fillPercent>0.3</fillPercent>
+		<building>
+			<spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+			<uninstallWork>100</uninstallWork>
+		</building>
 		<castEdgeShadows>false</castEdgeShadows>
-		<staticSunShadowHeight>0</staticSunShadowHeight>
-		<useHitPoints>true</useHitPoints>
-		<statBases>
-			<Mass>4</Mass>
-			<MaxHitPoints>75</MaxHitPoints>
-			<WorkToBuild>1000</WorkToBuild>
-			<Flammability>1.0</Flammability>
-		</statBases>
-		<designationCategory>Production</designationCategory>
-		<uiOrder>2399</uiOrder>
-		<passability>PassThroughOnly</passability>
-		<pathCost>70</pathCost>
-		<size>(2,1)</size>
-		<hasInteractionCell>true</hasInteractionCell>
-		<interactionCellOffset>(0,1,-1)</interactionCellOffset>
-		<modExtensions />
 		<comps>
 			<li Class="CompProperties_Power">
 				<compClass>CompPowerTrader</compClass>
@@ -95,13 +77,30 @@
 				<maxSimultaneous>3</maxSimultaneous>
 			</li>
 		</comps>
-		<minifiedDef>MinifiedThing</minifiedDef>
+		<costList>
+			<Steel>50</Steel>
+			<ComponentIndustrial>1</ComponentIndustrial>
+		</costList>
+		<designationCategory>Production</designationCategory>
+		<fillPercent>0.3</fillPercent>
+		<hasInteractionCell>true</hasInteractionCell>
 		<inspectorTabs>
 			<li>ITab_Bills</li>
 		</inspectorTabs>
-		<building>
-			<spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
-			<uninstallWork>100</uninstallWork>
-		</building>
+		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<passability>PassThroughOnly</passability>
+		<pathCost>70</pathCost>
+		<size>(2,1)</size>
+		<statBases>
+			<Mass>4</Mass>
+			<MaxHitPoints>75</MaxHitPoints>
+			<WorkToBuild>1000</WorkToBuild>
+			<Flammability>1.0</Flammability>
+		</statBases>
+		<staticSunShadowHeight>0</staticSunShadowHeight>
+		<surfaceType>Item</surfaceType>
+		<uiOrder>2399</uiOrder>
+		<useHitPoints>true</useHitPoints>
 	</ThingDef>
 </Defs>

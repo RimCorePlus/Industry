@@ -1,17 +1,22 @@
 ﻿<Defs>
-	<RecipeDef>
-		<defName>CorePlus_SpinCloth</defName>
-		<label>spin cloth</label>
-		<description>Spin raw cotton fiber into workable cloth.</description>
-		<jobString>Spinning cloth.</jobString>
-		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+	<!--parent-->
+	<RecipeDef Abstract="True" Name="CorePlus_SpinFabricBase">
 		<effectWorking>Tailor</effectWorking>
-		<soundWorking>Recipe_Tailor</soundWorking>
-		<workAmount>200</workAmount>
 		<recipeUsers>
 			<li>CorePlus_SpinningWheel</li>
 			<li>CorePlus_ElectricSpinningWheel</li>
 		</recipeUsers>
+		<soundWorking>Recipe_Tailor</soundWorking>
+		<workSkill>Crafting</workSkill>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+	</RecipeDef>
+	<!--cloth-->
+	<RecipeDef ParentName="CorePlus_SpinFabricBase">
+		<defName>CorePlus_SpinCloth</defName>
+		<label>spin cloth</label>
+		<description>Spin raw cotton fiber into workable cloth.</description>
+		<jobString>Spinning cloth.</jobString>
+		<displayPriority>0</displayPriority>
 		<ingredients>
 			<li>
 				<filter>
@@ -25,22 +30,14 @@
 		<products>
 			<Cloth>5</Cloth>
 		</products>
-		<workSkill>Crafting</workSkill>
-		<displayPriority>0</displayPriority>
+		<workAmount>250</workAmount>
 	</RecipeDef>
-	<RecipeDef>
+	<RecipeDef ParentName="CorePlus_SpinFabricBase">
 		<defName>CorePlus_SpinClothBulk</defName>
-		<label>spin cloth x25</label>
+		<label>spin cloth x4</label>
 		<description>Spin raw cotton fiber into workable cloth.</description>
 		<jobString>Spinning cloth.</jobString>
-		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
-		<effectWorking>Tailor</effectWorking>
-		<soundWorking>Recipe_Tailor</soundWorking>
-		<workAmount>1000</workAmount>
-		<recipeUsers>
-			<li>CorePlus_SpinningWheel</li>
-			<li>CorePlus_ElectricSpinningWheel</li>
-		</recipeUsers>
+		<displayPriority>5</displayPriority>
 		<ingredients>
 			<li>
 				<filter>
@@ -48,28 +45,21 @@
 						<li>CorePlus_Cotton</li>
 					</thingDefs>
 				</filter>
-				<count>50</count>
+				<count>40</count>
 			</li>
 		</ingredients>
 		<products>
-			<Cloth>25</Cloth>
+			<Cloth>20</Cloth>
 		</products>
-		<workSkill>Crafting</workSkill>
-		<displayPriority>1</displayPriority>
+		<workAmount>1000</workAmount>
 	</RecipeDef>
-	<RecipeDef>
+	<!--devilstrand-->
+	<RecipeDef ParentName="CorePlus_SpinFabricBase">
 		<defName>CorePlus_SpinDevilstrand</defName>
 		<label>spin devilstrand</label>
-		<description>Spin raw cotton fiber into workable cloth.</description>
-		<jobString>Spinning cloth.</jobString>
-		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
-		<effectWorking>Tailor</effectWorking>
-		<soundWorking>Recipe_Tailor</soundWorking>
-		<workAmount>400</workAmount>
-		<recipeUsers>
-			<li>CorePlus_SpinningWheel</li>
-			<li>CorePlus_ElectricSpinningWheel</li>
-		</recipeUsers>
+		<description>Spin raw devilstrand fiber into workable cloth.</description>
+		<jobString>Spinning devilstrand.</jobString>
+		<displayPriority>10</displayPriority>
 		<ingredients>
 			<li>
 				<filter>
@@ -84,22 +74,14 @@
 			<DevilstrandCloth>5</DevilstrandCloth>
 		</products>
 		<researchPrerequisite>Devilstrand</researchPrerequisite>
-		<workSkill>Crafting</workSkill>
-		<displayPriority>10</displayPriority>
+		<workAmount>500</workAmount>
 	</RecipeDef>
-	<RecipeDef>
+	<RecipeDef ParentName="CorePlus_SpinFabricBase">
 		<defName>CorePlus_SpinDevilstrandBulk</defName>
-		<label>spin devilstrand x25</label>
-		<description>Spin raw cotton fiber into workable cloth.</description>
-		<jobString>Spinning cloth.</jobString>
-		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
-		<effectWorking>Tailor</effectWorking>
-		<soundWorking>Recipe_Tailor</soundWorking>
-		<workAmount>2000</workAmount>
-		<recipeUsers>
-			<li>CorePlus_SpinningWheel</li>
-			<li>CorePlus_ElectricSpinningWheel</li>
-		</recipeUsers>
+		<label>spin devilstrand x4</label>
+		<description>Spin raw devilstrand fiber into workable cloth.</description>
+		<jobString>Spinning devilstrand.</jobString>
+		<displayPriority>15</displayPriority>
 		<ingredients>
 			<li>
 				<filter>
@@ -107,14 +89,13 @@
 						<li>CorePlus_Devilstrand</li>
 					</thingDefs>
 				</filter>
-				<count>50</count>
+				<count>40</count>
 			</li>
 		</ingredients>
 		<products>
-			<DevilstrandCloth>25</DevilstrandCloth>
+			<DevilstrandCloth>20</DevilstrandCloth>
 		</products>
 		<researchPrerequisite>Devilstrand</researchPrerequisite>
-		<workSkill>Crafting</workSkill>
-		<displayPriority>11</displayPriority>
+		<workAmount>2000</workAmount>
 	</RecipeDef>
 </Defs>
