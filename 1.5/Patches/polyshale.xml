@@ -12,7 +12,7 @@
                         <label>polyshale</label>
                         <description>Plasteel weathered into a brittle, flaky composite. Useless on its own, but it can be used to create a variety of valuable resources.</description>
                         <graphicData>
-                            <texPath>Things/Item/Resource/Coal</texPath>
+                            <texPath>Things/Item/Resource/Polyshale</texPath>
                             <graphicClass>Graphic_StackCount</graphicClass>
                         </graphicData>
                         <soundInteract>ChunkRock_Drop</soundInteract>

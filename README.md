@@ -21,7 +21,6 @@ Scope of this mod:
 > Requires [Vanilla Expanded Framework](https://steamcommunity.com/sharedfiles/filedetails/?id=2023507013).
 
 ## Changes
-
 ### Components
 - Craftable at the machining table with a 20% increased work requirement compared to fabrication
 
