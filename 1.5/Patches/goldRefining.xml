@@ -1,7 +1,7 @@
 <Patch>
     <Operation Class="VFECore.PatchOperationToggableSequence">
         <enabled>true</enabled>
-        <label>[Production Chain] Gold Refining</label>
+        <label>[Production Chain] Gold</label>
         <operations>
             <li Class="PatchOperationAdd">
                 <xpath>Defs</xpath>

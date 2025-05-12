@@ -64,9 +64,10 @@
 		<soundDrop>ChunkRock_Drop</soundDrop>
 		<stackLimit>500</stackLimit>
 		<statBases>
-			<MarketValue>0.5</MarketValue>
 			<Flammability>1.0</Flammability>
+			<MarketValue>0.5</MarketValue>
 			<Mass>0.1</Mass>
+			<MaxHitPoints>500</MaxHitPoints>
 		</statBases>
 		<thingCategories>
 			<li>ResourcesRaw</li>

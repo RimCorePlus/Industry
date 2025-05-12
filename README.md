@@ -13,11 +13,12 @@
 ![](About/Preview.png)\
 [![GPLv3][badge-license]](https://www.gnu.org/licenses/gpl-3.0)
 
-Spiritual successor to [Simple Chains: Steel](https://github.com/Owlchemist/simple-chains-steel) by Owlchemist. Originally forked for 1.5, almost all of the XML has been rewritten and expanded to cover silver and gold.
+Spiritual successor to [Simple Chains: Steel](https://github.com/Owlchemist/simple-chains-steel) by Owlchemist. Originally forked for 1.5, almost all of the XML has been rewritten and expanded to cover additional materials.
 
 ## Changes
-- Adds production chains for steel, silver (toggable), gold (toggable), and plasteel (toggable, requires [\[CorePlus\] Industry](https://github.com/rimcoreplus/industry))
-- [Toggable patches](#toggable-patches) to improve vanilla metal balance
+- Adds production chains for steel, silver, gold, and plasteel
+- Steel chain is required, the rest are toggable (plasteel requires [\[CorePlus\] Industry](https://github.com/rimcoreplus/industry))
+- Toggable patches to improve vanilla metal balance
 
 ### Refining
 |  | Ore (Bulk) | Coal (Bulk) | Work amount (Bulk) | Output (Bulk) |
@@ -25,12 +26,20 @@ Spiritual successor to [Simple Chains: Steel](https://github.com/Owlchemist/simp
 | Steel | 15 (60) | 5 (20) | 1000 (4000) | 15 (60) |
 | Plasteel | 12[^1] (48) | 1 (4) | 2000 (8000) | 10 (40) |
 | Silver | 50 (200) | 5 (20) | 1125 (4500) | 50 (200) |
-| Gold | 10 (40) |  | 1250 (5000) | 10 (40) |
+| Gold | 10 (40) | ~ | 1250 (5000) | 10 (40) |
 
-### Analysis
+### Toggable Patches
+- Metal is not flammable
+- Gold and silver are beautiful
+- Increase steel durability
+- Increase uranium durability
+- Increase plasteel durability
+- Remove compacted plasteel
+
+## Impact
 Production chains add tedium to the game. This is good for immersion, but (in my experience) detracts from the overall experience when there's no benefit. Accordingly, the refining recipes have been balanced to maximize output per job and create a stream of income for mining colonies that doesn't break the economy.
 
-Here's how refining jobs compare to vanilla money making activities[^2].
+Here's how refining jobs compare to vanilla[^2] money making activities:
 |  | Added value (per hr work) |
 |---:|:---:|
 | Rolling smokeleaf joints | 25 |
@@ -43,14 +52,6 @@ Here's how refining jobs compare to vanilla money making activities[^2].
 | **Gold refining** | **70** |
 
 Wealth management is another upside of refining chains over vanilla mining. Since raw materials are worth less than their refined counterparts, mining large veins doesn't drastically inflate your colony's wealth. Refining bills can be managed to meet the colony's needs without creating excess wealth.
-
-### Toggable Patches
-- Metal is not flammable
-- Gold and silver are beautiful
-- Increase steel durability
-- Increase uranium durability
-- Increase plasteel durability
-- Remove compacted plasteel
 
 ## Legal
 Portions of the materials used to create this mod are trademarks and/or copyrighted works of Ludeon Studios Inc. All rights reserved by Ludeon. This mod is not official and is not endorsed by Ludeon.
