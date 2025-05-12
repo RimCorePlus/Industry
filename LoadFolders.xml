@@ -6,6 +6,7 @@
         <!--DLC-->
         <li IfModActive="Ludeon.Rimworld.Ideology">DLC/Ideology/1.5</li>
         <!--mods-->
+        <li IfModActive="adaptive.storage.neolithic">Mods/Adaptive Storage Neolithic Module/1.5</li>
         <li IfModActive="coreplus.empire">Mods/CorePlus Empire/1.5</li>
     </v1.5>
 </loadFolders>
