@@ -1,5 +1,9 @@
 <Defs>
 	<StuffCategoryDef>
+		<defName>Chunky</defName>
+		<label>chunky</label>
+	</StuffCategoryDef>
+	<StuffCategoryDef>
 		<defName>RawWoody</defName>
 		<label>log</label>
 	</StuffCategoryDef>

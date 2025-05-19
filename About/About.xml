@@ -19,8 +19,12 @@
 	</modDependencies>
 	<loadBefore />
 	<loadAfter>
-		<li>coreplus.rebalance</li>
+		<li>adaptive.storage.neolithic</li>
 		<li>boomer.debloat</li>
+		<li>ceteam.combatextended</li>
+		<li>coreplus.empire</li>
+		<li>coreplus.genes.elves</li>
+		<li>coreplus.rebalance</li>
 		<li>OskarPotocki.VanillaFactionsExpanded.Core</li>
 	</loadAfter>
 	<incompatibleWith>

@@ -27,8 +27,19 @@ Scope of this mod:
 ### Neutroamine
 - (WIP) ~~Can now be synthesized in an expensive three step process~~
 
-### Toggable
-- Remove compacted machinery
+### Textiles
+- Cotton and devilstrand plants now yield raw fiber that must be spun before it can be used for tailoring
+- To offset this additional step, the new 2x1 electric spinning wheel can stack with two tool cabinets for an 18% work speed boost on tailoring benches
+
+### Wood
+- Lumber production chain
+- Firewood
 
 ## Legal
 Portions of the materials used to create this mod are trademarks and/or copyrighted works of Ludeon Studios Inc. All rights reserved by Ludeon. This mod is not official and is not endorsed by Ludeon.
+
+This mod includes code and textures from [Simple Chains: Lumber](https://github.com/Owlchemist/simple-chains-lumber) by Owlchemist, originally licensed under the GPL-3.0 License. These assets have been modified by boomer.\
+This mod includes code and textures from [Simple Chains: Steel](https://github.com/Owlchemist/simple-chains-steel) by Owlchemist, originally licensed under the GPL-3.0 License. These assets have been modified by boomer.
+
+[^1]: Also requires 3 iron ore (12 for bulk).
+[^2]: [Money making guide - RimWorld Wiki](https://rimworldwiki.com/wiki/Money_making_guide)

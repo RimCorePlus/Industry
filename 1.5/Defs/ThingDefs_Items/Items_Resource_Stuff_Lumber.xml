@@ -1,5 +1,4 @@
 ﻿<Defs>
-	<!--simple chains: lumber-->
 	<ThingDef ParentName="ResourceVerbBase">
 		<defName>CorePlus_WoodLog</defName>
 		<label>wood log</label>
