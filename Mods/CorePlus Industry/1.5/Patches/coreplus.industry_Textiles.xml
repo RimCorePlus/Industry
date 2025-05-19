@@ -1,0 +1,10 @@
+<Patch>
+    <Operation Class="PatchOperationAdd">
+        <xpath>//ThingDef[defName="Synthread"]</xpath>
+        <value>
+            <descriptionHyperlinks>
+                <RecipeDef>CorePlus_SpinSynthread</RecipeDef>
+            </descriptionHyperlinks>
+        </value>
+    </Operation>
+</Patch>
