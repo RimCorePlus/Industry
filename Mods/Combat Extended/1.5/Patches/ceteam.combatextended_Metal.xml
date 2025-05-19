@@ -1,0 +1,51 @@
+<Patch>
+	<!--iron stat rebalance-->
+	<Operation Class="PatchOperationSequence">
+		<operations>
+			<li Class="PatchOperationReplace">
+				<xpath>//ThingDef[defName="CorePlus_Iron"]/statBases/StuffPower_Armor_Sharp/text()</xpath>
+				<value>0.89</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>//ThingDef[defName="CorePlus_Iron"]/statBases/StuffPower_Armor_Blunt/text()</xpath>
+				<value>1.25</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>//ThingDef[defName="CorePlus_Iron"]/statBases/StuffPower_Armor_Heat/text()</xpath>
+				<value>0</value>
+			</li>
+		</operations>
+	</Operation>
+	<!--add CE statbases-->
+	<Operation Class="PatchOperationAdd">
+		<xpath>//ThingDef[defName="CorePlus_Iron"]/statBases[not(Bulk)]</xpath>
+		<value>
+			<Bulk>0.03</Bulk>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>//ThingDef[defName="CorePlus_Iron"]/statBases[not(MeleeCounterParryBonus)]</xpath>
+		<value>
+			<MeleeCounterParryBonus>1.3</MeleeCounterParryBonus>
+		</value>
+	</Operation>
+	<!--add CE stuffprops-->
+	<Operation Class="PatchOperationAdd">
+		<xpath>//ThingDef[defName="CorePlus_Iron"]/stuffProps/categories</xpath>
+		<value>
+			<li>Metallic_Weapon</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>//ThingDef[defName="CorePlus_Iron"]/stuffProps/statFactors[not(Mass)]</xpath>
+		<value>
+			<Mass>1.25</Mass>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>//ThingDef[defName="CorePlus_Iron"]/stuffProps/statFactors[not(MeleePenetrationFactor)]</xpath>
+		<value>
+			<MeleePenetrationFactor>0.95</MeleePenetrationFactor>
+		</value>
+	</Operation>
+</Patch>
