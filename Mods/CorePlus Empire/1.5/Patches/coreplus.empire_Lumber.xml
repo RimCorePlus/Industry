@@ -1,0 +1,19 @@
+<Patch>
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>[CorePlus] Empire</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationReplace">
+                    <xpath>//RoyalTitlePermitDef[defName="CorePlus_WoodDrop"]/label/text()</xpath>
+                    <value>lumber drop</value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>//RoyalTitlePermitDef[defName="CorePlus_WoodDrop"]/description/text()</xpath>
+                    <value>Call for a drop of 400 lumber.</value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+</Patch>

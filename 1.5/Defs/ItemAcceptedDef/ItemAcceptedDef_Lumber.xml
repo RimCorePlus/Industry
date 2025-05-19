@@ -1,0 +1,10 @@
+<Defs>
+    <ItemProcessor.ItemAcceptedDef>
+        <defName>CorePlus_WoodDryingRackFirstItem</defName>
+        <building>CorePlus_WoodDryingRack</building>
+        <slot>1</slot>
+        <items>
+            <li>CorePlus_GreenLumber</li>
+        </items>
+    </ItemProcessor.ItemAcceptedDef>
+</Defs>

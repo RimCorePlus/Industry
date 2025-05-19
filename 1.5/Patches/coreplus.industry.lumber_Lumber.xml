@@ -1,0 +1,130 @@
+<Patch>
+	<!--==========core patches==========-->
+	<!--trees drop new wood logs-->
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ThingDef/plant/harvestedThingDef[text()="WoodLog"]/text()</xpath>
+		<value>CorePlus_WoodLog</value>
+	</Operation>
+	<!--convert vanilla wood log to lumber-->
+	<Operation Class="PatchOperationSequence">
+		<operations>
+			<li Class="PatchOperationReplace">
+				<xpath>//ThingDef[defName="WoodLog"]/label/text()</xpath>
+				<value>lumber</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>//ThingDef[defName="WoodLog"]/description/text()</xpath>
+				<value>Processed lumber can be used for a wide variety of construction and crafting applications, and is quick to work with.</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>//ThingDef[defName="WoodLog"]/graphicData/texPath/text()</xpath>
+				<value>Things/Item/Resource/Lumber</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>//ThingDef[defName="WoodLog"]/graphicData</xpath>
+				<value>
+					<color>(133,97,67)</color>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+	<!--reduce wood work speed (0.7->0.6)-->
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ThingDef[defName="WoodLog"]//WorkToMake/text() | //ThingDef[defName="WoodLog"]//WorkToBuild/text()</xpath>
+		<value>0.6</value>
+	</Operation>
+	<!--add trestle to workgiver-->
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/WorkGiverDef[defName="DoBillsUseCraftingSpot"]/fixedBillGiverDefs</xpath>
+		<value>
+			<li>CorePlus_CarpentersTrestle</li>
+		</value>
+	</Operation>
+
+	<!--==========recipes==========-->
+	<!--replace lumber requirement with firewood for vanilla and modded buildings with appropriate keywords in the name-->
+	<Operation Class="PatchOperationSetName">
+		<success>Always</success>
+		<xpath>//ThingDef[contains(label, "fire") or contains(label, "torch") or contains(label, "pyre") or contains(label, "effigy")]/costList/WoodLog</xpath>
+		<name>CorePlus_Firewood</name>
+	</Operation>
+	<!--allow simple buildings to be constructed with raw wood logs-->
+	<Operation Class="PatchOperationAdd">
+		<xpath>//ThingDef[@Name="TableBase" or defName="Stool" or defName="Fence" or @Name="DoorBase" or defName="HorseshoesPin" or defName="PenMarker" or defName="MeleeWeapon_Club" or defName="MeleeWeapon_Spear" or defName="Apparel_WarMask" or @Name="NatureShrineBase"][stuffCategories]/stuffCategories</xpath>
+		<value>
+			<li>RawWoody</li>
+		</value>
+	</Operation>
+	<!--add green lumber, wood logs, and firewood to biofuel refinery and allow mixing ingredients-->
+	<Operation Class="PatchOperationSequence">
+		<operations>
+			<li Class="PatchOperationAdd">
+				<xpath>//RecipeDef[defName="Make_ChemfuelFromWood"]//thingDefs</xpath>
+				<value>
+					<li>CorePlus_WoodLog</li>
+					<li>CorePlus_GreenLumber</li>
+					<li>CorePlus_Firewood</li>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>//RecipeDef[defName="Make_ChemfuelFromWood"]</xpath>
+				<value>
+					<allowMixingIngredients>true</allowMixingIngredients>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+	<!--use firewood instead of lumber as fuel for all vanilla and modded buildings-->
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ThingDef/comps/li[@Class="CompProperties_Refuelable"]/fuelFilter/thingDefs/li[text()="WoodLog"]/text()</xpath>
+		<value>CorePlus_Firewood</value>
+	</Operation>
+
+	<!--==========traders==========-->
+	<!--neolithic caravans carry wood logs and firewood instead of processed lumber-->
+	<Operation Class="PatchOperationSequence">
+		<operations>
+			<li Class="PatchOperationReplace">
+				<xpath>//TraderKindDef[defName="Caravan_Neolithic_BulkGoods"]/stockGenerators/li/thingDef[text()="WoodLog"]/text()</xpath>
+				<value>CorePlus_WoodLog</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>//TraderKindDef[defName="Caravan_Neolithic_BulkGoods"]/stockGenerators</xpath>
+				<value>
+					<li Class="StockGenerator_SingleDef">
+						<thingDef>CorePlus_Firewood</thingDef>
+						<countRange>100~350</countRange>
+					</li>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+	<!--outlander caravans carry lumber and firewood-->
+	<Operation Class="PatchOperationAdd">
+		<xpath>//TraderKindDef[defName="Caravan_Outlander_BulkGoods"]/stockGenerators</xpath>
+		<value>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>WoodLog</thingDef>
+				<countRange>250~400</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>CorePlus_Firewood</thingDef>
+				<countRange>250~400</countRange>
+			</li>
+		</value>
+	</Operation>
+	<!--orbital bulk goods trader carries lumber (no patch needed), firewood, and wood logs-->
+	<Operation Class="PatchOperationAdd">
+		<xpath>//TraderKindDef[defName="Orbital_BulkGoods"]/stockGenerators</xpath>
+		<value>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>CorePlus_Firewood</thingDef>
+				<countRange>250~400</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>CorePlus_WoodLog</thingDef>
+				<countRange>250~400</countRange>
+			</li>
+		</value>
+	</Operation>
+</Patch>

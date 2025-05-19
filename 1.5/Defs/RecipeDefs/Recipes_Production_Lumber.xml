@@ -1,0 +1,93 @@
+﻿<Defs>
+	<!--simple chains: lumber-->
+	<RecipeDef>
+		<defName>CorePlus_MakeGreenLumber</defName>
+		<label>make green lumber</label>
+		<description>Make a batch of green lumber using wood logs.</description>
+		<jobString>Making green lumber from wood logs.</jobString>
+		<effectWorking>CutStone</effectWorking>
+		<soundWorking>Recipe_Machining</soundWorking>
+		<workAmount>400</workAmount>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<workSkill>Crafting</workSkill>
+		<workSkillLearnFactor>0.25</workSkillLearnFactor>
+		<targetCountAdjustment>20</targetCountAdjustment>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>CorePlus_WoodLog</li>
+						<li MayRequire="sirmashedpotato.ashlands">Mashed_Ashlands_ParasolWoodLog</li>
+					</thingDefs>
+				</filter>
+				<count>20</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>CorePlus_WoodLog</li>
+				<li MayRequire="sirmashedpotato.ashlands">Mashed_Ashlands_ParasolWoodLog</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<CorePlus_GreenLumber>20</CorePlus_GreenLumber>
+		</products>
+		<recipeUsers>
+			<li>CorePlus_CarpentersTrestle</li>
+			<li>TableMachining</li>
+		</recipeUsers>
+	</RecipeDef>
+	<RecipeDef>
+		<defName>CorePlus_MakeFirewood</defName>
+		<label>make firewood</label>
+		<description>Make a batch of firewood using available wood.</description>
+		<jobString>Making firewood from wood.</jobString>
+		<effectWorking>CutStone</effectWorking>
+		<soundWorking>Recipe_Machining</soundWorking>
+		<workAmount>200</workAmount>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<workSkill>Crafting</workSkill>
+		<workSkillLearnFactor>0.1</workSkillLearnFactor>
+		<targetCountAdjustment>20</targetCountAdjustment>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>CorePlus_WoodLog</li>
+						<li>CorePlus_GreenLumber</li>
+						<li>WoodLog</li>
+						<li MayRequire="sirmashedpotato.ashlands">Mashed_Ashlands_ParasolWoodLog</li>
+					</thingDefs>
+				</filter>
+				<count>20</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>CorePlus_WoodLog</li>
+				<li>CorePlus_GreenLumber</li>
+				<li>WoodLog</li>
+				<li MayRequire="sirmashedpotato.ashlands">Mashed_Ashlands_ParasolWoodLog</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<defaultIngredientFilter>
+			<thingDefs>
+				<li>CorePlus_WoodLog</li>
+			</thingDefs>
+			<disallowedThingDefs>
+				<li>CorePlus_GreenLumber</li>
+				<li>WoodLog</li>
+			</disallowedThingDefs>
+		</defaultIngredientFilter>
+		<products>
+			<CorePlus_Firewood>20</CorePlus_Firewood>
+		</products>
+		<recipeUsers>
+			<li>CorePlus_CarpentersTrestle</li>
+			<li>TableMachining</li>
+			<li>CraftingSpot</li>
+		</recipeUsers>
+	</RecipeDef>
+</Defs>

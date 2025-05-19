@@ -1,0 +1,16 @@
+<Defs>
+	<ItemProcessor.CombinationDef>
+		<defName>CorePlus_GreenLumberIntoLumber</defName>
+		<building>CorePlus_WoodDryingRack</building>
+		<items>
+			<li>CorePlus_GreenLumber</li>
+		</items>
+		<result>WoodLog</result>
+		<yield>50</yield>
+		<amount>
+			<li>50</li>
+		</amount>
+		<!--theoretical maximum output per quadrum: 375 lumber-->
+		<singleTimeIfNotQualityIncreasing>2</singleTimeIfNotQualityIncreasing>
+	</ItemProcessor.CombinationDef>
+</Defs>
