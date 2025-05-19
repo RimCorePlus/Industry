@@ -1,0 +1,128 @@
+<Patch>
+    <Operation Class="VFECore.PatchOperationToggableSequence">
+        <enabled>true</enabled>
+        <label>[Production Chain] Gold</label>
+        <operations>
+            <li Class="PatchOperationAdd">
+                <xpath>Defs</xpath>
+                <value>
+                    <!--add gold ore-->
+                    <ThingDef ParentName="ResourceBase">
+                        <defName>CorePlus_Gold</defName>
+                        <label>gold ore</label>
+                        <description>Raw, natural gold ore. It can be mined from rock formations, and with the right skills and resources can be refined into gold.</description>
+                        <descriptionHyperlinks>
+                            <RecipeDef>CorePlus_RefineGold</RecipeDef>
+                        </descriptionHyperlinks>
+                        <graphicData>
+                            <texPath>Things/Item/Resource/Gold</texPath>
+                            <graphicClass>Graphic_StackCount</graphicClass>
+                        </graphicData>
+                        <soundInteract>Metal_Drop</soundInteract>
+                        <soundDrop>Metal_Drop</soundDrop>
+                        <stackLimit>500</stackLimit>
+                        <statBases>
+                            <MarketValue>6.5</MarketValue>
+                            <Mass>0.1</Mass>
+                        </statBases>
+                        <useHitPoints>false</useHitPoints>
+                        <thingCategories>
+                            <li>ResourcesRaw</li>
+                        </thingCategories>
+                        <deepCommonality>0.5</deepCommonality>
+                        <deepCountPerPortion>8</deepCountPerPortion>
+                        <deepLumpSizeRange>1~4</deepLumpSizeRange>
+                    </ThingDef>
+                    <!--add gold refining recipes-->
+                    <RecipeDef ParentName="CorePlus_RefineRecipeBase">
+                        <defName>CorePlus_RefineGold</defName>
+                        <label>refine gold</label>
+                        <description>Make a batch of gold using raw gold ore.</description>
+                        <jobString>Refining gold from gold ore.</jobString>
+                        <workAmount>1250</workAmount>
+                        <ingredients>
+                            <li>
+                                <filter>
+                                    <thingDefs>
+                                        <li>CorePlus_Gold</li>
+                                    </thingDefs>
+                                </filter>
+                                <count>10</count>
+                            </li>
+                        </ingredients>
+                        <fixedIngredientFilter>
+                            <thingDefs>
+                                <li>CorePlus_Gold</li>
+                            </thingDefs>
+                        </fixedIngredientFilter>
+                        <products>
+                            <Gold>10</Gold>
+                        </products>
+                        <displayPriority>7</displayPriority>
+                    </RecipeDef>
+                    <RecipeDef ParentName="CorePlus_RefineRecipeBase">
+                        <defName>CorePlus_RefineGoldBulk</defName>
+                        <label>refine gold x4</label>
+                        <description>Make a batch of gold from raw gold ore.</description>
+                        <jobString>Refining gold from gold ore.</jobString>
+                        <workAmount>5000</workAmount>
+                        <ingredients>
+                            <li>
+                                <filter>
+                                    <thingDefs>
+                                        <li>CorePlus_Gold</li>
+                                    </thingDefs>
+                                </filter>
+                                <count>40</count>
+                            </li>
+                        </ingredients>
+                        <fixedIngredientFilter>
+                            <thingDefs>
+                                <li>CorePlus_Gold</li>
+                            </thingDefs>
+                        </fixedIngredientFilter>
+                        <products>
+                            <Gold>40</Gold>
+                        </products>
+                        <displayPriority>8</displayPriority>
+                    </RecipeDef>
+                </value>
+            </li>
+            <!--replace mineable gold with gold ore-->
+            <li Class="PatchOperationSequence">
+                <operations>
+                    <li Class="PatchOperationReplace">
+                        <xpath>//ThingDef[defName="MineableGold"]/building/mineableThing/text()</xpath>
+                        <value>CorePlus_Gold</value>
+                    </li>
+                    <li Class="PatchOperationReplace">
+                        <xpath>//ThingDef[defName="MineableGold"]/label/text()</xpath>
+                        <value>gold ore</value>
+                    </li>
+                    <li Class="PatchOperationReplace">
+                        <xpath>//ThingDef[defName="MineableGold"]/description/text()</xpath>
+                        <value>Rock containing gold ore.</value>
+                    </li>
+                    <li Class="PatchOperationRemove">
+                        <xpath>//ThingDef[defName="Gold"]/deepCommonality | //ThingDef[defName="Gold"]/deepCountPerPortion | //ThingDef[defName="Gold"]/deepLumpSizeRange</xpath>
+                    </li>
+                </operations>
+            </li>
+            <!--adjust gold graphicData-->
+            <li Class="PatchOperationSequence">
+                <operations>
+                    <li Class="PatchOperationReplace">
+                        <xpath>//ThingDef[defName="Gold"]/graphicData/texPath/text()</xpath>
+                        <value>Things/Item/Resource/CorePlus_Steel</value>
+                    </li>
+                    <li Class="PatchOperationAdd">
+                        <xpath>//ThingDef[defName="Gold"]/graphicData</xpath>
+                        <value>
+                            <color>(255,235,122)</color>
+                        </value>
+                    </li>
+                </operations>
+            </li>
+        </operations>
+    </Operation>
+</Patch>

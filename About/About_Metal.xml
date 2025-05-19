@@ -1,0 +1,33 @@
+﻿<ModMetaData>
+	<packageId>coreplus.industry.metal</packageId>
+	<name>[CorePlus] Industry - Metal</name>
+	<author>boomer</author>
+	<description />
+	<supportedVersions>
+		<li>1.5</li>
+	</supportedVersions>
+	<modVersion>1.5.0</modVersion>
+	<modIconPath IgnoreIfNoMatchingField="True" />
+	<url>https://github.com/RimCorePlus/Industry-Metal</url>
+	<modDependencies>
+		<li>
+			<packageId>OskarPotocki.VanillaFactionsExpanded.Core</packageId>
+			<displayName>Vanilla Expanded Framework</displayName>
+			<steamWorkshopUrl>https://steamcommunity.com/workshop/filedetails/?id=2023507013</steamWorkshopUrl>
+			<downloadUrl>https://github.com/Vanilla-Expanded/VanillaExpandedFramework</downloadUrl>
+		</li>
+	</modDependencies>
+	<loadBefore />
+	<loadAfter>
+		<li>coreplus.rebalance</li>
+		<li>boomer.debloat</li>
+		<li>coreplus.industry</li>
+		<li>OskarPotocki.VanillaFactionsExpanded.Core</li>
+		<li>ceteam.combatextended</li>
+		<li>coreplus.genes.elves</li>
+	</loadAfter>
+	<incompatibleWith>
+		<li>argon.expandedmaterials.metals</li>
+		<li>dankpyon.medieval.overhaul</li>
+	</incompatibleWith>
+</ModMetaData>

@@ -1,0 +1,142 @@
+﻿<Defs>
+	<RecipeDef Abstract="True" Name="CorePlus_RefineRecipeBase">
+		<effectWorking>Smelt</effectWorking>
+		<soundWorking>Recipe_Smelt</soundWorking>
+		<workSpeedStat>SmeltingSpeed</workSpeedStat>
+		<workSkillLearnFactor>0.25</workSkillLearnFactor>
+		<targetCountAdjustment>15</targetCountAdjustment>
+		<allowMixingIngredients>false</allowMixingIngredients>
+		<recipeUsers>
+			<li>CorePlus_Bloomery</li>
+			<li>ElectricSmelter</li>
+		</recipeUsers>
+	</RecipeDef>
+	<RecipeDef ParentName="CorePlus_RefineRecipeBase">
+		<defName>CorePlus_RefineSteel</defName>
+		<label>refine steel</label>
+		<description>Make a batch of steel using raw iron ore.</description>
+		<jobString>Refining steel from iron ore.</jobString>
+		<workAmount>1000</workAmount>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>CorePlus_Coal</li>
+					</thingDefs>
+				</filter>
+				<count>5</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>CorePlus_Iron</li>
+					</thingDefs>
+				</filter>
+				<count>15</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>CorePlus_Coal</li>
+				<li>CorePlus_Iron</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Steel>15</Steel>
+		</products>
+		<displayPriority>1</displayPriority>
+	</RecipeDef>
+	<RecipeDef ParentName="CorePlus_RefineRecipeBase">
+		<defName>CorePlus_RefineSteelBulk</defName>
+		<label>refine steel x4</label>
+		<description>Make four batches of steel using raw iron ore.</description>
+		<jobString>Refining steel from iron ore.</jobString>
+		<workAmount>4000</workAmount>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>CorePlus_Coal</li>
+					</thingDefs>
+				</filter>
+				<count>15</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>CorePlus_Iron</li>
+					</thingDefs>
+				</filter>
+				<count>60</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>CorePlus_Coal</li>
+				<li>CorePlus_Iron</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Steel>60</Steel>
+		</products>
+		<displayPriority>2</displayPriority>
+	</RecipeDef>
+	<RecipeDef>
+		<defName>CorePlus_MakeCharcoal</defName>
+		<label>make charcoal</label>
+		<description>Make a batch of charcoal from logs.</description>
+		<jobString>Making charcoal from wood logs.</jobString>
+		<effectWorking>Smelt</effectWorking>
+		<soundWorking>Recipe_Smelt</soundWorking>
+		<workAmount>900</workAmount>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<workSkill>Crafting</workSkill>
+		<workSkillLearnFactor>0.25</workSkillLearnFactor>
+		<targetCountAdjustment>20</targetCountAdjustment>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li MayRequire="coreplus.industry.lumber">CorePlus_WoodLog</li>
+						<li MayRequire="coreplus.industry.lumber">CorePlus_GreenLumber</li>
+						<li>WoodLog</li>
+						<li MayRequire="coreplus.industry.lumber">CorePlus_Firewood</li>
+						<li MayRequire="sirmashedpotato.ashlands">Mashed_Ashlands_ParasolWoodLog</li>
+					</thingDefs>
+				</filter>
+				<count>20</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li MayRequire="coreplus.industry.lumber">CorePlus_WoodLog</li>
+				<li MayRequire="coreplus.industry.lumber">CorePlus_GreenLumber</li>
+				<li>WoodLog</li>
+				<li MayRequire="coreplus.industry.lumber">CorePlus_Firewood</li>
+				<li MayRequire="sirmashedpotato.ashlands">Mashed_Ashlands_ParasolWoodLog</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<defaultIngredientFilter>
+			<thingDefs>
+				<li MayRequire="coreplus.industry.lumber">CorePlus_WoodLog</li>
+			</thingDefs>
+			<disallowedThingDefs>
+				<li MayRequire="coreplus.industry.lumber">CorePlus_GreenLumber</li>
+				<li>WoodLog</li>
+				<li MayRequire="coreplus.industry.lumber">CorePlus_Firewood</li>
+				<li MayRequire="sirmashedpotato.ashlands">Mashed_Ashlands_ParasolWoodLog</li>
+			</disallowedThingDefs>
+		</defaultIngredientFilter>
+		<products>
+			<CorePlus_Coal>10</CorePlus_Coal>
+		</products>
+		<recipeUsers>
+			<li>CorePlus_Bloomery</li>
+			<li>ElectricSmelter</li>
+			<li MayRequire="VanillaExpanded.VFEProduction">VFE_FueledSmelter</li>
+			<li>Campfire</li>
+		</recipeUsers>
+		<displayPriority>0</displayPriority>
+	</RecipeDef>
+</Defs>

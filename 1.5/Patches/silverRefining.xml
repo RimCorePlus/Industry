@@ -1,0 +1,153 @@
+<Patch>
+    <Operation Class="VFECore.PatchOperationToggableSequence">
+        <enabled>true</enabled>
+        <label>[Production Chain] Silver</label>
+        <operations>
+            <li Class="PatchOperationAdd">
+                <xpath>Defs</xpath>
+                <value>
+                    <!--add silver ore-->
+                    <ThingDef ParentName="ResourceBase">
+                        <defName>CorePlus_Silver</defName>
+                        <label>silver ore</label>
+                        <description>Raw, natural silver ore. It can be mined from rock formations, and with the right skills and resources can be refined into silver.</description>
+                        <descriptionHyperlinks>
+                            <RecipeDef>CorePlus_RefineSilver</RecipeDef>
+                        </descriptionHyperlinks>
+                        <graphicData>
+                            <texPath>Things/Item/Resource/Silver</texPath>
+                            <graphicClass>Graphic_StackCount</graphicClass>
+                        </graphicData>
+                        <soundInteract>Metal_Drop</soundInteract>
+                        <soundDrop>Metal_Drop</soundDrop>
+                        <stackLimit>500</stackLimit>
+                        <statBases>
+                            <MarketValue>0.5</MarketValue>
+                            <Mass>0.1</Mass>
+                        </statBases>
+                        <useHitPoints>false</useHitPoints>
+                        <thingCategories>
+                            <li>ResourcesRaw</li>
+                        </thingCategories>
+                        <deepCommonality>0.5</deepCommonality>
+                        <deepCountPerPortion>8</deepCountPerPortion>
+                        <deepLumpSizeRange>1~4</deepLumpSizeRange>
+                    </ThingDef>
+                    <!--add silver refining recipes-->
+                    <RecipeDef ParentName="CorePlus_RefineRecipeBase">
+                        <defName>CorePlus_RefineSilver</defName>
+                        <label>refine silver</label>
+                        <description>Make a batch of silver using raw silver ore.</description>
+                        <jobString>Refining silver from silver ore.</jobString>
+                        <workAmount>1125</workAmount>
+                        <ingredients>
+                            <li>
+                                <filter>
+                                    <thingDefs>
+                                        <li>CorePlus_Coal</li>
+                                    </thingDefs>
+                                </filter>
+                                <count>5</count>
+                            </li>
+                            <li>
+                                <filter>
+                                    <thingDefs>
+                                        <li>CorePlus_Silver</li>
+                                    </thingDefs>
+                                </filter>
+                                <count>50</count>
+                            </li>
+                        </ingredients>
+                        <fixedIngredientFilter>
+                            <thingDefs>
+                                <li>CorePlus_Coal</li>
+                                <li>CorePlus_Silver</li>
+                            </thingDefs>
+                        </fixedIngredientFilter>
+                        <products>
+                            <Silver>50</Silver>
+                        </products>
+                        <displayPriority>5</displayPriority>
+                    </RecipeDef>
+                    <RecipeDef ParentName="CorePlus_RefineRecipeBase">
+                        <defName>CorePlus_RefineSilverBulk</defName>
+                        <label>refine silver x4</label>
+                        <description>Make a batch of silver from raw silver ore.</description>
+                        <jobString>Refining silver from silver ore.</jobString>
+                        <workAmount>4500</workAmount>
+                        <ingredients>
+                            <li>
+                                <filter>
+                                    <thingDefs>
+                                        <li>CorePlus_Coal</li>
+                                    </thingDefs>
+                                </filter>
+                                <count>20</count>
+                            </li>
+                            <li>
+                                <filter>
+                                    <thingDefs>
+                                        <li>CorePlus_Silver</li>
+                                    </thingDefs>
+                                </filter>
+                                <count>200</count>
+                            </li>
+                        </ingredients>
+                        <fixedIngredientFilter>
+                            <thingDefs>
+                                <li>CorePlus_Coal</li>
+                                <li>CorePlus_Silver</li>
+                            </thingDefs>
+                        </fixedIngredientFilter>
+                        <products>
+                            <Silver>200</Silver>
+                        </products>
+                        <displayPriority>6</displayPriority>
+                    </RecipeDef>
+                </value>
+            </li>
+            <!--replace mineable silver with silver ore-->
+            <li Class="PatchOperationSequence">
+                <operations>
+                    <li Class="PatchOperationReplace">
+                        <xpath>//ThingDef[defName="MineableSilver"]/building/mineableThing/text()</xpath>
+                        <value>CorePlus_Silver</value>
+                    </li>
+                    <li Class="PatchOperationReplace">
+                        <xpath>//ThingDef[defName="MineableSilver"]/label/text()</xpath>
+                        <value>silver ore</value>
+                    </li>
+                    <li Class="PatchOperationReplace">
+                        <xpath>//ThingDef[defName="MineableSilver"]/description/text()</xpath>
+                        <value>Rock containing silver ore.</value>
+                    </li>
+                    <li Class="PatchOperationRemove">
+                        <xpath>//ThingDef[defName="Silver"]/deepCommonality | //ThingDef[defName="Silver"]/deepCountPerPortion | //ThingDef[defName="Silver"]/deepLumpSizeRange</xpath>
+                    </li>
+                </operations>
+            </li>
+            <!--adjust silver graphicData-->
+            <li Class="PatchOperationSequence">
+                <operations>
+                    <li Class="PatchOperationReplace">
+                        <xpath>//ThingDef[defName="Silver"]/graphicData/texPath/text()</xpath>
+                        <value>Things/Item/Resource/CorePlus_Steel</value>
+                    </li>
+                    <li Class="PatchOperationAdd">
+                        <xpath>//ThingDef[defName="Silver"]/graphicData</xpath>
+                        <value>
+                            <color>(180,173,150)</color>
+                        </value>
+                    </li>
+                </operations>
+            </li>
+            <!--add description hyperlink to coal-->
+            <li Class="PatchOperationAdd">
+                <xpath>//ThingDef[defName="CorePlus_Coal"]/descriptionHyperlinks</xpath>
+                <value>
+                    <RecipeDef>CorePlus_RefineSilver</RecipeDef>
+                </value>
+            </li>
+        </operations>
+    </Operation>
+</Patch>

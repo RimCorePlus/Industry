@@ -1,0 +1,221 @@
+<Patch>
+	<!--==========core patches==========-->
+	<!--replace mineable steel with iron-->
+	<Operation Class="PatchOperationSequence">
+		<operations>
+			<li Class="PatchOperationReplace">
+				<xpath>//ThingDef[defName="MineableSteel"]/building/mineableThing/text()</xpath>
+				<value>CorePlus_Iron</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>//ThingDef[defName="MineableSteel"]/label/text()</xpath>
+				<value>iron ore</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>//ThingDef[defName="MineableSteel"]/description/text()</xpath>
+				<value>Rock containing iron ore.</value>
+			</li>
+			<li Class="PatchOperationRemove">
+				<xpath>//ThingDef[defName="Steel"]/deepCommonality | //ThingDef[defName="Steel"]/deepCountPerPortion | //ThingDef[defName="Steel"]/deepLumpSizeRange</xpath>
+			</li>
+		</operations>
+	</Operation>
+	<!--add mineable coal to mapgen-->
+	<Operation Class="PatchOperationAdd">
+		<xpath>//GenStepDef[defName="PreciousLump"]/genStep/mineables</xpath>
+		<value>
+			<li>CorePlus_MineableCoal</li>
+		</value>
+	</Operation>
+	<!--adjust steel graphicData-->
+	<Operation Class="PatchOperationSequence">
+		<operations>
+			<li Class="PatchOperationReplace">
+				<xpath>//ThingDef[defName="Steel"]/graphicData/texPath/text()</xpath>
+				<value>Things/Item/Resource/CorePlus_Steel</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>//ThingDef[defName="Steel"]/graphicData</xpath>
+				<value>
+					<color>(105,105,105)</color>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+	<!--reduce steel work speed (1->0.9)-->
+	<Operation Class="PatchOperationAdd">
+		<xpath>//ThingDef[defName="Steel"]/stuffProps/statFactors</xpath>
+		<value>
+			<WorkToBuild>0.9</WorkToBuild>
+			<WorkToMake>0.9</WorkToMake>
+		</value>
+	</Operation>
+	<!--add bloomery to workgiver-->
+	<Operation Class="PatchOperationAdd">
+		<xpath>//WorkGiverDef[defName="DoBillsSmelter"]/fixedBillGiverDefs</xpath>
+		<value>
+			<li>CorePlus_Bloomery</li>
+		</value>
+	</Operation>
+
+	<!--==========bloomery chunk adjustments==========-->
+	<!--fix resourceReadoutPriority for vanilla and modded stone chunks using ChunkRockBase-->
+	<Operation Class="PatchOperationSequence">
+		<operations>
+			<li Class="PatchOperationAdd">
+				<xpath>//ThingDef[@ParentName="ChunkRockBase" and not(resourceReadoutPriority)]</xpath>
+				<value>
+					<resourceReadoutPriority>Middle</resourceReadoutPriority>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>//ThingDef[@ParentName="ChunkRockBase" and resourceReadoutPriority]/resourceReadoutPriority/text()</xpath>
+				<value>Middle</value>
+			</li>
+		</operations>
+	</Operation>
+	<!--add generic stuffProps-->
+	<Operation Class="PatchOperationAdd">
+		<xpath>//ThingDef[@ParentName="ChunkRockBase" and not(stuffProps)]</xpath>
+		<value>
+			<stuffProps>
+				<categories>
+					<li>Chunky</li>
+				</categories>
+				<statOffsets>
+					<WorkToBuild>140</WorkToBuild>
+				</statOffsets>
+				<soundImpactBullet>BulletImpact_Ground</soundImpactBullet>
+				<soundImpactMelee>Pawn_Melee_Punch_HitBuilding_Stone</soundImpactMelee>
+				<soundMeleeHitSharp>MeleeHit_Stone</soundMeleeHitSharp>
+				<soundMeleeHitBlunt>MeleeHit_Stone</soundMeleeHitBlunt>
+			</stuffProps>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ThingDef[@ParentName="ChunkRockBase" and stuffProps]/stuffProps</xpath>
+		<value>
+			<stuffProps>
+				<categories>
+					<li>Chunky</li>
+				</categories>
+				<statOffsets>
+					<WorkToBuild>140</WorkToBuild>
+				</statOffsets>
+				<soundImpactBullet>BulletImpact_Ground</soundImpactBullet>
+				<soundImpactMelee>Pawn_Melee_Punch_HitBuilding_Stone</soundImpactMelee>
+				<soundMeleeHitSharp>MeleeHit_Stone</soundMeleeHitSharp>
+				<soundMeleeHitBlunt>MeleeHit_Stone</soundMeleeHitBlunt>
+			</stuffProps>
+		</value>
+	</Operation>
+	<!--add specific stuffProps based on their stone block counterparts-->
+	<Operation Class="PatchOperationSequence">
+		<operations>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="ChunkGranite"]/stuffProps</xpath>
+				<value>
+					<color>(105,95,97)</color>
+					<stuffAdjective>granite</stuffAdjective>
+					<statFactors>
+						<MarketValue>0.5</MarketValue>
+						<MaxHitPoints>1.7</MaxHitPoints>
+						<WorkToBuild>5.25</WorkToBuild>
+					</statFactors>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="ChunkSlate"]/stuffProps</xpath>
+				<value>
+
+					<color>(70,70,70)</color>
+					<stuffAdjective>slate</stuffAdjective>
+					<statFactors>
+						<Beauty>0.8</Beauty>
+						<MarketValue>0.38</MarketValue>
+						<MaxHitPoints>1.3</MaxHitPoints>
+						<WorkToBuild>4.5</WorkToBuild>
+					</statFactors>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="ChunkLimestone"]/stuffProps</xpath>
+				<value>
+					<color>(158,153,135)</color>
+					<stuffAdjective>limestone</stuffAdjective>
+					<statFactors>
+						<MarketValue>0.4</MarketValue>
+						<MaxHitPoints>1.55</MaxHitPoints>
+						<WorkToBuild>4.8</WorkToBuild>
+					</statFactors>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="ChunkMarble"]/stuffProps</xpath>
+				<value>
+					<color>(132,135,132)</color>
+					<stuffAdjective>marble</stuffAdjective>
+					<statFactors>
+						<Beauty>1.35</Beauty>
+						<MarketValue>0.45</MarketValue>
+						<MaxHitPoints>1.2</MaxHitPoints>
+						<WorkToBuild>5.5</WorkToBuild>
+						<WorkToMake>1.15</WorkToMake>
+					</statFactors>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="ChunkSandstone"]/stuffProps</xpath>
+				<value>
+					<color>(126,104,94)</color>
+					<stuffAdjective>sandstone</stuffAdjective>
+					<statFactors>
+						<Beauty>1.1</Beauty>
+						<MarketValue>0.4</MarketValue>
+						<MaxHitPoints>1.4</MaxHitPoints>
+						<WorkToBuild>5.0</WorkToBuild>
+						<WorkToMake>1.1</WorkToMake>
+					</statFactors>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+
+	<!--==========recipes==========-->
+	<!--ship chunks and crashed shuttles yield slags instead of raw steel-->
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ThingDef[defName="ShipChunk" or defName="ShuttleCrashed"]/costList/Steel</xpath>
+		<value>
+			<ChunkSlagSteel>3</ChunkSlagSteel>
+		</value>
+	</Operation>
+	<!--allow coal to be used in vanilla and modded wood fueled benches (must use WoodLog as a fuel and also use either @ParentName="BenchBase", have a "recipes" node, or a bills tab)-->
+	<Operation Class="PatchOperationAdd">
+		<xpath>//ThingDef[@ParentName="BenchBase" and (comps/li[@Class="CompProperties_Refuelable"]//li[text()="WoodLog" or text()="CorePlus_Firewood"] or recipes or inspectorTabs/li[text()="ITab_Bills"])]/comps/li[@Class="CompProperties_Refuelable"]/fuelFilter/thingDefs</xpath>
+		<value>
+			<li>CorePlus_Coal</li>
+		</value>
+	</Operation>
+
+	<!--==========traders==========-->
+	<!--outlander caravans carry coal-->
+	<Operation Class="PatchOperationAdd">
+		<xpath>//TraderKindDef[defName="Caravan_Outlander_BulkGoods"]/stockGenerators</xpath>
+		<value>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>CorePlus_Coal</thingDef>
+				<countRange>150~300</countRange>
+			</li>
+		</value>
+	</Operation>
+	<!--orbital bulk goods trader carries coal-->
+	<Operation Class="PatchOperationAdd">
+		<xpath>//TraderKindDef[defName="Orbital_BulkGoods"]/stockGenerators</xpath>
+		<value>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>CorePlus_Coal</thingDef>
+				<countRange>300~450</countRange>
+			</li>
+		</value>
+	</Operation>
+</Patch>
