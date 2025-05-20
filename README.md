@@ -21,39 +21,41 @@ Scope of this mod:
 > Requires [Vanilla Expanded Framework](https://steamcommunity.com/sharedfiles/filedetails/?id=2023507013).
 
 ## Changes
+### Chocolate
+- Cocoa trees now yield cocoa beans, which are cooked with milk at a stove to yield chocolate (can be disabled in settings)
+
 ### Components
 - Craftable at the machining table with a 20% increased work requirement compared to fabrication
 
 ### Metal
-- Adds production chains for steel, silver, gold, and plasteel
-- Steel chain is required, the rest are toggable
-- Toggable patches to improve vanilla metal balance
-
-#### Refining
-|  | Ore (Bulk) | Coal (Bulk) | Work amount (Bulk) | Output (Bulk) |
-|---:|:---:|:---:|:---:|:---:|
-| Steel | 15 (60) | 5 (20) | 1000 (4000) | 15 (60) |
-| Plasteel | 12[^1] (48) | 1 (4) | 2000 (8000) | 10 (40) |
-| Silver | 50 (200) | 5 (20) | 1125 (4500) | 50 (200) |
-| Gold | 10 (40) | ~ | 1250 (5000) | 10 (40) |
+- Adds production chains for steel, silver, gold, and plasteel (every chain except for Steel can be disabled in settings)
+- [Toggable patches](#toggable-patches) to improve vanilla metal balance
 
 ### Neutroamine
 - (WIP) ~~Can now be synthesized in an expensive three step process~~
 
 ### Textiles
 - Cotton and devilstrand plants now yield raw fiber that must be spun before it can be used for tailoring
-- To offset this additional step, the new 2x1 electric spinning wheel can stack with two tool cabinets for an 18% work speed boost on tailoring benches
+- To help offset this additional labor requirement, the new 2x1 electric spinning wheel can stack with two tool cabinets for an 18% work speed boost on tailoring benches
+- Toggable production chain for Synthread (requires Plasteel production chain)
 
 ### Wood
 - Lumber production chain
 - Firewood
 
 ## Toggable Patches
-- Metal is not flammable
-- Gold and silver are beautiful
+- [Production Chain] Chocolate
+- [Production Chain] Gold
+- [Production Chain] Plasteel (disabling this also disables Synthread chain)
+- [Production Chain] Silver 
+- [Production Chain] Synthread (requires Plasteel chain)
+- Beautiful gold and silver
+- Easier industrial components (removes workAmount penalty from industrial component recipe, disabled by default)
+- Increase plasteel durability
 - Increase steel durability
 - Increase uranium durability
-- Increase plasteel durability
+- Non-flammable metal (affects every metallic and stuffable ThingDef, vanilla and modded)
+- Remove compacted machinery
 - Remove compacted plasteel
 
 ## Impact
@@ -72,6 +74,14 @@ Here's how refining jobs compare to vanilla[^2] money making activities:
 | **Gold refining** | **70** |
 
 Wealth management is another upside of refining chains over vanilla mining. Since raw materials are worth less than their refined counterparts, mining large veins doesn't drastically inflate your colony's wealth. Refining bills can be managed to meet the colony's needs without creating excess wealth.
+
+### Refining Recipes
+|  | Ore (Bulk) | Coal (Bulk) | Work amount (Bulk) | Output (Bulk) |
+|---:|:---:|:---:|:---:|:---:|
+| Steel | 15 (60) | 5 (20) | 1000 (4000) | 15 (60) |
+| Plasteel | 12[^1] (48) | 1 (4) | 2000 (8000) | 10 (40) |
+| Silver | 50 (200) | 5 (20) | 1125 (4500) | 50 (200) |
+| Gold | 10 (40) | ~ | 1250 (5000) | 10 (40) |
 
 ## Legal
 Portions of the materials used to create this mod are trademarks and/or copyrighted works of Ludeon Studios Inc. All rights reserved by Ludeon. This mod is not official and is not endorsed by Ludeon.

@@ -1,0 +1,79 @@
+<Patch>
+    <Operation Class="VFECore.PatchOperationToggableSequence">
+        <enabled>true</enabled>
+        <label>[Production Chain] Synthread (requires Plasteel chain)</label>
+        <operations>
+            <!--check for polyshale-->
+            <li Class="PatchOperationConditional">
+                <xpath>//ThingDef[defName="CorePlus_Polyshale"]</xpath>
+                <match Class="PatchOperationSequence">
+                    <operations>
+                        <!--add recipes-->
+                        <li Class="PatchOperationAdd">
+                            <xpath>Defs</xpath>
+                            <value>
+                                <RecipeDef ParentName="CorePlus_SpinFabricBase">
+                                    <defName>CorePlus_SpinSynthread</defName>
+                                    <label>spin synthread</label>
+                                    <description>Spin heated polyshale into workable cloth.</description>
+                                    <jobString>Spinning synthread.</jobString>
+                                    <displayPriority>20</displayPriority>
+                                    <ingredients>
+                                        <li>
+                                            <filter>
+                                                <thingDefs>
+                                                    <li>CorePlus_Polyshale</li>
+                                                </thingDefs>
+                                            </filter>
+                                            <count>1</count>
+                                        </li>
+                                    </ingredients>
+                                    <products>
+                                        <Synthread>6</Synthread>
+                                    </products>
+                                    <recipeUsers Inherit="False">
+                                        <li>CorePlus_ElectricSpinningWheel</li>
+                                    </recipeUsers>
+                                    <workAmount>1000</workAmount>
+                                </RecipeDef>
+                                <RecipeDef ParentName="CorePlus_SpinFabricBase">
+                                    <defName>CorePlus_SpinSynthreadBulk</defName>
+                                    <label>spin synthread x4</label>
+                                    <description>Spin heated polyshale into workable cloth.</description>
+                                    <jobString>Spinning synthread.</jobString>
+                                    <displayPriority>25</displayPriority>
+                                    <ingredients>
+                                        <li>
+                                            <filter>
+                                                <thingDefs>
+                                                    <li>CorePlus_Polyshale</li>
+                                                </thingDefs>
+                                            </filter>
+                                            <count>4</count>
+                                        </li>
+                                    </ingredients>
+                                    <products>
+                                        <Synthread>24</Synthread>
+                                    </products>
+                                    <recipeUsers Inherit="False">
+                                        <li>CorePlus_ElectricSpinningWheel</li>
+                                    </recipeUsers>
+                                    <workAmount>4000</workAmount>
+                                </RecipeDef>
+                            </value>
+                        </li>
+                        <!--add description hyperlink to synthread-->
+                        <li Class="PatchOperationAdd">
+                            <xpath>//ThingDef[defName="Synthread"]</xpath>
+                            <value>
+                                <descriptionHyperlinks>
+                                    <RecipeDef>CorePlus_SpinSynthread</RecipeDef>
+                                </descriptionHyperlinks>
+                            </value>
+                        </li>
+                    </operations>
+                </match>
+            </li>
+        </operations>
+    </Operation>
+</Patch>

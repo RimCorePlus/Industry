@@ -37,13 +37,4 @@
         <xpath>//ResearchProjectDef[defName="Devilstrand"]/description/text()</xpath>
         <value>Grow and spin devilstrand, a slow-growing mushroom that yields an exceptionally tough, heat-resistant plant fiber.</value>
     </Operation>
-    <!--add description hyperlink to synthread-->
-    <Operation Class="PatchOperationAdd">
-        <xpath>//ThingDef[defName="Synthread"]</xpath>
-        <value>
-            <descriptionHyperlinks>
-                <RecipeDef>CorePlus_SpinSynthread</RecipeDef>
-            </descriptionHyperlinks>
-        </value>
-    </Operation>
 </Patch>

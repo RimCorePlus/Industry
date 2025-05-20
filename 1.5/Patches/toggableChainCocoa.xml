@@ -1,7 +1,7 @@
 <Patch>
     <Operation Class="VFECore.PatchOperationToggableSequence">
         <enabled>true</enabled>
-        <label>enable chocolate production chain</label>
+        <label>[Production Chain] Chocolate</label>
         <operations>
             <!--add new defs-->
             <li Class="PatchOperationAdd">
