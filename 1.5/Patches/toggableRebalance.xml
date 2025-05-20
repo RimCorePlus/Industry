@@ -61,6 +61,19 @@
 	</Operation>
 	<Operation Class="VFECore.PatchOperationToggableSequence">
 		<enabled>true</enabled>
+		<label>remove compacted machinery</label>
+		<operations>
+			<li Class="PatchOperationReplace">
+				<xpath>//ThingDef[defName="MineableComponentsIndustrial"]/building/mineableScatterCommonality/text()</xpath>
+				<value>0</value>
+			</li>
+			<li Class="PatchOperationRemove">
+				<xpath>//GenStepDef/genStep/mineables/li[text()="MineableComponentsIndustrial"]</xpath>
+			</li>
+		</operations>
+	</Operation>
+	<Operation Class="VFECore.PatchOperationToggableSequence">
+		<enabled>true</enabled>
 		<label>remove compacted plasteel</label>
 		<operations>
 			<li Class="PatchOperationRemove">
@@ -79,6 +92,16 @@
 						</li>
 					</operations>
 				</nomatch>
+			</li>
+		</operations>
+	</Operation>
+	<Operation Class="VFECore.PatchOperationToggableSequence">
+		<enabled>false</enabled>
+		<label>easier industrial components</label>
+		<operations>
+			<li Class="PatchOperationReplace">
+				<xpath>//RecipeDef[defName="CorePlus_MakeComponentIndustrial"]/workAmount/text()</xpath>
+				<value>5000</value>
 			</li>
 		</operations>
 	</Operation>
