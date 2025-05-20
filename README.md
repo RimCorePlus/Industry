@@ -61,7 +61,7 @@ To help offset this added work requirement, the new 2x1 electric spinning wheel 
 ## Impact
 Production chains add tedium to the game. This is good for immersion, but (in my experience) detracts from the overall experience when there's no benefit. Accordingly, the refining recipes have been balanced to maximize output per job and create a stream of income for mining colonies that doesn't break the economy.
 
-Here's how refining jobs compare to vanilla[^2] money making activities:
+Here's how refining jobs compare to vanilla[^1] money making activities:
 |  | Added value (per hr work) |
 |---:|:---:|
 | Rolling smokeleaf joints | 25 |
@@ -79,8 +79,8 @@ Wealth management is another upside of refining chains over vanilla mining. Sinc
 |  | Ore (Bulk) | Coal (Bulk) | Work amount (Bulk) | Output (Bulk) |
 |---:|:---:|:---:|:---:|:---:|
 | Steel | 15 (60) | 5 (20) | 1000 (4000) | 15 (60) |
-| Plasteel | 12[^1] (48) | 1 (4) | 2000 (8000) | 10 (40) |
-| Silver | 50 (200) | 5 (20) | 1125 (4500) | 50 (200) |
+| Plasteel | 12[^2] (48) | 1 (4) | 2000 (8000) | 10 (40) |
+| Silver | 50 (200) | ~ | 1250 (5000) | 50 (200) |
 | Gold | 10 (40) | ~ | 1250 (5000) | 10 (40) |
 
 ## Legal
@@ -88,5 +88,5 @@ Portions of the materials used to create this mod are trademarks and/or copyrigh
 
 This mod includes code and textures from [Simple Chains: Lumber](https://github.com/Owlchemist/simple-chains-lumber) and [Simple Chains: Steel](https://github.com/Owlchemist/simple-chains-steel) by Owlchemist, originally licensed under the GPL-3.0 License. These assets have been modified by boomer.
 
-[^1]: Also requires 3 iron ore (12 for bulk).
-[^2]: [Money making guide - RimWorld Wiki](https://rimworldwiki.com/wiki/Money_making_guide)
+[^1]: [Money making guide - RimWorld Wiki](https://rimworldwiki.com/wiki/Money_making_guide)
+[^2]: Also requires 3 iron ore (12 for bulk).

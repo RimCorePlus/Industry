@@ -39,16 +39,8 @@
                         <label>refine silver</label>
                         <description>Make a batch of silver using raw silver ore.</description>
                         <jobString>Refining silver from silver ore.</jobString>
-                        <workAmount>1125</workAmount>
+                        <workAmount>1250</workAmount>
                         <ingredients>
-                            <li>
-                                <filter>
-                                    <thingDefs>
-                                        <li>CorePlus_Coal</li>
-                                    </thingDefs>
-                                </filter>
-                                <count>5</count>
-                            </li>
                             <li>
                                 <filter>
                                     <thingDefs>
@@ -67,23 +59,14 @@
                         <products>
                             <Silver>50</Silver>
                         </products>
-                        <displayPriority>5</displayPriority>
                     </RecipeDef>
                     <RecipeDef ParentName="CorePlus_RefineRecipeBase">
                         <defName>CorePlus_RefineSilverBulk</defName>
                         <label>refine silver x4</label>
                         <description>Make a batch of silver from raw silver ore.</description>
                         <jobString>Refining silver from silver ore.</jobString>
-                        <workAmount>4500</workAmount>
+                        <workAmount>5000</workAmount>
                         <ingredients>
-                            <li>
-                                <filter>
-                                    <thingDefs>
-                                        <li>CorePlus_Coal</li>
-                                    </thingDefs>
-                                </filter>
-                                <count>20</count>
-                            </li>
                             <li>
                                 <filter>
                                     <thingDefs>
@@ -102,9 +85,74 @@
                         <products>
                             <Silver>200</Silver>
                         </products>
-                        <displayPriority>6</displayPriority>
                     </RecipeDef>
                 </value>
+            </li>
+            <li Class="PatchOperationConditional">
+                <xpath>//ThingDef[defName="FT_ArcFurnace"]</xpath>
+                <match Class="PatchOperationAdd">
+                    <xpath>Defs</xpath>
+                    <value>
+                        <RecipeDef ParentName="CorePlus_RefineRecipeBase">
+                            <defName>CorePlus_RefineSilverFTC</defName>
+                            <label>refine silver x4</label>
+                            <description>Make a batch of silver from raw silver ore.</description>
+                            <jobString>Refining silver from silver ore.</jobString>
+                            <workAmount>2500</workAmount>
+                            <recipeUsers Inherit="False">
+                                <li>FT_ArcFurnace</li>
+                            </recipeUsers>
+                            <ingredients>
+                                <li>
+                                    <filter>
+                                        <thingDefs>
+                                            <li>CorePlus_Silver</li>
+                                        </thingDefs>
+                                    </filter>
+                                    <count>200</count>
+                                </li>
+                            </ingredients>
+                            <fixedIngredientFilter>
+                                <thingDefs>
+                                    <li>CorePlus_Coal</li>
+                                    <li>CorePlus_Silver</li>
+                                </thingDefs>
+                            </fixedIngredientFilter>
+                            <products>
+                                <Silver>200</Silver>
+                            </products>
+                        </RecipeDef>
+                        <RecipeDef ParentName="CorePlus_RefineRecipeBase">
+                            <defName>CorePlus_RefineSilverFTCBulk</defName>
+                            <label>refine silver x8</label>
+                            <description>Make a batch of silver from raw silver ore.</description>
+                            <jobString>Refining silver from silver ore.</jobString>
+                            <workAmount>5000</workAmount>
+                            <recipeUsers Inherit="False">
+                                <li>FT_ArcFurnace</li>
+                            </recipeUsers>
+                            <ingredients>
+                                <li>
+                                    <filter>
+                                        <thingDefs>
+                                            <li>CorePlus_Silver</li>
+                                        </thingDefs>
+                                    </filter>
+                                    <count>400</count>
+                                </li>
+                            </ingredients>
+                            <fixedIngredientFilter>
+                                <thingDefs>
+                                    <li>CorePlus_Coal</li>
+                                    <li>CorePlus_Silver</li>
+                                </thingDefs>
+                            </fixedIngredientFilter>
+                            <products>
+                                <Silver>400</Silver>
+                            </products>
+                        </RecipeDef>
+                    </value>
+                </match>
             </li>
             <!--replace mineable silver with silver ore-->
             <li Class="PatchOperationSequence">

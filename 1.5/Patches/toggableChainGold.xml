@@ -58,7 +58,6 @@
                         <products>
                             <Gold>10</Gold>
                         </products>
-                        <displayPriority>7</displayPriority>
                     </RecipeDef>
                     <RecipeDef ParentName="CorePlus_RefineRecipeBase">
                         <defName>CorePlus_RefineGoldBulk</defName>
@@ -84,9 +83,72 @@
                         <products>
                             <Gold>40</Gold>
                         </products>
-                        <displayPriority>8</displayPriority>
                     </RecipeDef>
                 </value>
+            </li>
+            <li Class="PatchOperationConditional">
+                <xpath>//ThingDef[defName="FT_ArcFurnace"]</xpath>
+                <match Class="PatchOperationAdd">
+                    <xpath>Defs</xpath>
+                    <value>
+                        <RecipeDef ParentName="CorePlus_RefineRecipeBase">
+                            <defName>CorePlus_RefineGoldFTC</defName>
+                            <label>refine gold x4</label>
+                            <description>Make a batch of gold from raw gold ore.</description>
+                            <jobString>Refining gold from gold ore.</jobString>
+                            <workAmount>2500</workAmount>
+                            <recipeUsers Inherit="False">
+                                <li>FT_ArcFurnace</li>
+                            </recipeUsers>
+                            <ingredients>
+                                <li>
+                                    <filter>
+                                        <thingDefs>
+                                            <li>CorePlus_Gold</li>
+                                        </thingDefs>
+                                    </filter>
+                                    <count>40</count>
+                                </li>
+                            </ingredients>
+                            <fixedIngredientFilter>
+                                <thingDefs>
+                                    <li>CorePlus_Gold</li>
+                                </thingDefs>
+                            </fixedIngredientFilter>
+                            <products>
+                                <Gold>40</Gold>
+                            </products>
+                        </RecipeDef>
+                        <RecipeDef ParentName="CorePlus_RefineRecipeBase">
+                            <defName>CorePlus_RefineGoldFTCBulk</defName>
+                            <label>refine gold x8</label>
+                            <description>Make a batch of gold from raw gold ore.</description>
+                            <jobString>Refining gold from gold ore.</jobString>
+                            <workAmount>5000</workAmount>
+                            <recipeUsers Inherit="False">
+                                <li>FT_ArcFurnace</li>
+                            </recipeUsers>
+                            <ingredients>
+                                <li>
+                                    <filter>
+                                        <thingDefs>
+                                            <li>CorePlus_Gold</li>
+                                        </thingDefs>
+                                    </filter>
+                                    <count>80</count>
+                                </li>
+                            </ingredients>
+                            <fixedIngredientFilter>
+                                <thingDefs>
+                                    <li>CorePlus_Gold</li>
+                                </thingDefs>
+                            </fixedIngredientFilter>
+                            <products>
+                                <Gold>80</Gold>
+                            </products>
+                        </RecipeDef>
+                    </value>
+                </match>
             </li>
             <!--replace mineable gold with gold ore-->
             <li Class="PatchOperationSequence">

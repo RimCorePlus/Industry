@@ -1,0 +1,76 @@
+<Defs>
+    <RecipeDef ParentName="CorePlus_RefineRecipeBase">
+        <defName>CorePlus_RefineSteelFTC</defName>
+        <label>refine steel x4</label>
+        <description>Make four batches of steel with raw iron ore.</description>
+        <jobString>Refining steel from iron ore.</jobString>
+        <workAmount>2000</workAmount>
+        <recipeUsers Inherit="False">
+            <li>FT_ArcFurnace</li>
+        </recipeUsers>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>CorePlus_Coal</li>
+                    </thingDefs>
+                </filter>
+                <count>15</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>CorePlus_Iron</li>
+                    </thingDefs>
+                </filter>
+                <count>60</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>CorePlus_Coal</li>
+                <li>CorePlus_Iron</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <products>
+            <Steel>60</Steel>
+        </products>
+    </RecipeDef>
+    <RecipeDef ParentName="CorePlus_RefineRecipeBase">
+        <defName>CorePlus_RefineSteelFTCBulk</defName>
+        <label>refine steel x8</label>
+        <description>Make eight batches of steel with raw iron ore.</description>
+        <jobString>Refining steel from iron ore.</jobString>
+        <workAmount>4000</workAmount>
+        <recipeUsers Inherit="False">
+            <li>FT_ArcFurnace</li>
+        </recipeUsers>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>CorePlus_Coal</li>
+                    </thingDefs>
+                </filter>
+                <count>30</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>CorePlus_Iron</li>
+                    </thingDefs>
+                </filter>
+                <count>120</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>CorePlus_Coal</li>
+                <li>CorePlus_Iron</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <products>
+            <Steel>120</Steel>
+        </products>
+    </RecipeDef>
+</Defs>
