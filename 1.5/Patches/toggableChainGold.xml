@@ -185,6 +185,14 @@
                     </li>
                 </operations>
             </li>
+            <!--mining work sites have gold ore instead of gold-->
+            <li Class="PatchOperationConditional">
+                <xpath>//SitePartDef[defName="WorkSite_Mining"]</xpath>
+                <match Class="PatchOperationReplace">
+                    <xpath>//SitePartDef[defName="WorkSite_Mining"]/lootTable/li/thing[text()="Gold"]/text()</xpath>
+                    <value>CorePlus_Gold</value>
+                </match>
+            </li>
         </operations>
     </Operation>
 </Patch>

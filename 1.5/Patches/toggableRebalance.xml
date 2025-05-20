@@ -80,6 +80,12 @@
 			<li Class="PatchOperationRemove">
 				<xpath>//GenStepDef/genStep/mineables/li[text()="MineableComponentsIndustrial"]</xpath>
 			</li>
+			<li Class="PatchOperationConditional">
+				<xpath>//SitePartDef[defName="WorkSite_Mining"]</xpath>
+				<match Class="PatchOperationRemove">
+					<xpath>//SitePartDef[defName="WorkSite_Mining"]/lootTable/li[thing[text()="ComponentIndustrial"]]</xpath>
+				</match>
+			</li>
 		</operations>
 	</Operation>
 	<Operation Class="VFECore.PatchOperationToggableSequence">

@@ -247,6 +247,19 @@
                     <RecipeDef>CorePlus_RefinePlasteel</RecipeDef>
                 </value>
             </li>
+            <!--add mining work site for polyshale-->
+            <li Class="PatchOperationConditional">
+                <xpath>//SitePartDef[defName="WorkSite_Mining"]</xpath>
+                <match Class="PatchOperationAdd">
+                    <xpath>//SitePartDef[defName="WorkSite_Mining"]/lootTable</xpath>
+                    <value>
+                        <li>
+                            <thing>CorePlus_Polyshale</thing>
+                            <weight>0.25</weight>
+                        </li>
+                    </value>
+                </match>
+            </li>
         </operations>
     </Operation>
 </Patch>

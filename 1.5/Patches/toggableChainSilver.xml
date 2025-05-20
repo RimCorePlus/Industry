@@ -189,12 +189,13 @@
                     </li>
                 </operations>
             </li>
-            <!--add description hyperlink to coal-->
-            <li Class="PatchOperationAdd">
-                <xpath>//ThingDef[defName="CorePlus_Coal"]/descriptionHyperlinks</xpath>
-                <value>
-                    <RecipeDef>CorePlus_RefineSilver</RecipeDef>
-                </value>
+            <!--mining work sites have silver ore instead of silver-->
+            <li Class="PatchOperationConditional">
+                <xpath>//SitePartDef[defName="WorkSite_Mining"]</xpath>
+                <match Class="PatchOperationReplace">
+                    <xpath>//SitePartDef[defName="WorkSite_Mining"]/lootTable/li/thing[text()="Silver"]/text()</xpath>
+                    <value>CorePlus_Silver</value>
+                </match>
             </li>
         </operations>
     </Operation>
