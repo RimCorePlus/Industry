@@ -98,11 +98,11 @@
 			<li>
 				<filter>
 					<thingDefs>
-						<li MayRequire="coreplus.industry.lumber">CorePlus_WoodLog</li>
-						<li MayRequire="coreplus.industry.lumber">CorePlus_GreenLumber</li>
-						<li>WoodLog</li>
-						<li MayRequire="coreplus.industry.lumber">CorePlus_Firewood</li>
 						<li MayRequire="sirmashedpotato.ashlands">Mashed_Ashlands_ParasolWoodLog</li>
+						<li>CorePlus_Firewood</li>
+						<li>CorePlus_GreenLumber</li>
+						<li>CorePlus_WoodLog</li>
+						<li>WoodLog</li>
 					</thingDefs>
 				</filter>
 				<count>20</count>
@@ -110,32 +110,32 @@
 		</ingredients>
 		<fixedIngredientFilter>
 			<thingDefs>
-				<li MayRequire="coreplus.industry.lumber">CorePlus_WoodLog</li>
-				<li MayRequire="coreplus.industry.lumber">CorePlus_GreenLumber</li>
-				<li>WoodLog</li>
-				<li MayRequire="coreplus.industry.lumber">CorePlus_Firewood</li>
 				<li MayRequire="sirmashedpotato.ashlands">Mashed_Ashlands_ParasolWoodLog</li>
+				<li>CorePlus_Firewood</li>
+				<li>CorePlus_GreenLumber</li>
+				<li>CorePlus_WoodLog</li>
+				<li>WoodLog</li>
 			</thingDefs>
 		</fixedIngredientFilter>
 		<defaultIngredientFilter>
 			<thingDefs>
-				<li MayRequire="coreplus.industry.lumber">CorePlus_WoodLog</li>
+				<li>CorePlus_WoodLog</li>
 			</thingDefs>
 			<disallowedThingDefs>
-				<li MayRequire="coreplus.industry.lumber">CorePlus_GreenLumber</li>
-				<li>WoodLog</li>
-				<li MayRequire="coreplus.industry.lumber">CorePlus_Firewood</li>
 				<li MayRequire="sirmashedpotato.ashlands">Mashed_Ashlands_ParasolWoodLog</li>
+				<li>CorePlus_Firewood</li>
+				<li>CorePlus_GreenLumber</li>
+				<li>WoodLog</li>
 			</disallowedThingDefs>
 		</defaultIngredientFilter>
 		<products>
 			<CorePlus_Coal>10</CorePlus_Coal>
 		</products>
 		<recipeUsers>
-			<li>CorePlus_Bloomery</li>
-			<li>ElectricSmelter</li>
 			<li MayRequire="VanillaExpanded.VFEProduction">VFE_FueledSmelter</li>
 			<li>Campfire</li>
+			<li>CorePlus_Bloomery</li>
+			<li>ElectricSmelter</li>
 		</recipeUsers>
 		<displayPriority>0</displayPriority>
 	</RecipeDef>
