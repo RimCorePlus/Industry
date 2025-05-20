@@ -13,10 +13,6 @@
 ![](About/Preview.png)\
 [![GPLv3][badge-license]](https://www.gnu.org/licenses/gpl-3.0)
 
-Scope of this mod:
-- Rebalance existing production chains for manufactured goods
-- Add production chains for goods that cannot otherwise be crafted
-
 > [!IMPORTANT]
 > Requires [Vanilla Expanded Framework](https://steamcommunity.com/sharedfiles/filedetails/?id=2023507013).
 
@@ -28,22 +24,26 @@ Scope of this mod:
 - Craftable at the machining table with a 20% increased work requirement compared to fabrication
 
 ### Metal
-- Adds production chains for steel, silver, gold, and plasteel (every chain except for Steel can be disabled in settings)
-- [Toggable patches](#toggable-patches) to improve vanilla metal balance
+- Production chains for steel
+- Optional production chains for gold, silver, and plasteel
+- [Optional patches](#settings) to improve vanilla metal balance
 
 ### Neutroamine
 - (WIP) ~~Can now be synthesized in an expensive three step process~~
 
 ### Textiles
 - Cotton and devilstrand plants now yield raw fiber that must be spun before it can be used for tailoring
-- To help offset this additional labor requirement, the new 2x1 electric spinning wheel can stack with two tool cabinets for an 18% work speed boost on tailoring benches
-- Toggable production chain for Synthread (requires Plasteel production chain)
+- Optional production chain for Synthread (requires Plasteel production chain)
+
+To help offset this added work requirement, the new 2x1 electric spinning wheel stacks with two tool cabinets for an 18% boost to work speed on tailoring benches.
 
 ### Wood
-- Lumber production chain
-- Firewood
+- Trees now yield logs that are less useful than wood
+- Logs can be processed into firewood or green lumber at a carpentry trestle or machining table
+- Green lumber is dried on a drying rack for approximately two days to yield lumber (vanilla wood)
+- Wood-fueled benches and campfires now require firewood
 
-## Toggable Patches
+## Settings
 - [Production Chain] Chocolate
 - [Production Chain] Gold
 - [Production Chain] Plasteel (disabling this also disables Synthread chain)
