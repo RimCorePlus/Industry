@@ -6,9 +6,10 @@
 	<supportedVersions>
 		<li>1.5</li>
 	</supportedVersions>
-	<modVersion>1.5.0</modVersion>
+	<modVersion />
 	<modIconPath IgnoreIfNoMatchingField="True" />
 	<url>https://github.com/RimCorePlus/Industry</url>
+	<descriptionsByVersion />
 	<modDependencies>
 		<li>
 			<packageId>OskarPotocki.VanillaFactionsExpanded.Core</packageId>
@@ -17,17 +18,23 @@
 			<downloadUrl>https://github.com/Vanilla-Expanded/VanillaExpandedFramework</downloadUrl>
 		</li>
 	</modDependencies>
+	<modDependenciesByVersion />
 	<loadBefore />
+	<loadBeforeByVersion />
+	<forceLoadBefore />
 	<loadAfter>
 		<li>adaptive.storage.neolithic</li>
 		<li>boomer.debloat</li>
 		<li>ceteam.combatextended</li>
 		<li>coreplus.empire</li>
 		<li>coreplus.genes.elves</li>
-		<li>coreplus.rebalance</li>
+		<li>boomer.rebalance</li>
 		<li>OskarPotocki.VanillaFactionsExpanded.Core</li>
 	</loadAfter>
+	<loadAfterByVersion />
+	<forceLoadAfter />
 	<incompatibleWith>
 		<li>dankpyon.medieval.overhaul</li>
 	</incompatibleWith>
+	<incompatibleWithByVersion />
 </ModMetaData>
