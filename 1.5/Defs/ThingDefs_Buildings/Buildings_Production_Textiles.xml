@@ -91,6 +91,9 @@
 		<minifiedDef>MinifiedThing</minifiedDef>
 		<passability>PassThroughOnly</passability>
 		<pathCost>70</pathCost>
+		<researchPrerequisites>
+			<li>Electricity</li>
+		</researchPrerequisites>
 		<size>(2,1)</size>
 		<statBases>
 			<Mass>4</Mass>
