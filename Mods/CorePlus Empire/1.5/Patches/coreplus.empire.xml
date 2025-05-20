@@ -1,7 +1,7 @@
 <Patch>
     <Operation Class="PatchOperationFindMod">
         <mods>
-            <li>[CorePlus] Empire</li>
+            <li>[RCP] Empire</li>
         </mods>
         <match Class="PatchOperationSequence">
             <operations>
