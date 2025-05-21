@@ -17,7 +17,6 @@
 	<loadAfter>
 		<li>adaptive.storage.neolithic</li>
 		<li>aoba.fortress.industrial.citadel</li>
-		<li>boomer.debloat</li>
 		<li>boomer.rebalance</li>
 		<li>ceteam.combatextended</li>
 		<li>coreplus.empire</li>
