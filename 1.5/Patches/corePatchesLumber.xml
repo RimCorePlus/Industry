@@ -123,7 +123,7 @@
 			</li>
 			<li Class="StockGenerator_SingleDef">
 				<thingDef>CorePlus_WoodLog</thingDef>
-				<countRange>250~400</countRange>
+				<countRange>500~800</countRange>
 			</li>
 		</value>
 	</Operation>

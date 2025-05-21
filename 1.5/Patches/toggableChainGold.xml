@@ -193,6 +193,16 @@
                     <value>CorePlus_Gold</value>
                 </match>
             </li>
+            <!--orbital traders carry gold-->
+            <li Class="PatchOperationAdd">
+                <xpath>//TraderKindDef[defName="Orbital_BulkGoods"]/stockGenerators</xpath>
+                <value>
+                    <li Class="StockGenerator_SingleDef">
+                        <thingDef>CorePlus_Gold</thingDef>
+                        <countRange>100~400</countRange>
+                    </li>
+                </value>
+            </li>
         </operations>
     </Operation>
 </Patch>

@@ -260,6 +260,26 @@
                     </value>
                 </match>
             </li>
+            <!--outlander traders carry polyshale-->
+            <li Class="PatchOperationAdd">
+                <xpath>//TraderKindDef[defName="Caravan_Outlander_BulkGoods"]/stockGenerators</xpath>
+                <value>
+                    <li Class="StockGenerator_SingleDef">
+                        <thingDef>CorePlus_Polyshale</thingDef>
+                        <countRange>50~100</countRange>
+                    </li>
+                </value>
+            </li>
+            <!--orbital traders carry polyshale-->
+            <li Class="PatchOperationAdd">
+                <xpath>//TraderKindDef[defName="Orbital_BulkGoods"]/stockGenerators</xpath>
+                <value>
+                    <li Class="StockGenerator_SingleDef">
+                        <thingDef>CorePlus_Polyshale</thingDef>
+                        <countRange>200~300</countRange>
+                    </li>
+                </value>
+            </li>
         </operations>
     </Operation>
 </Patch>

@@ -197,6 +197,16 @@
                     <value>CorePlus_Silver</value>
                 </match>
             </li>
+            <!--orbital traders carry silver-->
+            <li Class="PatchOperationAdd">
+                <xpath>//TraderKindDef[defName="Orbital_BulkGoods"]/stockGenerators</xpath>
+                <value>
+                    <li Class="StockGenerator_SingleDef">
+                        <thingDef>CorePlus_Silver</thingDef>
+                        <countRange>200~300</countRange>
+                    </li>
+                </value>
+            </li>
         </operations>
     </Operation>
 </Patch>

@@ -198,7 +198,7 @@
 	</Operation>
 
 	<!--==========traders==========-->
-	<!--outlander caravans carry coal-->
+	<!--outlander caravans carry coal and iron-->
 	<Operation Class="PatchOperationAdd">
 		<xpath>//TraderKindDef[defName="Caravan_Outlander_BulkGoods"]/stockGenerators</xpath>
 		<value>
@@ -206,15 +206,23 @@
 				<thingDef>CorePlus_Coal</thingDef>
 				<countRange>150~300</countRange>
 			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>CorePlus_Iron</thingDef>
+				<countRange>150~300</countRange>
+			</li>
 		</value>
 	</Operation>
-	<!--orbital bulk goods trader carries coal-->
+	<!--orbital bulk goods trader carries coal and iron-->
 	<Operation Class="PatchOperationAdd">
 		<xpath>//TraderKindDef[defName="Orbital_BulkGoods"]/stockGenerators</xpath>
 		<value>
 			<li Class="StockGenerator_SingleDef">
 				<thingDef>CorePlus_Coal</thingDef>
-				<countRange>300~450</countRange>
+				<countRange>800~1200</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>CorePlus_Iron</thingDef>
+				<countRange>500~800</countRange>
 			</li>
 		</value>
 	</Operation>
