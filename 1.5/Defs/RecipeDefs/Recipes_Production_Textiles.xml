@@ -10,6 +10,24 @@
 		<workSkill>Crafting</workSkill>
 		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
 	</RecipeDef>
+	<RecipeDef Abstract="True" Name="CorePlus_MakeTanningLiquorBase">
+		<jobString>Making a batch of tanning liquor.</jobString>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_CookMeal</soundWorking>
+		<workAmount>900</workAmount>
+		<workSkill>Cooking</workSkill>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<workSkillLearnFactor>0.25</workSkillLearnFactor>
+		<targetCountAdjustment>25</targetCountAdjustment>
+		<products>
+			<CorePlus_TanningLiquor>25</CorePlus_TanningLiquor>
+		</products>
+		<recipeUsers>
+			<li>Campfire</li>
+			<li>FueledStove</li>
+			<li>ElectricStove</li>
+		</recipeUsers>
+	</RecipeDef>
 	<!--cloth-->
 	<RecipeDef ParentName="CorePlus_SpinFabricBase">
 		<defName>CorePlus_SpinCloth</defName>
@@ -97,5 +115,56 @@
 		</products>
 		<researchPrerequisite>Devilstrand</researchPrerequisite>
 		<workAmount>2000</workAmount>
+	</RecipeDef>
+	<!--hardened patchleather-->
+	<RecipeDef ParentName="CorePlus_MakeTanningLiquorBase">
+		<defName>CorePlus_MakeTanningLiquorFromWood</defName>
+		<label>make tanning liquor from wood</label>
+		<description>Make a batch of tanning liquor using the bark and wood contents from logs.</description>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>WoodLog</li>
+						<li>CorePlus_WoodLog</li>
+						<li MayRequire="sirmashedpotato.ashlands">Mashed_Ashlands_ParasolWoodLog</li>
+					</thingDefs>
+				</filter>
+				<count>10</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>WoodLog</li>
+				<li>CorePlus_WoodLog</li>
+				<li MayRequire="sirmashedpotato.ashlands">Mashed_Ashlands_ParasolWoodLog</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+	</RecipeDef>
+	<RecipeDef ParentName="CorePlus_MakeTanningLiquorBase">
+		<defName>CorePlus_MakeTanningLiquorFromFood</defName>
+		<label>make tanning liquor from food</label>
+		<description>Make a batch of tanning liquor using any organic ingredients known to harbor tannins.</description>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RawHops</li>
+						<li>RawAgave</li>
+						<li>RawBerries</li>
+						<li>RawCorn</li>
+					</thingDefs>
+				</filter>
+				<count>25</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>RawHops</li>
+				<li>RawAgave</li>
+				<li>RawBerries</li>
+				<li>RawCorn</li>
+			</thingDefs>
+		</fixedIngredientFilter>
 	</RecipeDef>
 </Defs>

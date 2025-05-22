@@ -1,4 +1,5 @@
 <Defs>
+	<!--lumber-->
 	<ItemProcessor.CombinationDef>
 		<defName>CorePlus_GreenLumberIntoLumber</defName>
 		<building>CorePlus_WoodDryingRack</building>
@@ -10,7 +11,25 @@
 		<amount>
 			<li>50</li>
 		</amount>
-		<!--theoretical maximum output per quadrum: 375 lumber-->
 		<singleTimeIfNotQualityIncreasing>2</singleTimeIfNotQualityIncreasing>
+	</ItemProcessor.CombinationDef>
+	<!--hardened patchleather-->
+	<ItemProcessor.CombinationDef>
+		<defName>CorePlus_PatchIntoHardened</defName>
+		<building>CorePlus_TanningVat</building>
+		<items>
+			<li>CorePlus_TanningLiquor</li>
+		</items>
+		<secondItems>
+			<li>Leather_Patch</li>
+		</secondItems>
+		<amount>
+			<li>25</li>
+			<li>50</li>
+		</amount>
+		<result>CorePlus_Leather_Hardened</result>
+		<yield>50</yield>
+		<useQualityIncreasing>false</useQualityIncreasing>
+		<singleTimeIfNotQualityIncreasing>1</singleTimeIfNotQualityIncreasing>
 	</ItemProcessor.CombinationDef>
 </Defs>

@@ -34,6 +34,7 @@
 ### Textiles
 - Cotton and devilstrand plants now yield raw fiber that must be spun before it can be used for tailoring
 - Optional production chain for Synthread (requires Plasteel production chain)
+- Patchleather can be tanned to create hardened patchleather
 
 To help offset this added work requirement, the new 2x1 electric spinning wheel stacks with two tool cabinets for an 18% boost to work speed on tailoring benches.
 
@@ -59,9 +60,10 @@ To help offset this added work requirement, the new 2x1 electric spinning wheel 
 - Remove compacted plasteel
 
 ## Impact
-Production chains add tedium to the game. This is good for immersion, but (in my experience) detracts from the overall experience when there's no benefit. Accordingly, the refining recipes have been balanced to maximize output per job and create a stream of income for mining colonies that doesn't break the economy.
+Production chains add tedium to the game. This is good for immersion, but (in my experience) detracts from the overall experience when there's no benefit. Accordingly, new production chains have been balanced to maximize output per job and create new streams of income for colonies that doesn't break the economy.
 
-Here's how refining jobs compare to vanilla[^1] money making activities:
+#### Metal
+Refining jobs compared to vanilla[^1] money making activities:
 |  | Added value (per hr work) |
 |---:|:---:|
 | Rolling smokeleaf joints | 25 |
@@ -73,15 +75,20 @@ Here's how refining jobs compare to vanilla[^1] money making activities:
 | Flake synthesis | 64 |
 | **Gold refining** | **70** |
 
-Wealth management is another upside of refining chains over vanilla mining. Since raw materials are worth less than their refined counterparts, mining large veins doesn't drastically inflate your colony's wealth. Refining bills can be managed to meet the colony's needs without creating excess wealth.
+Wealth management is another potential upside of refining chains over vanilla mining. Since raw materials are worth less than their refined counterparts, mining large veins doesn't drastically inflate your colony's wealth. Refining bills can be managed to meet the colony's needs without creating excess wealth.
 
-### Refining Recipes
-|  | Ore (Bulk) | Coal (Bulk) | Work amount (Bulk) | Output (Bulk) |
-|---:|:---:|:---:|:---:|:---:|
-| Steel | 15 (60) | 5 (20) | 1000 (4000) | 15 (60) |
-| Plasteel | 12[^2] (48) | 1 (4) | 2000 (8000) | 10 (40) |
-| Silver | 50 (200) | ~ | 1250 (5000) | 50 (200) |
-| Gold | 10 (40) | ~ | 1250 (5000) | 10 (40) |
+#### Hardened Patchleather
+Hardened patchleather is best used for crafting armor. It is superior to cloth, patchleather, and plainleather, and much easier to source than devilstrand and comparable exotic leathers. To offset its abundance, it takes a full day to tan and is 30% slower to craft with than normal leathers.
+
+|  | Beauty | Max Hit Points | Armor - Sharp | Armor - Blunt | Armor - Heat | Insulation - Cold | Insulation - Heat | Market Value |
+|---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| Patchleather | 1 | 1 | 0.45 | 0.19 | 0.9 | 9 | 9 | 1.5 |
+| Plainleather | 1 | 1.3 | 0.81 | 0.24 | 1.5 | 16 | 16 | 2.1 |
+| **Hardened Patchleather** | **1** | **1.3** | **0.93** | **0.24** | **1.5** | **9** | **9** | **1.8** |
+| Cloth | 1 | 1 | 0.36 | 0 | 0.18 | 18 | 18 | 1.5 |
+| Devilstrand | 3.2 | 1.3 | 1.4 | 0.36 | 3 | 20 | 24 | 5.5 |
+
+Since this chain adds a new resource with great benefits over an existing resource, it is not balanced as a money making activity. Hardened patchleather is only slightly more valuable than the sum of its precursors.
 
 ## Legal
 Portions of the materials used to create this mod are trademarks and/or copyrighted works of Ludeon Studios Inc. All rights reserved by Ludeon. This mod is not official and is not endorsed by Ludeon.

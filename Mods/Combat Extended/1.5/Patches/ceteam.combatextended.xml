@@ -114,6 +114,14 @@
 			<MeleePenetrationFactor>0.4</MeleePenetrationFactor>
 		</value>
 	</Operation>
+	<!--hardened leather-->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="CorePlus_Leather_Hardened"]/statBases/StuffPower_Armor_Sharp</xpath>
+		<value>
+			<StuffPower_Armor_Sharp>0.07</StuffPower_Armor_Sharp>
+		</value>
+	</Operation>
+	<!--toggable patches-->
 	<Operation Class="VFECore.PatchOperationToggableSequence">
 		<enabled>true</enabled>
 		<label>[Combat Extended] Improvised gas mask uses coal instead of wood</label>
