@@ -114,4 +114,14 @@
 			<MeleePenetrationFactor>0.4</MeleePenetrationFactor>
 		</value>
 	</Operation>
+	<Operation Class="VFECore.PatchOperationToggableSequence">
+		<enabled>true</enabled>
+		<label>[Combat Extended] Improvised gas mask uses coal instead of wood</label>
+		<operations>
+			<li Class="PatchOperationSetName">
+				<xpath>//ThingDef[defName="CE_Apparel_ImprovGasMask"]/costList/WoodLog</xpath>
+				<name>CorePlus_Coal</name>
+			</li>
+		</operations>
+	</Operation>
 </Patch>
