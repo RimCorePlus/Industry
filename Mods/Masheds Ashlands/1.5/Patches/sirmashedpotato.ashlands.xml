@@ -1,0 +1,12 @@
+<Patch>
+    <Operation Class="VFECore.PatchOperationToggableSequence">
+        <enabled>true</enabled>
+        <label>[Mashed's Ashlands] Parasol logs are rawWoody</label>
+        <operations>
+            <li Class="PatchOperationReplace">
+                <xpath>//ThingDef[defName="Mashed_Ashlands_ParasolWoodLog"]/stuffProps/categories/li[text()="Woody"]/text()</xpath>
+                <name>RawWoody</name>
+            </li>
+        </operations>
+    </Operation>
+</Patch>

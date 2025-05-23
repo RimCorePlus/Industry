@@ -10,5 +10,6 @@
         <li IfModActive="coreplus.empire">Mods/CorePlus Empire/1.5</li>
         <li IfModActive="ceteam.combatextended">Mods/Combat Extended/1.5</li>
         <li IfModActive="aoba.fortress.industrial.citadel">Mods/Fortification Industrial - Citadel/1.5</li>
+        <li IfModActive="sirmashedpotato.ashlands">Mods/Masheds Ashlands/1.5</li>
     </v1.5>
 </loadFolders>
