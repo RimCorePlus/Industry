@@ -124,7 +124,7 @@
 	<!--toggable patches-->
 	<Operation Class="VFECore.PatchOperationToggableSequence">
 		<enabled>true</enabled>
-		<label>[Combat Extended] Improvised gas mask uses coal instead of wood</label>
+		<label>[Combat Extended] Improvised gas mask uses coal</label>
 		<operations>
 			<li Class="PatchOperationSetName">
 				<xpath>//ThingDef[defName="CE_Apparel_ImprovGasMask"]/costList/WoodLog</xpath>
