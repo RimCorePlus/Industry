@@ -5,7 +5,7 @@
         <operations>
             <li Class="PatchOperationReplace">
                 <xpath>//ThingDef[defName="Mashed_Ashlands_ParasolWoodLog"]/stuffProps/categories/li[text()="Woody"]/text()</xpath>
-                <name>RawWoody</name>
+                <value>RawWoody</value>
             </li>
         </operations>
     </Operation>
