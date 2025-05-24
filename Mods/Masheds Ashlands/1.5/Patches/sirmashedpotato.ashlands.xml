@@ -7,6 +7,20 @@
                 <xpath>//ThingDef[defName="Mashed_Ashlands_ParasolWoodLog"]/stuffProps/categories/li[text()="Woody"]/text()</xpath>
                 <value>RawWoody</value>
             </li>
+            <li Class="PatchOperationReplace">
+                <xpath>//ThingDef[defName="Mashed_Ashlands_ParasolWoodLog"]/statBases</xpath>
+                <value>
+                    <statBases>
+                        <MarketValue>0.9</MarketValue>
+                        <MaxHitPoints>80</MaxHitPoints>
+                        <Mass>0.4</Mass>
+                        <Flammability>0.4</Flammability>
+                        <DeteriorationRate>0.35</DeteriorationRate>
+                        <SharpDamageMultiplier>0.22</SharpDamageMultiplier>
+                        <BluntDamageMultiplier>0.67</BluntDamageMultiplier>
+                    </statBases>
+                </value>
+            </li>
         </operations>
     </Operation>
 </Patch>
