@@ -1,6 +1,6 @@
 <Defs>
     <ModSettingsFramework.ModOptionCategoryDef Name="RG_ModOptionsBase" Abstract="True">
-        <modSettingsName>RCP Industry</modSettingsName>
+        <modSettingsName>[RCP] Industry</modSettingsName>
         <modPackageSettingsID>RCP.Industry</modPackageSettingsID>
     </ModSettingsFramework.ModOptionCategoryDef>
     <ModSettingsFramework.ModOptionCategoryDef ParentName="RG_ModOptionsBase">
