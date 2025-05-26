@@ -11,5 +11,7 @@
         <li IfModActive="ceteam.combatextended">Mods/Combat Extended/1.5</li>
         <li IfModActive="aoba.fortress.industrial.citadel">Mods/Fortification Industrial - Citadel/1.5</li>
         <li IfModActive="sirmashedpotato.ashlands">Mods/Masheds Ashlands/1.5</li>
+        <li IfModActive="rebuild.cotr.doorsandcorners">Mods/ReBuild Doors and Corners/1.5</li>
+        <li IfModActive="vanillaexpanded.vfecore">Mods/Vanilla Furniture Expanded/1.5</li>
     </v1.5>
 </loadFolders>

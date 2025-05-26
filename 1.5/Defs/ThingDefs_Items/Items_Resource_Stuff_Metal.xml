@@ -54,6 +54,7 @@
 		<label>coal</label>
 		<description>A piece of hard, black coal. Can be used as fuel for generators, stoves, torches and campfires.</description>
 		<descriptionHyperlinks>
+			<RecipeDef>CorePlus_MakeCharcoal</RecipeDef>
 			<RecipeDef>CorePlus_RefineSteel</RecipeDef>
 		</descriptionHyperlinks>
 		<graphicData>

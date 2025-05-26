@@ -6,6 +6,7 @@
 		<descriptionHyperlinks>
 			<RecipeDef>CorePlus_MakeFirewood</RecipeDef>
 			<RecipeDef>CorePlus_MakeGreenLumber</RecipeDef>
+			<RecipeDef>CorePlus_MakeTanningLiquorFromWood</RecipeDef>
 		</descriptionHyperlinks>
 		<graphicData>
 			<texPath>Things/Item/Resource/WoodLog</texPath>
@@ -62,6 +63,9 @@
 		<defName>CorePlus_GreenLumber</defName>
 		<label>green lumber</label>
 		<description>This lumber has been cut from logs, but has yet to be dried out in a controlled environment.</description>
+		<descriptionHyperlinks>
+			<RecipeDef>CorePlus_MakeGreenLumber</RecipeDef>
+		</descriptionHyperlinks>
 		<graphicData>
 			<texPath>Things/Item/Resource/Lumber</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
@@ -89,7 +93,7 @@
 		<stuffProps>
 			<stuffAdjective>rough wooden</stuffAdjective>
 			<categories>
-				<li>Woody</li>
+				<li>RawWoody</li>
 			</categories>
 			<commonality>0.1</commonality>
 			<color>(133,115,67)</color>

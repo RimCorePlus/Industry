@@ -44,13 +44,12 @@
 	<!--==========recipes==========-->
 	<!--replace lumber requirement with firewood for vanilla and modded buildings with appropriate keywords in the name-->
 	<Operation Class="PatchOperationSetName">
-		<success>Always</success>
 		<xpath>//ThingDef[contains(label, "fire") or contains(label, "torch") or contains(label, "pyre") or contains(label, "effigy")]/costList/WoodLog</xpath>
 		<name>CorePlus_Firewood</name>
 	</Operation>
 	<!--allow simple buildings to be constructed with raw wood logs-->
 	<Operation Class="PatchOperationAdd">
-		<xpath>//ThingDef[@Name="TableBase" or defName="Stool" or defName="Fence" or @Name="DoorBase" or defName="HorseshoesPin" or defName="PenMarker" or defName="MeleeWeapon_Club" or defName="MeleeWeapon_Spear" or defName="Apparel_WarMask" or @Name="NatureShrineBase"][stuffCategories]/stuffCategories</xpath>
+		<xpath>//ThingDef[@Name="TableBase" or defName="Stool" or defName="Fence" or @Name="DoorBase" or defName="HorseshoesPin" or defName="PenMarker" or defName="MeleeWeapon_Club" or defName="MeleeWeapon_Spear" or defName="Apparel_WarMask" or @Name="NatureShrineBase" or @Name="ShelfBase"][stuffCategories]/stuffCategories</xpath>
 		<value>
 			<li>RawWoody</li>
 		</value>

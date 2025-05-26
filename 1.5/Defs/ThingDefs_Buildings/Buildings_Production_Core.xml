@@ -1,4 +1,41 @@
 <Defs>
+    <!--building base-->
+    <ThingDef Name="CorePlus_IndustryBuildingBase" ParentName="BenchBase" Abstract="True">
+        <altitudeLayer>Building</altitudeLayer>
+        <building>
+            <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+        </building>
+        <canOverlapZones>false</canOverlapZones>
+        <castEdgeShadows>false</castEdgeShadows>
+        <designationCategory>Production</designationCategory>
+        <drawerType>MapMeshAndRealTime</drawerType>
+        <fillPercent>0.3</fillPercent>
+        <graphicData>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <shaderType>CutoutComplex</shaderType>
+        </graphicData>
+        <minifiedDef>MinifiedThing</minifiedDef>
+        <passability>PassThroughOnly</passability>
+        <pathCost>70</pathCost>
+        <statBases>
+            <WorkToBuild>1000</WorkToBuild>
+            <Flammability>1.0</Flammability>
+        </statBases>
+        <staticSunShadowHeight>0</staticSunShadowHeight>
+        <useHitPoints>true</useHitPoints>
+    </ThingDef>
+    <!--work table base-->
+    <ThingDef Name="CorePlus_WorkTableBase" ParentName="CorePlus_IndustryBuildingBase" Abstract="True">
+        <hasInteractionCell>true</hasInteractionCell>
+        <inspectorTabs>
+            <li>ITab_Bills</li>
+        </inspectorTabs>
+        <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+        <surfaceType>Item</surfaceType>
+        <thingClass>Building_WorkTable</thingClass>
+        <tickerType>Rare</tickerType>
+    </ThingDef>
+    <!--stonecutter spot-->
     <ThingDef ParentName="BuildingBase">
         <defName>CorePlus_StonecutterSpot</defName>
         <label>stonecutter's spot</label>

@@ -37,4 +37,68 @@
         <xpath>//ResearchProjectDef[defName="Devilstrand"]/description/text()</xpath>
         <value>Grow and spin devilstrand, a slow-growing mushroom that yields an exceptionally tough, heat-resistant plant fiber.</value>
     </Operation>
+    <!--add hyperlink to cloth-->
+    <Operation Class="PatchOperationConditional">
+        <xpath>//ThingDef[defName="Cloth"]/descriptionHyperlinks</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>//ThingDef[defName="Cloth"]</xpath>
+            <value>
+                <descriptionHyperlinks>
+                    <RecipeDef>CorePlus_SpinCloth</RecipeDef>
+                </descriptionHyperlinks>
+            </value>
+        </nomatch>
+        <match Class="PatchOperationAdd">
+            <xpath>//ThingDef[defName="Cloth"]/descriptionHyperlinks</xpath>
+            <value>
+                <RecipeDef>CorePlus_SpinCloth</RecipeDef>
+            </value>
+        </match>
+    </Operation>
+    <!--add hyperlink to devilstrand-->
+    <Operation Class="PatchOperationConditional">
+        <xpath>//ThingDef[defName="DevilstrandCloth"]/descriptionHyperlinks</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>//ThingDef[defName="DevilstrandCloth"]</xpath>
+            <value>
+                <descriptionHyperlinks>
+                    <RecipeDef>CorePlus_SpinDevilstrand</RecipeDef>
+                </descriptionHyperlinks>
+            </value>
+        </nomatch>
+        <match Class="PatchOperationAdd">
+            <xpath>//ThingDef[defName="DevilstrandCloth"]/descriptionHyperlinks</xpath>
+            <value>
+                <RecipeDef>CorePlus_SpinDevilstrand</RecipeDef>
+            </value>
+        </match>
+    </Operation>
+    <!--add hyperlinks to patchleather-->
+    <Operation Class="PatchOperationConditional">
+        <xpath>//ThingDef[defName="Leather_Patch"]/descriptionHyperlinks</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>//ThingDef[defName="Leather_Patch"]</xpath>
+            <value>
+                <descriptionHyperlinks>
+                    <ThingDef>CorePlus_Leather_Hardened</ThingDef>
+                    <ThingDef>CorePlus_TanningLiquor</ThingDef>
+                    <ThingDef>CorePlus_TanningVat</ThingDef>
+                </descriptionHyperlinks>
+            </value>
+        </nomatch>
+        <match Class="PatchOperationAdd">
+            <xpath>//ThingDef[defName="Leather_Patch"]/descriptionHyperlinks</xpath>
+            <value>
+                <ThingDef>CorePlus_Leather_Hardened</ThingDef>
+                <ThingDef>CorePlus_TanningLiquor</ThingDef>
+                <ThingDef>CorePlus_TanningVat</ThingDef>
+            </value>
+        </match>
+    </Operation>
+    <!--add tip to patchleather description-->
+    <Operation Class="PatchOperationInsert">
+        <xpath>//ThingDef[defName="Leather_Patch"]/description/text()</xpath>
+        <order>Append</order>
+        <value>\n\nIt can be hardened in a tanning vat.</value>
+    </Operation>
 </Patch>

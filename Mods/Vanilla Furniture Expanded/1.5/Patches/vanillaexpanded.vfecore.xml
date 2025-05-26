@@ -1,0 +1,8 @@
+<Patch>
+    <Operation Class="PatchOperationAdd">
+        <xpath>//ThingDef[@Name="VFE_SimpleBedBase"]/stuffCategories</xpath>
+        <value>
+            <li>RawWoody</li>
+        </value>
+    </Operation>
+</Patch>

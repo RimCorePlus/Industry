@@ -3,6 +3,11 @@
         <defName>CorePlus_Leather_Hardened</defName>
         <label>hardened patchleather</label>
         <description>A hardened textile created by tanning patchleather. While the hardening process makes it quite tough compared to patchleather, it is still a poor insulator.</description>
+        <descriptionHyperlinks>
+            <ThingDef>Leather_Patch</ThingDef>
+            <ThingDef>CorePlus_TanningLiquor</ThingDef>
+            <ThingDef>CorePlus_TanningVat</ThingDef>
+        </descriptionHyperlinks>
         <graphicData>
             <color>(72,60,48)</color>
         </graphicData>
