@@ -1,6 +1,6 @@
 ﻿<Defs>
-	<ThingDef ParentName="CorePlus_WorkTableBase">
-		<defName>CorePlus_Bloomery</defName>
+	<ThingDef ParentName="RCP_WorkTableBase">
+		<defName>RCP_Bloomery</defName>
 		<label>bloomery</label>
 		<description>Used to refine metal, but this primitive design is both more labor intensive and less fuel efficient than a proper smelting station.</description>
 		<thingClass>Building_WorkTable</thingClass>
@@ -29,7 +29,7 @@
 				<fuelCapacity>50.0</fuelCapacity>
 				<fuelFilter>
 					<thingDefs>
-						<li>CorePlus_Coal</li>
+						<li>RCP_Coal</li>
 					</thingDefs>
 				</fuelFilter>
 				<consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>

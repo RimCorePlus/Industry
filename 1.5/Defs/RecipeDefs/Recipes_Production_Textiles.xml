@@ -1,16 +1,16 @@
 ﻿<Defs>
 	<!--parent-->
-	<RecipeDef Abstract="True" Name="CorePlus_SpinFabricBase">
+	<RecipeDef Abstract="True" Name="RCP_SpinFabricBase">
 		<effectWorking>Tailor</effectWorking>
 		<recipeUsers>
-			<li>CorePlus_SpinningWheel</li>
-			<li>CorePlus_ElectricSpinningWheel</li>
+			<li>RCP_SpinningWheel</li>
+			<li>RCP_ElectricSpinningWheel</li>
 		</recipeUsers>
 		<soundWorking>Recipe_Tailor</soundWorking>
 		<workSkill>Crafting</workSkill>
 		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
 	</RecipeDef>
-	<RecipeDef Abstract="True" Name="CorePlus_MakeTanningLiquorBase">
+	<RecipeDef Abstract="True" Name="RCP_MakeTanningLiquorBase">
 		<jobString>Making a batch of tanning liquor.</jobString>
 		<effectWorking>Cook</effectWorking>
 		<soundWorking>Recipe_CookMeal</soundWorking>
@@ -20,7 +20,7 @@
 		<workSkillLearnFactor>0.25</workSkillLearnFactor>
 		<targetCountAdjustment>25</targetCountAdjustment>
 		<products>
-			<CorePlus_TanningLiquor>25</CorePlus_TanningLiquor>
+		<RCP_TanningLiquor>25</RCP_TanningLiquor>
 		</products>
 		<recipeUsers>
 			<li>Campfire</li>
@@ -29,8 +29,8 @@
 		</recipeUsers>
 	</RecipeDef>
 	<!--cloth-->
-	<RecipeDef ParentName="CorePlus_SpinFabricBase">
-		<defName>CorePlus_SpinCloth</defName>
+	<RecipeDef ParentName="RCP_SpinFabricBase">
+		<defName>RCP_SpinCloth</defName>
 		<label>spin cloth</label>
 		<description>Spin raw cotton fiber into workable cloth.</description>
 		<jobString>Spinning cloth.</jobString>
@@ -39,7 +39,7 @@
 			<li>
 				<filter>
 					<thingDefs>
-						<li>CorePlus_Cotton</li>
+						<li>RCP_Cotton</li>
 					</thingDefs>
 				</filter>
 				<count>10</count>
@@ -50,8 +50,8 @@
 		</products>
 		<workAmount>250</workAmount>
 	</RecipeDef>
-	<RecipeDef ParentName="CorePlus_SpinFabricBase">
-		<defName>CorePlus_SpinClothBulk</defName>
+	<RecipeDef ParentName="RCP_SpinFabricBase">
+		<defName>RCP_SpinClothBulk</defName>
 		<label>spin cloth x4</label>
 		<description>Spin raw cotton fiber into workable cloth.</description>
 		<jobString>Spinning cloth.</jobString>
@@ -60,7 +60,7 @@
 			<li>
 				<filter>
 					<thingDefs>
-						<li>CorePlus_Cotton</li>
+						<li>RCP_Cotton</li>
 					</thingDefs>
 				</filter>
 				<count>40</count>
@@ -72,8 +72,8 @@
 		<workAmount>1000</workAmount>
 	</RecipeDef>
 	<!--devilstrand-->
-	<RecipeDef ParentName="CorePlus_SpinFabricBase">
-		<defName>CorePlus_SpinDevilstrand</defName>
+	<RecipeDef ParentName="RCP_SpinFabricBase">
+		<defName>RCP_SpinDevilstrand</defName>
 		<label>spin devilstrand</label>
 		<description>Spin raw devilstrand fiber into workable cloth.</description>
 		<jobString>Spinning devilstrand.</jobString>
@@ -82,7 +82,7 @@
 			<li>
 				<filter>
 					<thingDefs>
-						<li>CorePlus_Devilstrand</li>
+						<li>RCP_Devilstrand</li>
 					</thingDefs>
 				</filter>
 				<count>10</count>
@@ -94,8 +94,8 @@
 		<researchPrerequisite>Devilstrand</researchPrerequisite>
 		<workAmount>500</workAmount>
 	</RecipeDef>
-	<RecipeDef ParentName="CorePlus_SpinFabricBase">
-		<defName>CorePlus_SpinDevilstrandBulk</defName>
+	<RecipeDef ParentName="RCP_SpinFabricBase">
+		<defName>RCP_SpinDevilstrandBulk</defName>
 		<label>spin devilstrand x4</label>
 		<description>Spin raw devilstrand fiber into workable cloth.</description>
 		<jobString>Spinning devilstrand.</jobString>
@@ -104,7 +104,7 @@
 			<li>
 				<filter>
 					<thingDefs>
-						<li>CorePlus_Devilstrand</li>
+						<li>RCP_Devilstrand</li>
 					</thingDefs>
 				</filter>
 				<count>40</count>
@@ -115,56 +115,5 @@
 		</products>
 		<researchPrerequisite>Devilstrand</researchPrerequisite>
 		<workAmount>2000</workAmount>
-	</RecipeDef>
-	<!--hardened patchleather-->
-	<RecipeDef ParentName="CorePlus_MakeTanningLiquorBase">
-		<defName>CorePlus_MakeTanningLiquorFromWood</defName>
-		<label>make tanning liquor from wood</label>
-		<description>Make a batch of tanning liquor using the bark and wood contents from logs.</description>
-		<ingredients>
-			<li>
-				<filter>
-					<thingDefs>
-						<li>WoodLog</li>
-						<li>CorePlus_WoodLog</li>
-						<li MayRequire="sirmashedpotato.ashlands">Mashed_Ashlands_ParasolWoodLog</li>
-					</thingDefs>
-				</filter>
-				<count>10</count>
-			</li>
-		</ingredients>
-		<fixedIngredientFilter>
-			<thingDefs>
-				<li>WoodLog</li>
-				<li>CorePlus_WoodLog</li>
-				<li MayRequire="sirmashedpotato.ashlands">Mashed_Ashlands_ParasolWoodLog</li>
-			</thingDefs>
-		</fixedIngredientFilter>
-	</RecipeDef>
-	<RecipeDef ParentName="CorePlus_MakeTanningLiquorBase">
-		<defName>CorePlus_MakeTanningLiquorFromFood</defName>
-		<label>make tanning liquor from food</label>
-		<description>Make a batch of tanning liquor using any organic ingredients known to harbor tannins.</description>
-		<ingredients>
-			<li>
-				<filter>
-					<thingDefs>
-						<li>RawHops</li>
-						<li>RawAgave</li>
-						<li>RawBerries</li>
-						<li>RawCorn</li>
-					</thingDefs>
-				</filter>
-				<count>25</count>
-			</li>
-		</ingredients>
-		<fixedIngredientFilter>
-			<thingDefs>
-				<li>RawHops</li>
-				<li>RawAgave</li>
-				<li>RawBerries</li>
-				<li>RawCorn</li>
-			</thingDefs>
-		</fixedIngredientFilter>
 	</RecipeDef>
 </Defs>

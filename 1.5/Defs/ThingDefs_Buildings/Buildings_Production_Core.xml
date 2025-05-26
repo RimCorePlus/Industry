@@ -1,6 +1,6 @@
 <Defs>
     <!--building base-->
-    <ThingDef Name="CorePlus_IndustryBuildingBase" ParentName="BenchBase" Abstract="True">
+    <ThingDef Name="RCP_IndustryBuildingBase" ParentName="BenchBase" Abstract="True">
         <altitudeLayer>Building</altitudeLayer>
         <building>
             <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
@@ -25,7 +25,7 @@
         <useHitPoints>true</useHitPoints>
     </ThingDef>
     <!--work table base-->
-    <ThingDef Name="CorePlus_WorkTableBase" ParentName="CorePlus_IndustryBuildingBase" Abstract="True">
+    <ThingDef Name="RCP_WorkTableBase" ParentName="RCP_IndustryBuildingBase" Abstract="True">
         <hasInteractionCell>true</hasInteractionCell>
         <inspectorTabs>
             <li>ITab_Bills</li>
@@ -37,7 +37,7 @@
     </ThingDef>
     <!--stonecutter spot-->
     <ThingDef ParentName="BuildingBase">
-        <defName>CorePlus_StonecutterSpot</defName>
+        <defName>RCP_StonecutterSpot</defName>
         <label>stonecutter's spot</label>
         <description>A place for smashing large rocks together to create blocks.</description>
         <thingClass>Building_WorkTable</thingClass>

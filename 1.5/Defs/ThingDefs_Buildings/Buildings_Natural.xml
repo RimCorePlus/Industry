@@ -1,6 +1,6 @@
 <Defs>
     <ThingDef ParentName="RockBase">
-        <defName>CorePlus_MineableCoal</defName>
+        <defName>RCP_MineableCoal</defName>
         <label>coal</label>
         <description>Rock containing bits of coal.</description>
         <graphicData>
@@ -15,7 +15,7 @@
         </statBases>
         <building>
             <isResourceRock>true</isResourceRock>
-            <mineableThing>CorePlus_Coal</mineableThing>
+            <mineableThing>RCP_Coal</mineableThing>
             <mineableYield>50</mineableYield>
             <mineableScatterCommonality>0.5</mineableScatterCommonality>
             <mineableScatterLumpSizeRange>20~40</mineableScatterLumpSizeRange>

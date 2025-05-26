@@ -1,19 +1,23 @@
 <Patch>
-    <Operation Class="VFECore.PatchOperationToggableSequence">
-        <enabled>true</enabled>
-        <label>[Production Chain] Synthread (requires Plasteel chain)</label>
+    <Operation Class="ModSettingsFramework.PatchOperationModOption">
+        <defaultValue>true</defaultValue>
+        <label>Synthread (requires Plasteel chain)</label>
+        <tooltip>Synthread can be spun from heated polyshale. Does nothing without the plateel chain enabled.</tooltip>
+        <id>RCP_ChainSynthread</id>
+        <category>RCP_IndustryChains</category>
+        <order>2</order>
         <operations>
             <!--check for polyshale-->
             <li Class="PatchOperationConditional">
-                <xpath>//ThingDef[defName="CorePlus_Polyshale"]</xpath>
+                <xpath>//ThingDef[defName="RCP_Polyshale"]</xpath>
                 <match Class="PatchOperationSequence">
                     <operations>
                         <!--add recipes-->
                         <li Class="PatchOperationAdd">
                             <xpath>Defs</xpath>
                             <value>
-                                <RecipeDef ParentName="CorePlus_SpinFabricBase">
-                                    <defName>CorePlus_SpinSynthread</defName>
+                                <RecipeDef ParentName="RCP_SpinFabricBase">
+                                    <defName>RCP_SpinSynthread</defName>
                                     <label>spin synthread</label>
                                     <description>Spin heated polyshale into workable cloth.</description>
                                     <jobString>Spinning synthread.</jobString>
@@ -22,7 +26,7 @@
                                         <li>
                                             <filter>
                                                 <thingDefs>
-                                                    <li>CorePlus_Polyshale</li>
+                                                    <li>RCP_Polyshale</li>
                                                 </thingDefs>
                                             </filter>
                                             <count>1</count>
@@ -32,12 +36,12 @@
                                         <Synthread>6</Synthread>
                                     </products>
                                     <recipeUsers Inherit="False">
-                                        <li>CorePlus_ElectricSpinningWheel</li>
+                                        <li>RCP_ElectricSpinningWheel</li>
                                     </recipeUsers>
                                     <workAmount>1000</workAmount>
                                 </RecipeDef>
-                                <RecipeDef ParentName="CorePlus_SpinFabricBase">
-                                    <defName>CorePlus_SpinSynthreadBulk</defName>
+                                <RecipeDef ParentName="RCP_SpinFabricBase">
+                                    <defName>RCP_SpinSynthreadBulk</defName>
                                     <label>spin synthread x4</label>
                                     <description>Spin heated polyshale into workable cloth.</description>
                                     <jobString>Spinning synthread.</jobString>
@@ -46,7 +50,7 @@
                                         <li>
                                             <filter>
                                                 <thingDefs>
-                                                    <li>CorePlus_Polyshale</li>
+                                                    <li>RCP_Polyshale</li>
                                                 </thingDefs>
                                             </filter>
                                             <count>4</count>
@@ -56,7 +60,7 @@
                                         <Synthread>24</Synthread>
                                     </products>
                                     <recipeUsers Inherit="False">
-                                        <li>CorePlus_ElectricSpinningWheel</li>
+                                        <li>RCP_ElectricSpinningWheel</li>
                                     </recipeUsers>
                                     <workAmount>4000</workAmount>
                                 </RecipeDef>
@@ -67,7 +71,7 @@
                             <xpath>//ThingDef[defName="Synthread"]</xpath>
                             <value>
                                 <descriptionHyperlinks>
-                                    <RecipeDef>CorePlus_SpinSynthread</RecipeDef>
+                                    <RecipeDef>RCP_SpinSynthread</RecipeDef>
                                 </descriptionHyperlinks>
                             </value>
                         </li>

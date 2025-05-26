@@ -1,6 +1,6 @@
 ﻿<Defs>
 	<RecipeDef>
-		<defName>CorePlus_MakeComponentIndustrial</defName>
+		<defName>RCP_MakeComponentIndustrial</defName>
 		<label>make component</label>
 		<description>Make a component.</description>
 		<jobString>Making component.</jobString>

@@ -2,19 +2,19 @@
     <!--construct buildings with wood logs where it makes sense-->
     <Operation Class="PatchOperationSetName">
         <xpath>//ThingDef[defName="ChristmasTree" or defName="SacrificialFlag" or defName="IncenseShrine"]/costList/WoodLog</xpath>
-        <name>CorePlus_WoodLog</name>
+        <name>RCP_WoodLog</name>
     </Operation>
     <!--woodmaker dryad-->
     <Operation Class="PatchOperationReplace">
         <xpath>//ThingDef[defName="Dryad_Woodmaker"]/comps/li[@Class="CompProperties_Spawner"]/thingToSpawn/text() | //ThingDef[defName="Dryad_Woodmaker"]/descriptionHyperlinks/ThingDef/text() | //GauranlenTreeModeDef[defName="Woodmaker"]/hyperlinks/ThingDef[text()="WoodLog"]/text()</xpath>
-        <value>CorePlus_WoodLog</value>
+        <value>RCP_WoodLog</value>
     </Operation>
     <!--add mining work site for coal-->
     <Operation Class="PatchOperationAdd">
         <xpath>//SitePartDef[defName="WorkSite_Mining"]/lootTable</xpath>
         <value>
             <li>
-                <thing>CorePlus_Coal</thing>
+                <thing>RCP_Coal</thing>
                 <weight>0.5</weight>
             </li>
         </value>
@@ -22,11 +22,11 @@
     <!--logging work sites have wood logs instead of lumber-->
     <Operation Class="PatchOperationReplace">
         <xpath>//SitePartDef[defName="WorkSite_Logging"]/lootTable/li/thing[text()="WoodLog"]/text()</xpath>
-        <value>CorePlus_WoodLog</value>
+        <value>RCP_WoodLog</value>
     </Operation>
     <!--mining work sites have iron ore instead of steel-->
     <Operation Class="PatchOperationReplace">
         <xpath>//SitePartDef[defName="WorkSite_Mining"]/lootTable/li/thing[text()="Steel"]/text()</xpath>
-        <value>CorePlus_Iron</value>
+        <value>RCP_Iron</value>
     </Operation>
 </Patch>

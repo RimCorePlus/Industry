@@ -5,7 +5,7 @@
 		<operations>
 			<li Class="PatchOperationReplace">
 				<xpath>//ThingDef[defName="MineableSteel"]/building/mineableThing/text()</xpath>
-				<value>CorePlus_Iron</value>
+				<value>RCP_Iron</value>
 			</li>
 			<li Class="PatchOperationReplace">
 				<xpath>//ThingDef[defName="MineableSteel"]/label/text()</xpath>
@@ -24,7 +24,7 @@
 	<Operation Class="PatchOperationAdd">
 		<xpath>//GenStepDef[defName="PreciousLump"]/genStep/mineables</xpath>
 		<value>
-			<li>CorePlus_MineableCoal</li>
+			<li>RCP_MineableCoal</li>
 		</value>
 	</Operation>
 	<!--adjust steel graphicData-->
@@ -32,7 +32,7 @@
 		<operations>
 			<li Class="PatchOperationReplace">
 				<xpath>//ThingDef[defName="Steel"]/graphicData/texPath/text()</xpath>
-				<value>Things/Item/Resource/CorePlus_Steel</value>
+				<value>Things/Item/Resource/Ingot</value>
 			</li>
 			<li Class="PatchOperationAdd">
 				<xpath>//ThingDef[defName="Steel"]/graphicData</xpath>
@@ -54,7 +54,7 @@
 	<Operation Class="PatchOperationAdd">
 		<xpath>//WorkGiverDef[defName="DoBillsSmelter"]/fixedBillGiverDefs</xpath>
 		<value>
-			<li>CorePlus_Bloomery</li>
+			<li>RCP_Bloomery</li>
 		</value>
 	</Operation>
 
@@ -113,7 +113,7 @@
 	<Operation Class="PatchOperationSequence">
 		<operations>
 			<li Class="PatchOperationAdd">
-				<xpath>Defs/ThingDef[defName="ChunkGranite"]/stuffProps</xpath>
+				<xpath>//ThingDef[defName="ChunkGranite"]/stuffProps</xpath>
 				<value>
 					<color>(105,95,97)</color>
 					<stuffAdjective>granite</stuffAdjective>
@@ -125,7 +125,7 @@
 				</value>
 			</li>
 			<li Class="PatchOperationAdd">
-				<xpath>Defs/ThingDef[defName="ChunkSlate"]/stuffProps</xpath>
+				<xpath>//ThingDef[defName="ChunkSlate"]/stuffProps</xpath>
 				<value>
 
 					<color>(70,70,70)</color>
@@ -139,7 +139,7 @@
 				</value>
 			</li>
 			<li Class="PatchOperationAdd">
-				<xpath>Defs/ThingDef[defName="ChunkLimestone"]/stuffProps</xpath>
+				<xpath>//ThingDef[defName="ChunkLimestone"]/stuffProps</xpath>
 				<value>
 					<color>(158,153,135)</color>
 					<stuffAdjective>limestone</stuffAdjective>
@@ -151,7 +151,7 @@
 				</value>
 			</li>
 			<li Class="PatchOperationAdd">
-				<xpath>Defs/ThingDef[defName="ChunkMarble"]/stuffProps</xpath>
+				<xpath>//ThingDef[defName="ChunkMarble"]/stuffProps</xpath>
 				<value>
 					<color>(132,135,132)</color>
 					<stuffAdjective>marble</stuffAdjective>
@@ -165,7 +165,7 @@
 				</value>
 			</li>
 			<li Class="PatchOperationAdd">
-				<xpath>Defs/ThingDef[defName="ChunkSandstone"]/stuffProps</xpath>
+				<xpath>//ThingDef[defName="ChunkSandstone"]/stuffProps</xpath>
 				<value>
 					<color>(126,104,94)</color>
 					<stuffAdjective>sandstone</stuffAdjective>
@@ -191,9 +191,9 @@
 	</Operation>
 	<!--allow coal to be used in vanilla and modded wood fueled benches (must use WoodLog as a fuel and also use either @ParentName="BenchBase", have a "recipes" node, or a bills tab)-->
 	<Operation Class="PatchOperationAdd">
-		<xpath>//ThingDef[@ParentName="BenchBase" and (comps/li[@Class="CompProperties_Refuelable"]//li[text()="WoodLog" or text()="CorePlus_Firewood"] or recipes or inspectorTabs/li[text()="ITab_Bills"])]/comps/li[@Class="CompProperties_Refuelable"]/fuelFilter/thingDefs</xpath>
+		<xpath>//ThingDef[@ParentName="BenchBase" and (comps/li[@Class="CompProperties_Refuelable"]//li[text()="WoodLog" or text()="RCP_Firewood"] or recipes or inspectorTabs/li[text()="ITab_Bills"])]/comps/li[@Class="CompProperties_Refuelable"]/fuelFilter/thingDefs</xpath>
 		<value>
-			<li>CorePlus_Coal</li>
+			<li>RCP_Coal</li>
 		</value>
 	</Operation>
 
@@ -203,11 +203,11 @@
 		<xpath>//TraderKindDef[defName="Caravan_Outlander_BulkGoods"]/stockGenerators</xpath>
 		<value>
 			<li Class="StockGenerator_SingleDef">
-				<thingDef>CorePlus_Coal</thingDef>
+				<thingDef>RCP_Coal</thingDef>
 				<countRange>150~300</countRange>
 			</li>
 			<li Class="StockGenerator_SingleDef">
-				<thingDef>CorePlus_Iron</thingDef>
+				<thingDef>RCP_Iron</thingDef>
 				<countRange>150~300</countRange>
 			</li>
 		</value>
@@ -217,11 +217,11 @@
 		<xpath>//TraderKindDef[defName="Orbital_BulkGoods"]/stockGenerators</xpath>
 		<value>
 			<li Class="StockGenerator_SingleDef">
-				<thingDef>CorePlus_Coal</thingDef>
+				<thingDef>RCP_Coal</thingDef>
 				<countRange>800~1200</countRange>
 			</li>
 			<li Class="StockGenerator_SingleDef">
-				<thingDef>CorePlus_Iron</thingDef>
+				<thingDef>RCP_Iron</thingDef>
 				<countRange>500~800</countRange>
 			</li>
 		</value>

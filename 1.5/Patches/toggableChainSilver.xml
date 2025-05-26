@@ -1,18 +1,22 @@
 <Patch>
-    <Operation Class="VFECore.PatchOperationToggableSequence">
-        <enabled>true</enabled>
-        <label>[Production Chain] Silver</label>
+    <Operation Class="ModSettingsFramework.PatchOperationModOption">
+        <defaultValue>true</defaultValue>
+        <label>Silver</label>
+        <tooltip>Silver must be smelted before it can be used as currency or for crafting.</tooltip>
+        <id>RCP_ChainSilver</id>
+        <category>RCP_IndustryChains</category>
+        <order>4</order>
         <operations>
             <li Class="PatchOperationAdd">
                 <xpath>Defs</xpath>
                 <value>
                     <!--add silver ore-->
                     <ThingDef ParentName="ResourceBase">
-                        <defName>CorePlus_Silver</defName>
+                        <defName>RCP_Silver</defName>
                         <label>silver ore</label>
                         <description>Raw, natural silver ore. It can be mined from rock formations, and with the right skills and resources can be refined into silver.</description>
                         <descriptionHyperlinks>
-                            <RecipeDef>CorePlus_RefineSilver</RecipeDef>
+                            <RecipeDef>RCP_RefineSilver</RecipeDef>
                         </descriptionHyperlinks>
                         <graphicData>
                             <texPath>Things/Item/Resource/Silver</texPath>
@@ -34,8 +38,8 @@
                         <deepLumpSizeRange>1~4</deepLumpSizeRange>
                     </ThingDef>
                     <!--add silver refining recipes-->
-                    <RecipeDef ParentName="CorePlus_RefineRecipeBase">
-                        <defName>CorePlus_RefineSilver</defName>
+                    <RecipeDef ParentName="RCP_RefineRecipeBase">
+                        <defName>RCP_RefineSilver</defName>
                         <label>refine silver</label>
                         <description>Make a batch of silver using raw silver ore.</description>
                         <jobString>Refining silver from silver ore.</jobString>
@@ -44,7 +48,7 @@
                             <li>
                                 <filter>
                                     <thingDefs>
-                                        <li>CorePlus_Silver</li>
+                                        <li>RCP_Silver</li>
                                     </thingDefs>
                                 </filter>
                                 <count>50</count>
@@ -52,16 +56,16 @@
                         </ingredients>
                         <fixedIngredientFilter>
                             <thingDefs>
-                                <li>CorePlus_Coal</li>
-                                <li>CorePlus_Silver</li>
+                                <li>RCP_Coal</li>
+                                <li>RCP_Silver</li>
                             </thingDefs>
                         </fixedIngredientFilter>
                         <products>
                             <Silver>50</Silver>
                         </products>
                     </RecipeDef>
-                    <RecipeDef ParentName="CorePlus_RefineRecipeBase">
-                        <defName>CorePlus_RefineSilverBulk</defName>
+                    <RecipeDef ParentName="RCP_RefineRecipeBase">
+                        <defName>RCP_RefineSilverBulk</defName>
                         <label>refine silver x4</label>
                         <description>Make a batch of silver from raw silver ore.</description>
                         <jobString>Refining silver from silver ore.</jobString>
@@ -70,7 +74,7 @@
                             <li>
                                 <filter>
                                     <thingDefs>
-                                        <li>CorePlus_Silver</li>
+                                        <li>RCP_Silver</li>
                                     </thingDefs>
                                 </filter>
                                 <count>200</count>
@@ -78,8 +82,8 @@
                         </ingredients>
                         <fixedIngredientFilter>
                             <thingDefs>
-                                <li>CorePlus_Coal</li>
-                                <li>CorePlus_Silver</li>
+                                <li>RCP_Coal</li>
+                                <li>RCP_Silver</li>
                             </thingDefs>
                         </fixedIngredientFilter>
                         <products>
@@ -93,8 +97,8 @@
                 <match Class="PatchOperationAdd">
                     <xpath>Defs</xpath>
                     <value>
-                        <RecipeDef ParentName="CorePlus_RefineRecipeBase">
-                            <defName>CorePlus_RefineSilverFTC</defName>
+                        <RecipeDef ParentName="RCP_RefineRecipeBase">
+                            <defName>RCP_RefineSilverFTC</defName>
                             <label>refine silver x4</label>
                             <description>Make a batch of silver from raw silver ore.</description>
                             <jobString>Refining silver from silver ore.</jobString>
@@ -106,7 +110,7 @@
                                 <li>
                                     <filter>
                                         <thingDefs>
-                                            <li>CorePlus_Silver</li>
+                                            <li>RCP_Silver</li>
                                         </thingDefs>
                                     </filter>
                                     <count>200</count>
@@ -114,16 +118,16 @@
                             </ingredients>
                             <fixedIngredientFilter>
                                 <thingDefs>
-                                    <li>CorePlus_Coal</li>
-                                    <li>CorePlus_Silver</li>
+                                    <li>RCP_Coal</li>
+                                    <li>RCP_Silver</li>
                                 </thingDefs>
                             </fixedIngredientFilter>
                             <products>
                                 <Silver>200</Silver>
                             </products>
                         </RecipeDef>
-                        <RecipeDef ParentName="CorePlus_RefineRecipeBase">
-                            <defName>CorePlus_RefineSilverFTCBulk</defName>
+                        <RecipeDef ParentName="RCP_RefineRecipeBase">
+                            <defName>RCP_RefineSilverFTCBulk</defName>
                             <label>refine silver x8</label>
                             <description>Make a batch of silver from raw silver ore.</description>
                             <jobString>Refining silver from silver ore.</jobString>
@@ -135,7 +139,7 @@
                                 <li>
                                     <filter>
                                         <thingDefs>
-                                            <li>CorePlus_Silver</li>
+                                            <li>RCP_Silver</li>
                                         </thingDefs>
                                     </filter>
                                     <count>400</count>
@@ -143,8 +147,8 @@
                             </ingredients>
                             <fixedIngredientFilter>
                                 <thingDefs>
-                                    <li>CorePlus_Coal</li>
-                                    <li>CorePlus_Silver</li>
+                                    <li>RCP_Coal</li>
+                                    <li>RCP_Silver</li>
                                 </thingDefs>
                             </fixedIngredientFilter>
                             <products>
@@ -159,7 +163,7 @@
                 <operations>
                     <li Class="PatchOperationReplace">
                         <xpath>//ThingDef[defName="MineableSilver"]/building/mineableThing/text()</xpath>
-                        <value>CorePlus_Silver</value>
+                        <value>RCP_Silver</value>
                     </li>
                     <li Class="PatchOperationReplace">
                         <xpath>//ThingDef[defName="MineableSilver"]/label/text()</xpath>
@@ -179,7 +183,7 @@
                 <operations>
                     <li Class="PatchOperationReplace">
                         <xpath>//ThingDef[defName="Silver"]/graphicData/texPath/text()</xpath>
-                        <value>Things/Item/Resource/CorePlus_Steel</value>
+                        <value>Things/Item/Resource/Ingot</value>
                     </li>
                     <li Class="PatchOperationAdd">
                         <xpath>//ThingDef[defName="Silver"]/graphicData</xpath>
@@ -194,7 +198,7 @@
                 <xpath>//SitePartDef[defName="WorkSite_Mining"]</xpath>
                 <match Class="PatchOperationReplace">
                     <xpath>//SitePartDef[defName="WorkSite_Mining"]/lootTable/li/thing[text()="Silver"]/text()</xpath>
-                    <value>CorePlus_Silver</value>
+                    <value>RCP_Silver</value>
                 </match>
             </li>
             <!--orbital traders carry silver-->
@@ -202,7 +206,7 @@
                 <xpath>//TraderKindDef[defName="Orbital_BulkGoods"]/stockGenerators</xpath>
                 <value>
                     <li Class="StockGenerator_SingleDef">
-                        <thingDef>CorePlus_Silver</thingDef>
+                        <thingDef>RCP_Silver</thingDef>
                         <countRange>200~300</countRange>
                     </li>
                 </value>

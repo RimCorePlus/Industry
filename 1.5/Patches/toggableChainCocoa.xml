@@ -1,19 +1,23 @@
 <Patch>
-    <Operation Class="VFECore.PatchOperationToggableSequence">
-        <enabled>true</enabled>
-        <label>[Production Chain] Chocolate</label>
+    <Operation Class="ModSettingsFramework.PatchOperationModOption">
+        <defaultValue>true</defaultValue>
+        <label>Cocoa</label>
+        <tooltip>Cocoa trees now yield cocoa beans, which are cooked with milk to yield chocolate.</tooltip>
+        <id>RCP_ChainCocoa</id>
+        <category>RCP_IndustryChains</category>
+        <order>0</order>
         <operations>
             <!--add new defs-->
             <li Class="PatchOperationAdd">
                 <xpath>Defs</xpath>
                 <value>
                     <ThingDef ParentName="ResourceBase">
-                        <defName>CorePlus_Cocoa</defName>
+                        <defName>RCP_Cocoa</defName>
                         <label>cocoa</label>
                         <description>Raw cocoa beans harvested from a cocoa tree. Yields delicious chocolate when mixed with milk at a stove.</description>
                         <descriptionHyperlinks>
                             <ThingDef>Plant_TreeCocoa</ThingDef>
-                            <RecipeDef>CorePlus_MakeChocolate</RecipeDef>
+                            <RecipeDef>RCP_MakeChocolate</RecipeDef>
                         </descriptionHyperlinks>
                         <resourceReadoutPriority>Last</resourceReadoutPriority>
                         <statBases>
@@ -33,7 +37,7 @@
                         </thingCategories>
                     </ThingDef>
                     <RecipeDef>
-                        <defName>CorePlus_MakeChocolate</defName>
+                        <defName>RCP_MakeChocolate</defName>
                         <label>make chocolate</label>
                         <description>Make chocolate.</description>
                         <jobString>Making chocolate.</jobString>
@@ -47,7 +51,7 @@
                             <li>
                                 <filter>
                                     <thingDefs>
-                                        <li>CorePlus_Cocoa</li>
+                                        <li>RCP_Cocoa</li>
                                     </thingDefs>
                                 </filter>
                                 <count>3</count>
@@ -63,7 +67,7 @@
                         </ingredients>
                         <fixedIngredientFilter>
                             <thingDefs>
-                                <li>CorePlus_Cocoa</li>
+                                <li>RCP_Cocoa</li>
                                 <li>Milk</li>
                             </thingDefs>
                         </fixedIngredientFilter>
@@ -72,7 +76,7 @@
                         </products>
                     </RecipeDef>
                     <RecipeDef>
-                        <defName>CorePlus_MakeChocolateBulk</defName>
+                        <defName>RCP_MakeChocolateBulk</defName>
                         <label>make chocolate x20</label>
                         <description>Make chocolate.</description>
                         <jobString>Making chocolate.</jobString>
@@ -86,7 +90,7 @@
                             <li>
                                 <filter>
                                     <thingDefs>
-                                        <li>CorePlus_Cocoa</li>
+                                        <li>RCP_Cocoa</li>
                                     </thingDefs>
                                 </filter>
                                 <count>15</count>
@@ -102,7 +106,7 @@
                         </ingredients>
                         <fixedIngredientFilter>
                             <thingDefs>
-                                <li>CorePlus_Cocoa</li>
+                                <li>RCP_Cocoa</li>
                                 <li>Milk</li>
                             </thingDefs>
                         </fixedIngredientFilter>
@@ -116,7 +120,7 @@
             <li Class="PatchOperationAdd">
                 <xpath>//ThingDef[@ParentName="BenchBase" and contains(label, "stove")]/recipes</xpath>
                 <value>
-                    <li>CorePlus_MakeChocolate</li>
+                    <li>RCP_MakeChocolate</li>
                 </value>
             </li>
             <!--change harvestedThingDef for cocoa tree-->
@@ -126,7 +130,7 @@
             </li>
             <li Class="PatchOperationReplace">
                 <xpath>//ThingDef[defName="Plant_TreeCocoa"]//harvestedThingDef/text()</xpath>
-                <value>CorePlus_Cocoa</value>
+                <value>RCP_Cocoa</value>
             </li>
             <!--buff market value to compensate for increased cost (1x milk + 2x cocoa is worth 2.9, vanilla chocolate is worth 3)-->
             <li Class="PatchOperationReplace">

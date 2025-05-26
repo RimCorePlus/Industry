@@ -3,20 +3,20 @@
     <Operation Class="PatchOperationAdd">
         <xpath>//ThingDef[defName="TableMachining"]/recipes</xpath>
         <value>
-            <li>CorePlus_MakeComponentIndustrial</li>
+            <li>RCP_MakeComponentIndustrial</li>
         </value>
     </Operation>
     <!--stonecutter's spot-->
     <Operation Class="PatchOperationAdd">
         <xpath>//WorkGiverDef[defName="DoBillsStonecut"]/fixedBillGiverDefs</xpath>
         <value>
-            <li>CorePlus_StonecutterSpot</li>
+            <li>RCP_StonecutterSpot</li>
         </value>
     </Operation>
     <Operation Class="PatchOperationAdd">
         <xpath>//RecipeDef[recipeUsers/li/text()="TableStonecutter"]/recipeUsers</xpath>
         <value>
-            <li>CorePlus_StonecutterSpot</li>
+            <li>RCP_StonecutterSpot</li>
         </value>
     </Operation>
 </Patch>

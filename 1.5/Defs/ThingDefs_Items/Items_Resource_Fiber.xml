@@ -1,13 +1,13 @@
 <Defs>
     <ThingDef ParentName="ResourceBase">
-        <defName>CorePlus_Cotton</defName>
+        <defName>RCP_Cotton</defName>
         <label>cotton</label>
         <description>Soft, fluffy balls of cotton fiber. Must be spun into workable fabric at a spinning wheel.</description>
         <descriptionHyperlinks>
-            <RecipeDef>CorePlus_SpinCloth</RecipeDef>
+            <RecipeDef>RCP_SpinCloth</RecipeDef>
         </descriptionHyperlinks>
         <graphicData>
-            <texPath>Things/Item/Resource/Fiber/CorePlus_FiberCotton</texPath>
+            <texPath>Things/Item/Resource/Fiber/RCP_FiberCotton</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <statBases>
@@ -26,14 +26,14 @@
         <allowedArchonexusCount>80</allowedArchonexusCount>
     </ThingDef>
     <ThingDef ParentName="ResourceBase">
-        <defName>CorePlus_Devilstrand</defName>
+        <defName>RCP_Devilstrand</defName>
         <label>devilstrand fiber</label>
         <description>Loose devilstrand microfibers. Must be spun into workable fabric at a spinning wheel.</description>
         <descriptionHyperlinks>
-            <RecipeDef>CorePlus_SpinDevilstrand</RecipeDef>
+            <RecipeDef>RCP_SpinDevilstrand</RecipeDef>
         </descriptionHyperlinks>
         <graphicData>
-            <texPath>Things/Item/Resource/Fiber/CorePlus_FiberDevilstrand</texPath>
+            <texPath>Things/Item/Resource/Fiber/RCP_FiberDevilstrand</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <statBases>

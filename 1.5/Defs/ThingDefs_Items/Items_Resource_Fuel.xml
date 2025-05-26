@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 	<ThingDef ParentName="ResourceBase">
-		<defName>CorePlus_Firewood</defName>
+		<defName>RCP_Firewood</defName>
 		<label>firewood</label>
 		<description>Split wood can be used as a ready-to-use fuel source.</description>
 		<descriptionHyperlinks>
-			<RecipeDef>CorePlus_MakeFirewood</RecipeDef>
+			<RecipeDef>RCP_MakeFirewood</RecipeDef>
 		</descriptionHyperlinks>
 		<graphicData>
 			<texPath>Things/Item/Resource/Firewood</texPath>

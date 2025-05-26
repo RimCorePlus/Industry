@@ -1,7 +1,25 @@
 <Patch>
-	<Operation Class="VFECore.PatchOperationToggableSequence">
-		<enabled>true</enabled>
+	<Operation Class="ModSettingsFramework.PatchOperationModOption">
+		<defaultValue>false</defaultValue>
+		<label>Faster industrial components</label>
+		<tooltip>By default, components take longer to craft on the machining table. Enabling this setting will remove that debuff.</tooltip>
+		<id>RCP_FasterIndustrialComponents</id>
+		<category>RCP_IndustryPatches</category>
+		<order>0</order>
+		<operations>
+			<li Class="PatchOperationReplace">
+				<xpath>//RecipeDef[defName="RCP_MakeComponentIndustrial"]/workAmount/text()</xpath>
+				<value>5000</value>
+			</li>
+		</operations>
+	</Operation>
+	<Operation Class="ModSettingsFramework.PatchOperationModOption">
+		<defaultValue>true</defaultValue>
 		<label>Beautiful gold and silver</label>
+		<tooltip>Gold and silver stockpiles have a beauty of 4 instead of making the room uglier.</tooltip>
+		<id>RCP_BeautifulGold</id>
+		<category>RCP_IndustryPatches</category>
+		<order>1</order>
 		<operations>
 			<li Class="PatchOperationAdd">
 				<xpath>//ThingDef[defName="Gold" or defName="Silver"]/statBases</xpath>
@@ -11,19 +29,27 @@
 			</li>
 		</operations>
 	</Operation>
-	<Operation Class="VFECore.PatchOperationToggableSequence">
-		<enabled>false</enabled>
-		<label>Easier industrial components</label>
+	<Operation Class="ModSettingsFramework.PatchOperationModOption">
+		<defaultValue>true</defaultValue>
+		<label>Increase steel durability</label>
+		<tooltip>Increase steel hitpoints from 1 to 2.</tooltip>
+		<id>RCP_DurableSteel</id>
+		<category>RCP_IndustryPatches</category>
+		<order>2</order>
 		<operations>
 			<li Class="PatchOperationReplace">
-				<xpath>//RecipeDef[defName="CorePlus_MakeComponentIndustrial"]/workAmount/text()</xpath>
-				<value>5000</value>
+				<xpath>//ThingDef[defName="Steel"]/stuffProps/statFactors/MaxHitPoints/text()</xpath>
+				<value>2</value>
 			</li>
 		</operations>
 	</Operation>
-	<Operation Class="VFECore.PatchOperationToggableSequence">
-		<enabled>true</enabled>
+	<Operation Class="ModSettingsFramework.PatchOperationModOption">
+		<defaultValue>true</defaultValue>
 		<label>Increase plasteel durability</label>
+		<tooltip>Increase plasteel hitpoints from 2.8 to 3.</tooltip>
+		<id>RCP_DurablePlasteel</id>
+		<category>RCP_IndustryPatches</category>
+		<order>3</order>
 		<operations>
 			<li Class="PatchOperationReplace">
 				<xpath>//ThingDef[defName="Plasteel"]/stuffProps/statFactors/MaxHitPoints/text()</xpath>
@@ -31,36 +57,13 @@
 			</li>
 		</operations>
 	</Operation>
-	<Operation Class="VFECore.PatchOperationToggableSequence">
-		<enabled>true</enabled>
-		<label>Increase steel durability</label>
-		<operations>
-			<li Class="PatchOperationReplace">
-				<xpath>//ThingDef[defName="Steel"]/stuffProps/statFactors/MaxHitPoints/text()</xpath>
-				<value>2</value>
-			</li>
-			<li Class="PatchOperationConditional">
-				<xpath>//ThingDef[defName="CorePlus_ElvenSteel"]</xpath>
-				<match Class="PatchOperationReplace">
-					<xpath>//ThingDef[defName="CorePlus_ElvenSteel"]/stuffProps/statFactors/MaxHitPoints/text()</xpath>
-					<value>2</value>
-				</match>
-			</li>
-		</operations>
-	</Operation>
-	<Operation Class="VFECore.PatchOperationToggableSequence">
-		<enabled>true</enabled>
-		<label>Increase uranium durability</label>
-		<operations>
-			<li Class="PatchOperationReplace">
-				<xpath>//ThingDef[defName="Uranium"]/stuffProps/statFactors/MaxHitPoints/text()</xpath>
-				<value>2.6</value>
-			</li>
-		</operations>
-	</Operation>
-	<Operation Class="VFECore.PatchOperationToggableSequence">
-		<enabled>true</enabled>
+	<Operation Class="ModSettingsFramework.PatchOperationModOption">
+		<defaultValue>true</defaultValue>
 		<label>Non-flammable metal</label>
+		<tooltip>Self-explanatory. Overlaps with Metal Don't Burn. Works for all resources categorized as "metallic" loaded before this mod.</tooltip>
+		<id>RCP_MetalDontBurn</id>
+		<category>RCP_IndustryPatches</category>
+		<order>4</order>
 		<operations>
 			<li Class="PatchOperationReplace">
 				<xpath>//ThingDef/stuffProps[categories/li[text()="Metallic"]]/statFactors/Flammability/text()</xpath>
@@ -69,9 +72,12 @@
 			</li>
 		</operations>
 	</Operation>
-	<Operation Class="VFECore.PatchOperationToggableSequence">
-		<enabled>true</enabled>
+	<Operation Class="ModSettingsFramework.PatchOperationModOption">
+		<defaultValue>true</defaultValue>
 		<label>Remove compacted machinery</label>
+		<id>RCP_CompactedMachinery</id>
+		<category>RCP_IndustryPatches</category>
+		<order>5</order>
 		<operations>
 			<li Class="PatchOperationReplace">
 				<xpath>//ThingDef[defName="MineableComponentsIndustrial"]/building/mineableScatterCommonality/text()</xpath>
@@ -88,15 +94,18 @@
 			</li>
 		</operations>
 	</Operation>
-	<Operation Class="VFECore.PatchOperationToggableSequence">
-		<enabled>true</enabled>
+	<Operation Class="ModSettingsFramework.PatchOperationModOption">
+		<defaultValue>true</defaultValue>
 		<label>Remove compacted plasteel</label>
+		<id>RCP_CompactedPlasteel</id>
+		<category>RCP_IndustryPatches</category>
+		<order>6</order>
 		<operations>
 			<li Class="PatchOperationRemove">
 				<xpath>//ThingDef[defName="Plasteel"]/deepCommonality | //ThingDef[defName="Plasteel"]/deepCountPerPortion | //ThingDef[defName="Plasteel"]/deepLumpSizeRange</xpath>
 			</li>
 			<li Class="PatchOperationConditional">
-				<xpath>//ThingDef[defName="CorePlus_Polyshale"]</xpath>
+				<xpath>//ThingDef[defName="RCP_Polyshale"]</xpath>
 				<nomatch Class="PatchOperationSequence">
 					<operations>
 						<li Class="PatchOperationReplace">

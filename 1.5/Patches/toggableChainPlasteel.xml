@@ -1,14 +1,18 @@
 <Patch>
-    <Operation Class="VFECore.PatchOperationToggableSequence">
-        <enabled>true</enabled>
-        <label>[Production Chain] Plasteel</label>
+    <Operation Class="ModSettingsFramework.PatchOperationModOption">
+        <defaultValue>true</defaultValue>
+        <label>Plasteel</label>
+        <tooltip>Plasteel must be smelted from polyshale, iron, and coal before it can be used for crafting.</tooltip>
+        <id>RCP_ChainPlasteel</id>
+        <category>RCP_IndustryChains</category>
+        <order>1</order>
         <operations>
             <!--add defs-->
             <li Class="PatchOperationAdd">
                 <xpath>Defs</xpath>
                 <value>
                     <ThingDef ParentName="ResourceBase">
-                        <defName>CorePlus_Polyshale</defName>
+                        <defName>RCP_Polyshale</defName>
                         <label>polyshale</label>
                         <description>Plasteel weathered into a brittle, flaky composite. Useless on its own, but it can be used to create a variety of valuable resources.</description>
                         <graphicData>
@@ -36,7 +40,7 @@
                 <operations>
                     <li Class="PatchOperationReplace">
                         <xpath>//ThingDef[defName="MineablePlasteel"]/building/mineableThing/text()</xpath>
-                        <value>CorePlus_Polyshale</value>
+                        <value>RCP_Polyshale</value>
                     </li>
                     <li Class="PatchOperationReplace">
                         <xpath>//ThingDef[defName="MineablePlasteel"]/label/text()</xpath>
@@ -52,8 +56,8 @@
             <li Class="PatchOperationAdd">
                 <xpath>Defs</xpath>
                 <value>
-                    <RecipeDef ParentName="CorePlus_RefineRecipeBase">
-                        <defName>CorePlus_RefinePlasteel</defName>
+                    <RecipeDef ParentName="RCP_RefineRecipeBase">
+                        <defName>RCP_RefinePlasteel</defName>
                         <label>refine plasteel</label>
                         <description>Make a batch of plasteel using polyshale.</description>
                         <jobString>Refining plasteel from polyshale.</jobString>
@@ -62,7 +66,7 @@
                             <li>
                                 <filter>
                                     <thingDefs>
-                                        <li>CorePlus_Polyshale</li>
+                                        <li>RCP_Polyshale</li>
                                     </thingDefs>
                                 </filter>
                                 <count>12</count>
@@ -70,7 +74,7 @@
                             <li>
                                 <filter>
                                     <thingDefs>
-                                        <li>CorePlus_Iron</li>
+                                        <li>RCP_Iron</li>
                                     </thingDefs>
                                 </filter>
                                 <count>3</count>
@@ -78,7 +82,7 @@
                             <li>
                                 <filter>
                                     <thingDefs>
-                                        <li>CorePlus_Coal</li>
+                                        <li>RCP_Coal</li>
                                     </thingDefs>
                                 </filter>
                                 <count>1</count>
@@ -86,17 +90,17 @@
                         </ingredients>
                         <fixedIngredientFilter>
                             <thingDefs>
-                                <li>CorePlus_Coal</li>
-                                <li>CorePlus_Iron</li>
-                                <li>CorePlus_Polyshale</li>
+                                <li>RCP_Coal</li>
+                                <li>RCP_Iron</li>
+                                <li>RCP_Polyshale</li>
                             </thingDefs>
                         </fixedIngredientFilter>
                         <products>
                             <Plasteel>15</Plasteel>
                         </products>
                     </RecipeDef>
-                    <RecipeDef ParentName="CorePlus_RefineRecipeBase">
-                        <defName>CorePlus_RefinePlasteelBulk</defName>
+                    <RecipeDef ParentName="RCP_RefineRecipeBase">
+                        <defName>RCP_RefinePlasteelBulk</defName>
                         <label>refine plasteel x4</label>
                         <description>Make a batch of plasteel using polyshale.</description>
                         <jobString>Refining plasteel from polyshale.</jobString>
@@ -105,7 +109,7 @@
                             <li>
                                 <filter>
                                     <thingDefs>
-                                        <li>CorePlus_Polyshale</li>
+                                        <li>RCP_Polyshale</li>
                                     </thingDefs>
                                 </filter>
                                 <count>48</count>
@@ -113,7 +117,7 @@
                             <li>
                                 <filter>
                                     <thingDefs>
-                                        <li>CorePlus_Iron</li>
+                                        <li>RCP_Iron</li>
                                     </thingDefs>
                                 </filter>
                                 <count>12</count>
@@ -121,7 +125,7 @@
                             <li>
                                 <filter>
                                     <thingDefs>
-                                        <li>CorePlus_Coal</li>
+                                        <li>RCP_Coal</li>
                                     </thingDefs>
                                 </filter>
                                 <count>4</count>
@@ -129,9 +133,9 @@
                         </ingredients>
                         <fixedIngredientFilter>
                             <thingDefs>
-                                <li>CorePlus_Coal</li>
-                                <li>CorePlus_Iron</li>
-                                <li>CorePlus_Polyshale</li>
+                                <li>RCP_Coal</li>
+                                <li>RCP_Iron</li>
+                                <li>RCP_Polyshale</li>
                             </thingDefs>
                         </fixedIngredientFilter>
                         <products>
@@ -145,8 +149,8 @@
                 <match Class="PatchOperationAdd">
                     <xpath>Defs</xpath>
                     <value>
-                        <RecipeDef ParentName="CorePlus_RefineRecipeBase">
-                            <defName>CorePlus_RefinePlasteelFTC</defName>
+                        <RecipeDef ParentName="RCP_RefineRecipeBase">
+                            <defName>RCP_RefinePlasteelFTC</defName>
                             <label>refine plasteel x4</label>
                             <description>Make a batch of plasteel using polyshale.</description>
                             <jobString>Refining plasteel from polyshale.</jobString>
@@ -158,7 +162,7 @@
                                 <li>
                                     <filter>
                                         <thingDefs>
-                                            <li>CorePlus_Polyshale</li>
+                                            <li>RCP_Polyshale</li>
                                         </thingDefs>
                                     </filter>
                                     <count>48</count>
@@ -166,7 +170,7 @@
                                 <li>
                                     <filter>
                                         <thingDefs>
-                                            <li>CorePlus_Iron</li>
+                                            <li>RCP_Iron</li>
                                         </thingDefs>
                                     </filter>
                                     <count>12</count>
@@ -174,7 +178,7 @@
                                 <li>
                                     <filter>
                                         <thingDefs>
-                                            <li>CorePlus_Coal</li>
+                                            <li>RCP_Coal</li>
                                         </thingDefs>
                                     </filter>
                                     <count>4</count>
@@ -182,17 +186,17 @@
                             </ingredients>
                             <fixedIngredientFilter>
                                 <thingDefs>
-                                    <li>CorePlus_Coal</li>
-                                    <li>CorePlus_Iron</li>
-                                    <li>CorePlus_Polyshale</li>
+                                    <li>RCP_Coal</li>
+                                    <li>RCP_Iron</li>
+                                    <li>RCP_Polyshale</li>
                                 </thingDefs>
                             </fixedIngredientFilter>
                             <products>
                                 <Plasteel>60</Plasteel>
                             </products>
                         </RecipeDef>
-                        <RecipeDef ParentName="CorePlus_RefineRecipeBase">
-                            <defName>CorePlus_RefinePlasteelFTCBulk</defName>
+                        <RecipeDef ParentName="RCP_RefineRecipeBase">
+                            <defName>RCP_RefinePlasteelFTCBulk</defName>
                             <label>refine plasteel x8</label>
                             <description>Make a batch of plasteel using polyshale.</description>
                             <jobString>Refining plasteel from polyshale.</jobString>
@@ -204,7 +208,7 @@
                                 <li>
                                     <filter>
                                         <thingDefs>
-                                            <li>CorePlus_Polyshale</li>
+                                            <li>RCP_Polyshale</li>
                                         </thingDefs>
                                     </filter>
                                     <count>96</count>
@@ -212,7 +216,7 @@
                                 <li>
                                     <filter>
                                         <thingDefs>
-                                            <li>CorePlus_Iron</li>
+                                            <li>RCP_Iron</li>
                                         </thingDefs>
                                     </filter>
                                     <count>24</count>
@@ -220,7 +224,7 @@
                                 <li>
                                     <filter>
                                         <thingDefs>
-                                            <li>CorePlus_Coal</li>
+                                            <li>RCP_Coal</li>
                                         </thingDefs>
                                     </filter>
                                     <count>8</count>
@@ -228,9 +232,9 @@
                             </ingredients>
                             <fixedIngredientFilter>
                                 <thingDefs>
-                                    <li>CorePlus_Coal</li>
-                                    <li>CorePlus_Iron</li>
-                                    <li>CorePlus_Polyshale</li>
+                                    <li>RCP_Coal</li>
+                                    <li>RCP_Iron</li>
+                                    <li>RCP_Polyshale</li>
                                 </thingDefs>
                             </fixedIngredientFilter>
                             <products>
@@ -242,9 +246,9 @@
             </li>
             <!--add description hyperlink to coal-->
             <li Class="PatchOperationAdd">
-                <xpath>//ThingDef[defName="CorePlus_Coal"]/descriptionHyperlinks</xpath>
+                <xpath>//ThingDef[defName="RCP_Coal"]/descriptionHyperlinks</xpath>
                 <value>
-                    <RecipeDef>CorePlus_RefinePlasteel</RecipeDef>
+                    <RecipeDef>RCP_RefinePlasteel</RecipeDef>
                 </value>
             </li>
             <!--add mining work site for polyshale-->
@@ -254,7 +258,7 @@
                     <xpath>//SitePartDef[defName="WorkSite_Mining"]/lootTable</xpath>
                     <value>
                         <li>
-                            <thing>CorePlus_Polyshale</thing>
+                            <thing>RCP_Polyshale</thing>
                             <weight>0.25</weight>
                         </li>
                     </value>
@@ -265,7 +269,7 @@
                 <xpath>//TraderKindDef[defName="Caravan_Outlander_BulkGoods"]/stockGenerators</xpath>
                 <value>
                     <li Class="StockGenerator_SingleDef">
-                        <thingDef>CorePlus_Polyshale</thingDef>
+                        <thingDef>RCP_Polyshale</thingDef>
                         <countRange>50~100</countRange>
                     </li>
                 </value>
@@ -275,7 +279,7 @@
                 <xpath>//TraderKindDef[defName="Orbital_BulkGoods"]/stockGenerators</xpath>
                 <value>
                     <li Class="StockGenerator_SingleDef">
-                        <thingDef>CorePlus_Polyshale</thingDef>
+                        <thingDef>RCP_Polyshale</thingDef>
                         <countRange>200~300</countRange>
                     </li>
                 </value>

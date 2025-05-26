@@ -1,18 +1,22 @@
 <Patch>
-    <Operation Class="VFECore.PatchOperationToggableSequence">
-        <enabled>true</enabled>
-        <label>[Production Chain] Gold</label>
+    <Operation Class="ModSettingsFramework.PatchOperationModOption">
+        <defaultValue>true</defaultValue>
+        <label>Gold</label>
+        <tooltip>Gold must be smelted before it can be used for crafting.</tooltip>
+        <id>RCP_ChainGold</id>
+        <category>RCP_IndustryChains</category>
+        <order>3</order>
         <operations>
             <li Class="PatchOperationAdd">
                 <xpath>Defs</xpath>
                 <value>
                     <!--add gold ore-->
                     <ThingDef ParentName="ResourceBase">
-                        <defName>CorePlus_Gold</defName>
+                        <defName>RCP_Gold</defName>
                         <label>gold ore</label>
                         <description>Raw, natural gold ore. It can be mined from rock formations, and with the right skills and resources can be refined into gold.</description>
                         <descriptionHyperlinks>
-                            <RecipeDef>CorePlus_RefineGold</RecipeDef>
+                            <RecipeDef>RCP_RefineGold</RecipeDef>
                         </descriptionHyperlinks>
                         <graphicData>
                             <texPath>Things/Item/Resource/Gold</texPath>
@@ -34,8 +38,8 @@
                         <deepLumpSizeRange>1~4</deepLumpSizeRange>
                     </ThingDef>
                     <!--add gold refining recipes-->
-                    <RecipeDef ParentName="CorePlus_RefineRecipeBase">
-                        <defName>CorePlus_RefineGold</defName>
+                    <RecipeDef ParentName="RCP_RefineRecipeBase">
+                        <defName>RCP_RefineGold</defName>
                         <label>refine gold</label>
                         <description>Make a batch of gold using raw gold ore.</description>
                         <jobString>Refining gold from gold ore.</jobString>
@@ -44,7 +48,7 @@
                             <li>
                                 <filter>
                                     <thingDefs>
-                                        <li>CorePlus_Gold</li>
+                                        <li>RCP_Gold</li>
                                     </thingDefs>
                                 </filter>
                                 <count>10</count>
@@ -52,15 +56,15 @@
                         </ingredients>
                         <fixedIngredientFilter>
                             <thingDefs>
-                                <li>CorePlus_Gold</li>
+                                <li>RCP_Gold</li>
                             </thingDefs>
                         </fixedIngredientFilter>
                         <products>
                             <Gold>10</Gold>
                         </products>
                     </RecipeDef>
-                    <RecipeDef ParentName="CorePlus_RefineRecipeBase">
-                        <defName>CorePlus_RefineGoldBulk</defName>
+                    <RecipeDef ParentName="RCP_RefineRecipeBase">
+                        <defName>RCP_RefineGoldBulk</defName>
                         <label>refine gold x4</label>
                         <description>Make a batch of gold from raw gold ore.</description>
                         <jobString>Refining gold from gold ore.</jobString>
@@ -69,7 +73,7 @@
                             <li>
                                 <filter>
                                     <thingDefs>
-                                        <li>CorePlus_Gold</li>
+                                        <li>RCP_Gold</li>
                                     </thingDefs>
                                 </filter>
                                 <count>40</count>
@@ -77,7 +81,7 @@
                         </ingredients>
                         <fixedIngredientFilter>
                             <thingDefs>
-                                <li>CorePlus_Gold</li>
+                                <li>RCP_Gold</li>
                             </thingDefs>
                         </fixedIngredientFilter>
                         <products>
@@ -91,8 +95,8 @@
                 <match Class="PatchOperationAdd">
                     <xpath>Defs</xpath>
                     <value>
-                        <RecipeDef ParentName="CorePlus_RefineRecipeBase">
-                            <defName>CorePlus_RefineGoldFTC</defName>
+                        <RecipeDef ParentName="RCP_RefineRecipeBase">
+                            <defName>RCP_RefineGoldFTC</defName>
                             <label>refine gold x4</label>
                             <description>Make a batch of gold from raw gold ore.</description>
                             <jobString>Refining gold from gold ore.</jobString>
@@ -104,7 +108,7 @@
                                 <li>
                                     <filter>
                                         <thingDefs>
-                                            <li>CorePlus_Gold</li>
+                                            <li>RCP_Gold</li>
                                         </thingDefs>
                                     </filter>
                                     <count>40</count>
@@ -112,15 +116,15 @@
                             </ingredients>
                             <fixedIngredientFilter>
                                 <thingDefs>
-                                    <li>CorePlus_Gold</li>
+                                    <li>RCP_Gold</li>
                                 </thingDefs>
                             </fixedIngredientFilter>
                             <products>
                                 <Gold>40</Gold>
                             </products>
                         </RecipeDef>
-                        <RecipeDef ParentName="CorePlus_RefineRecipeBase">
-                            <defName>CorePlus_RefineGoldFTCBulk</defName>
+                        <RecipeDef ParentName="RCP_RefineRecipeBase">
+                            <defName>RCP_RefineGoldFTCBulk</defName>
                             <label>refine gold x8</label>
                             <description>Make a batch of gold from raw gold ore.</description>
                             <jobString>Refining gold from gold ore.</jobString>
@@ -132,7 +136,7 @@
                                 <li>
                                     <filter>
                                         <thingDefs>
-                                            <li>CorePlus_Gold</li>
+                                            <li>RCP_Gold</li>
                                         </thingDefs>
                                     </filter>
                                     <count>80</count>
@@ -140,7 +144,7 @@
                             </ingredients>
                             <fixedIngredientFilter>
                                 <thingDefs>
-                                    <li>CorePlus_Gold</li>
+                                    <li>RCP_Gold</li>
                                 </thingDefs>
                             </fixedIngredientFilter>
                             <products>
@@ -155,7 +159,7 @@
                 <operations>
                     <li Class="PatchOperationReplace">
                         <xpath>//ThingDef[defName="MineableGold"]/building/mineableThing/text()</xpath>
-                        <value>CorePlus_Gold</value>
+                        <value>RCP_Gold</value>
                     </li>
                     <li Class="PatchOperationReplace">
                         <xpath>//ThingDef[defName="MineableGold"]/label/text()</xpath>
@@ -175,7 +179,7 @@
                 <operations>
                     <li Class="PatchOperationReplace">
                         <xpath>//ThingDef[defName="Gold"]/graphicData/texPath/text()</xpath>
-                        <value>Things/Item/Resource/CorePlus_Steel</value>
+                        <value>Things/Item/Resource/Ingot</value>
                     </li>
                     <li Class="PatchOperationAdd">
                         <xpath>//ThingDef[defName="Gold"]/graphicData</xpath>
@@ -190,7 +194,7 @@
                 <xpath>//SitePartDef[defName="WorkSite_Mining"]</xpath>
                 <match Class="PatchOperationReplace">
                     <xpath>//SitePartDef[defName="WorkSite_Mining"]/lootTable/li/thing[text()="Gold"]/text()</xpath>
-                    <value>CorePlus_Gold</value>
+                    <value>RCP_Gold</value>
                 </match>
             </li>
             <!--orbital traders carry gold-->
@@ -198,7 +202,7 @@
                 <xpath>//TraderKindDef[defName="Orbital_BulkGoods"]/stockGenerators</xpath>
                 <value>
                     <li Class="StockGenerator_SingleDef">
-                        <thingDef>CorePlus_Gold</thingDef>
+                        <thingDef>RCP_Gold</thingDef>
                         <countRange>100~400</countRange>
                     </li>
                 </value>

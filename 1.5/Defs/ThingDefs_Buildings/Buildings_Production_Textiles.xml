@@ -1,7 +1,7 @@
 ﻿<Defs>
 	<!--manual spinning wheel-->
-	<ThingDef ParentName="CorePlus_WorkTableBase">
-		<defName>CorePlus_SpinningWheel</defName>
+	<ThingDef ParentName="RCP_WorkTableBase">
+		<defName>RCP_SpinningWheel</defName>
 		<label>spinning wheel</label>
 		<description>A crude wooden device for spinning fabric from raw fibers.</description>
 		<graphicData>
@@ -21,8 +21,8 @@
 		<uiOrder>2398</uiOrder>
 	</ThingDef>
 	<!--electric spinning wheel-->
-	<ThingDef ParentName="CorePlus_WorkTableBase">
-		<defName>CorePlus_ElectricSpinningWheel</defName>
+	<ThingDef ParentName="RCP_WorkTableBase">
+		<defName>RCP_ElectricSpinningWheel</defName>
 		<label>electric spinning wheel</label>
 		<description>A small table mounted with a fully electric spinng wheel for spinning fabric from raw fibers.</description>
 		<graphicData>
@@ -63,48 +63,5 @@
 			<Flammability>0.4</Flammability>
 		</statBases>
 		<uiOrder>2399</uiOrder>
-	</ThingDef>
-	<!--tanning vat-->
-	<ThingDef ParentName="CorePlus_IndustryBuildingBase">
-		<defName>CorePlus_TanningVat</defName>
-		<label>tanning vat</label>
-		<description>Tanning liquors can be poured here, and patchleather can then be soaked in it for about a day to yield hardened patchleather.</description>
-		<descriptionHyperlinks>
-			<ThingDef>CorePlus_Leather_Hardened</ThingDef>
-			<ThingDef>CorePlus_TanningLiquor</ThingDef>
-		</descriptionHyperlinks>
-		<thingClass>ItemProcessor.Building_ItemProcessor</thingClass>
-		<graphicData>
-			<texPath>Things/Building/Production/tanning_vat</texPath>
-			<drawSize>(1.33, 1.33)</drawSize>
-			<damageData>
-				<rect>(0.05,0.05,0.9,0.9)</rect>
-				<cornerTL>Damage/Corner</cornerTL>
-				<cornerTR>Damage/Corner</cornerTR>
-				<cornerBL>Damage/Corner</cornerBL>
-				<cornerBR>Damage/Corner</cornerBR>
-			</damageData>
-			<shadowData>
-				<volume>(0.8, 0.8, 0.8)</volume>
-				<offset>(0,0,-0.25)</offset>
-			</shadowData>
-		</graphicData>
-		<uiIconPath>Things/Building/Production/tanning_vat_north</uiIconPath>
-		<stuffCategories>
-			<li>Metallic</li>
-			<li>Woody</li>
-		</stuffCategories>
-		<costStuffCount>20</costStuffCount>
-		<statBases>
-			<Mass>5</Mass>
-			<MaxHitPoints>90</MaxHitPoints>
-		</statBases>
-		<comps>
-			<li Class="ItemProcessor.CompProperties_ItemProcessor">
-				<isSemiAutomaticMachine>true</isSemiAutomaticMachine>
-				<showFactoryProgressBar>true</showFactoryProgressBar>
-				<numberOfInputs>2</numberOfInputs>
-			</li>
-		</comps>
 	</ThingDef>
 </Defs>

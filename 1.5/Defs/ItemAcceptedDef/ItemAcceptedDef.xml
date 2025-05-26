@@ -1,28 +1,11 @@
 <Defs>
     <!--lumber-->
     <ItemProcessor.ItemAcceptedDef>
-        <defName>CorePlus_WoodDryingRackFirstItem</defName>
-        <building>CorePlus_WoodDryingRack</building>
+        <defName>RCP_WoodDryingRackFirstItem</defName>
+        <building>RCP_WoodDryingRack</building>
         <slot>1</slot>
         <items>
-            <li>CorePlus_GreenLumber</li>
-        </items>
-    </ItemProcessor.ItemAcceptedDef>
-    <!--hardened patchleather-->
-    <ItemProcessor.ItemAcceptedDef>
-        <defName>CorePlus_TanningVatFirstItem</defName>
-        <building>CorePlus_TanningVat</building>
-        <slot>1</slot>
-        <items>
-            <li>CorePlus_TanningLiquor</li>
-        </items>
-    </ItemProcessor.ItemAcceptedDef>
-    <ItemProcessor.ItemAcceptedDef>
-        <defName>CorePlus_TanningVatSecondItem</defName>
-        <building>CorePlus_TanningVat</building>
-        <slot>2</slot>
-        <items>
-            <li>Leather_Patch</li>
+            <li>RCP_GreenLumber</li>
         </items>
     </ItemProcessor.ItemAcceptedDef>
 </Defs>

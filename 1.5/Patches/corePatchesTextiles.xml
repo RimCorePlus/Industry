@@ -3,25 +3,25 @@
     <Operation Class="PatchOperationAdd">
         <xpath>//WorkGiverDef[defName="DoBillsUseCraftingSpot"]/fixedBillGiverDefs</xpath>
         <value>
-            <li>CorePlus_SpinningWheel</li>
-            <li>CorePlus_ElectricSpinningWheel</li>
+            <li>RCP_SpinningWheel</li>
+            <li>RCP_ElectricSpinningWheel</li>
         </value>
     </Operation>
     <!--make electric spnning wheel a linkable building for tailoring bench-->
     <Operation Class="PatchOperationAdd">
         <xpath>//ThingDef[contains(label, "tailor bench")]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
         <value>
-            <li>CorePlus_ElectricSpinningWheel</li>
+            <li>RCP_ElectricSpinningWheel</li>
         </value>
     </Operation>
     <!--change cotton and devilstrand yield to fiber-->
     <Operation Class="PatchOperationReplace">
         <xpath>//ThingDef[defName="Plant_Cotton"]/plant/harvestedThingDef/text()</xpath>
-        <value>CorePlus_Cotton</value>
+        <value>RCP_Cotton</value>
     </Operation>
     <Operation Class="PatchOperationReplace">
         <xpath>//ThingDef[defName="Plant_Devilstrand"]/plant/harvestedThingDef/text()</xpath>
-        <value>CorePlus_Devilstrand</value>
+        <value>RCP_Devilstrand</value>
     </Operation>
     <!--buff harvest yield by 50% to compensate for 2:1 spinning loss-->
     <Operation Class="PatchOperationReplace">
@@ -44,14 +44,14 @@
             <xpath>//ThingDef[defName="Cloth"]</xpath>
             <value>
                 <descriptionHyperlinks>
-                    <RecipeDef>CorePlus_SpinCloth</RecipeDef>
+                    <RecipeDef>RCP_SpinCloth</RecipeDef>
                 </descriptionHyperlinks>
             </value>
         </nomatch>
         <match Class="PatchOperationAdd">
             <xpath>//ThingDef[defName="Cloth"]/descriptionHyperlinks</xpath>
             <value>
-                <RecipeDef>CorePlus_SpinCloth</RecipeDef>
+                <RecipeDef>RCP_SpinCloth</RecipeDef>
             </value>
         </match>
     </Operation>
@@ -62,14 +62,14 @@
             <xpath>//ThingDef[defName="DevilstrandCloth"]</xpath>
             <value>
                 <descriptionHyperlinks>
-                    <RecipeDef>CorePlus_SpinDevilstrand</RecipeDef>
+                    <RecipeDef>RCP_SpinDevilstrand</RecipeDef>
                 </descriptionHyperlinks>
             </value>
         </nomatch>
         <match Class="PatchOperationAdd">
             <xpath>//ThingDef[defName="DevilstrandCloth"]/descriptionHyperlinks</xpath>
             <value>
-                <RecipeDef>CorePlus_SpinDevilstrand</RecipeDef>
+                <RecipeDef>RCP_SpinDevilstrand</RecipeDef>
             </value>
         </match>
     </Operation>
@@ -80,18 +80,18 @@
             <xpath>//ThingDef[defName="Leather_Patch"]</xpath>
             <value>
                 <descriptionHyperlinks>
-                    <ThingDef>CorePlus_Leather_Hardened</ThingDef>
-                    <ThingDef>CorePlus_TanningLiquor</ThingDef>
-                    <ThingDef>CorePlus_TanningVat</ThingDef>
+                    <ThingDef>RCP_Leather_Hardened</ThingDef>
+                    <ThingDef>RCP_TanningLiquor</ThingDef>
+                    <ThingDef>RCP_TanningVat</ThingDef>
                 </descriptionHyperlinks>
             </value>
         </nomatch>
         <match Class="PatchOperationAdd">
             <xpath>//ThingDef[defName="Leather_Patch"]/descriptionHyperlinks</xpath>
             <value>
-                <ThingDef>CorePlus_Leather_Hardened</ThingDef>
-                <ThingDef>CorePlus_TanningLiquor</ThingDef>
-                <ThingDef>CorePlus_TanningVat</ThingDef>
+                <ThingDef>RCP_Leather_Hardened</ThingDef>
+                <ThingDef>RCP_TanningLiquor</ThingDef>
+                <ThingDef>RCP_TanningVat</ThingDef>
             </value>
         </match>
     </Operation>

@@ -1,5 +1,5 @@
 ﻿<ModMetaData>
-	<packageId>coreplus.industry</packageId>
+	<packageId>RCP.Industry</packageId>
 	<name>[RCP] Industry</name>
 	<author>boomer</author>
 	<supportedVersions>
@@ -18,8 +18,8 @@
 		<li>adaptive.storage.neolithic</li>
 		<li>aoba.fortress.industrial.citadel</li>
 		<li>ceteam.combatextended</li>
-		<li>coreplus.empire</li>
-		<li>coreplus.genes.elves</li>
+		<li>RCP.Empire</li>
+		<li>RCP.Genes.Elves</li>
 		<li>OskarPotocki.VanillaFactionsExpanded.Core</li>
 	</loadAfter>
 	<incompatibleWith>

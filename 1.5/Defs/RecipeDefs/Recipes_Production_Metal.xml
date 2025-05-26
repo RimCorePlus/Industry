@@ -1,6 +1,6 @@
 ﻿<Defs>
 	<RecipeDef>
-		<defName>CorePlus_MakeCharcoal</defName>
+		<defName>RCP_MakeCharcoal</defName>
 		<label>make charcoal</label>
 		<description>Make a batch of charcoal from logs.</description>
 		<jobString>Making charcoal from wood logs.</jobString>
@@ -17,9 +17,9 @@
 				<filter>
 					<thingDefs>
 						<li MayRequire="sirmashedpotato.ashlands">Mashed_Ashlands_ParasolWoodLog</li>
-						<li>CorePlus_Firewood</li>
-						<li>CorePlus_GreenLumber</li>
-						<li>CorePlus_WoodLog</li>
+						<li>RCP_Firewood</li>
+						<li>RCP_GreenLumber</li>
+						<li>RCP_WoodLog</li>
 						<li>WoodLog</li>
 					</thingDefs>
 				</filter>
@@ -29,34 +29,34 @@
 		<fixedIngredientFilter>
 			<thingDefs>
 				<li MayRequire="sirmashedpotato.ashlands">Mashed_Ashlands_ParasolWoodLog</li>
-				<li>CorePlus_Firewood</li>
-				<li>CorePlus_GreenLumber</li>
-				<li>CorePlus_WoodLog</li>
+				<li>RCP_Firewood</li>
+				<li>RCP_GreenLumber</li>
+				<li>RCP_WoodLog</li>
 				<li>WoodLog</li>
 			</thingDefs>
 		</fixedIngredientFilter>
 		<defaultIngredientFilter>
 			<thingDefs>
-				<li>CorePlus_WoodLog</li>
+				<li>RCP_WoodLog</li>
 			</thingDefs>
 			<disallowedThingDefs>
 				<li MayRequire="sirmashedpotato.ashlands">Mashed_Ashlands_ParasolWoodLog</li>
-				<li>CorePlus_Firewood</li>
-				<li>CorePlus_GreenLumber</li>
+				<li>RCP_Firewood</li>
+				<li>RCP_GreenLumber</li>
 				<li>WoodLog</li>
 			</disallowedThingDefs>
 		</defaultIngredientFilter>
 		<products>
-			<CorePlus_Coal>10</CorePlus_Coal>
+		<RCP_Coal>10</RCP_Coal>
 		</products>
 		<recipeUsers>
 			<li MayRequire="VanillaExpanded.VFEProduction">VFE_FueledSmelter</li>
 			<li>Campfire</li>
-			<li>CorePlus_Bloomery</li>
+			<li>RCP_Bloomery</li>
 			<li>ElectricSmelter</li>
 		</recipeUsers>
 	</RecipeDef>
-	<RecipeDef Abstract="True" Name="CorePlus_RefineRecipeBase">
+	<RecipeDef Abstract="True" Name="RCP_RefineRecipeBase">
 		<effectWorking>Smelt</effectWorking>
 		<soundWorking>Recipe_Smelt</soundWorking>
 		<workSpeedStat>SmeltingSpeed</workSpeedStat>
@@ -64,12 +64,12 @@
 		<targetCountAdjustment>15</targetCountAdjustment>
 		<allowMixingIngredients>false</allowMixingIngredients>
 		<recipeUsers>
-			<li>CorePlus_Bloomery</li>
+			<li>RCP_Bloomery</li>
 			<li>ElectricSmelter</li>
 		</recipeUsers>
 	</RecipeDef>
-	<RecipeDef ParentName="CorePlus_RefineRecipeBase">
-		<defName>CorePlus_RefineSteel</defName>
+	<RecipeDef ParentName="RCP_RefineRecipeBase">
+		<defName>RCP_RefineSteel</defName>
 		<label>refine steel</label>
 		<description>Make a batch of steel with raw iron ore.</description>
 		<jobString>Refining steel from iron ore.</jobString>
@@ -78,7 +78,7 @@
 			<li>
 				<filter>
 					<thingDefs>
-						<li>CorePlus_Coal</li>
+						<li>RCP_Coal</li>
 					</thingDefs>
 				</filter>
 				<count>5</count>
@@ -86,7 +86,7 @@
 			<li>
 				<filter>
 					<thingDefs>
-						<li>CorePlus_Iron</li>
+						<li>RCP_Iron</li>
 					</thingDefs>
 				</filter>
 				<count>15</count>
@@ -94,16 +94,16 @@
 		</ingredients>
 		<fixedIngredientFilter>
 			<thingDefs>
-				<li>CorePlus_Coal</li>
-				<li>CorePlus_Iron</li>
+				<li>RCP_Coal</li>
+				<li>RCP_Iron</li>
 			</thingDefs>
 		</fixedIngredientFilter>
 		<products>
 			<Steel>15</Steel>
 		</products>
 	</RecipeDef>
-	<RecipeDef ParentName="CorePlus_RefineRecipeBase">
-		<defName>CorePlus_RefineSteelBulk</defName>
+	<RecipeDef ParentName="RCP_RefineRecipeBase">
+		<defName>RCP_RefineSteelBulk</defName>
 		<label>refine steel x4</label>
 		<description>Make four batches of steel with raw iron ore.</description>
 		<jobString>Refining steel from iron ore.</jobString>
@@ -112,7 +112,7 @@
 			<li>
 				<filter>
 					<thingDefs>
-						<li>CorePlus_Coal</li>
+						<li>RCP_Coal</li>
 					</thingDefs>
 				</filter>
 				<count>15</count>
@@ -120,7 +120,7 @@
 			<li>
 				<filter>
 					<thingDefs>
-						<li>CorePlus_Iron</li>
+						<li>RCP_Iron</li>
 					</thingDefs>
 				</filter>
 				<count>60</count>
@@ -128,8 +128,8 @@
 		</ingredients>
 		<fixedIngredientFilter>
 			<thingDefs>
-				<li>CorePlus_Coal</li>
-				<li>CorePlus_Iron</li>
+				<li>RCP_Coal</li>
+				<li>RCP_Iron</li>
 			</thingDefs>
 		</fixedIngredientFilter>
 		<products>

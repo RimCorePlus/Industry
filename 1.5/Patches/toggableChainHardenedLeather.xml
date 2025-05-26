@@ -1,0 +1,201 @@
+<Patch>
+    <Operation Class="ModSettingsFramework.PatchOperationModOption">
+        <defaultValue>true</defaultValue>
+        <label>Hardened patchleather</label>
+        <tooltip>Adds a vat for tanning patchleather, making it significantly more durable.</tooltip>
+        <id>RCP_ChainHardenedLeather</id>
+        <category>RCP_IndustryChains</category>
+        <order>5</order>
+        <operations>
+            <li Class="PatchOperationAdd">
+                <xpath>Defs</xpath>
+                <value>
+                    <!--tanning vat-->
+                    <ThingDef ParentName="RCP_IndustryBuildingBase">
+                        <defName>RCP_TanningVat</defName>
+                        <label>tanning vat</label>
+                        <description>Tanning liquors can be poured here, and patchleather can then be soaked in it for about a day to yield hardened patchleather.</description>
+                        <descriptionHyperlinks>
+                            <ThingDef>RCP_Leather_Hardened</ThingDef>
+                            <ThingDef>RCP_TanningLiquor</ThingDef>
+                        </descriptionHyperlinks>
+                        <thingClass>ItemProcessor.Building_ItemProcessor</thingClass>
+                        <graphicData>
+                            <texPath>Things/Building/Production/tanning_vat</texPath>
+                            <drawSize>(1.33, 1.33)</drawSize>
+                            <damageData>
+                                <rect>(0.05,0.05,0.9,0.9)</rect>
+                                <cornerTL>Damage/Corner</cornerTL>
+                                <cornerTR>Damage/Corner</cornerTR>
+                                <cornerBL>Damage/Corner</cornerBL>
+                                <cornerBR>Damage/Corner</cornerBR>
+                            </damageData>
+                            <shadowData>
+                                <volume>(0.8, 0.8, 0.8)</volume>
+                                <offset>(0,0,-0.25)</offset>
+                            </shadowData>
+                        </graphicData>
+                        <uiIconPath>Things/Building/Production/tanning_vat_north</uiIconPath>
+                        <stuffCategories>
+                            <li>Metallic</li>
+                            <li>Woody</li>
+                        </stuffCategories>
+                        <costStuffCount>20</costStuffCount>
+                        <statBases>
+                            <Mass>5</Mass>
+                            <MaxHitPoints>90</MaxHitPoints>
+                        </statBases>
+                        <comps>
+                            <li Class="ItemProcessor.CompProperties_ItemProcessor">
+                                <isSemiAutomaticMachine>true</isSemiAutomaticMachine>
+                                <showFactoryProgressBar>true</showFactoryProgressBar>
+                                <numberOfInputs>2</numberOfInputs>
+                            </li>
+                        </comps>
+                    </ThingDef>
+                    <!--tanning liquor-->
+                    <ThingDef ParentName="ResourceBase">
+                        <defName>RCP_TanningLiquor</defName>
+                        <label>tanning liquor</label>
+                        <description>Tannins leeched from various natural sources have been concentrated into this liquor. It can be used to process raw hides into tanned leathers.</description>
+                        <descriptionHyperlinks>
+                            <RecipeDef>RCP_MakeTanningLiquorFromFood</RecipeDef>
+                            <RecipeDef>RCP_MakeTanningLiquorFromWood</RecipeDef>
+                        </descriptionHyperlinks>
+                        <graphicData>
+                            <texPath>Things/Item/Resource/TanningLiquor</texPath>
+                            <graphicClass>Graphic_Single</graphicClass>
+                        </graphicData>
+                        <rotatable>false</rotatable>
+                        <stackLimit>25</stackLimit>
+                        <thingCategories>
+                            <li>Manufactured</li>
+                        </thingCategories>
+                        <statBases>
+                            <DeteriorationRate>1.0</DeteriorationRate>
+                            <MarketValue>2.2</MarketValue>
+                            <Mass>0.8</Mass>
+                            <Flammability>0.05</Flammability>
+                            <MaxHitPoints>60</MaxHitPoints>
+                        </statBases>
+                    </ThingDef>
+                    <!--tanning liquor recipes-->
+                    <RecipeDef ParentName="RCP_MakeTanningLiquorBase">
+                        <defName>RCP_MakeTanningLiquorFromWood</defName>
+                        <label>make tanning liquor from wood</label>
+                        <description>Make a batch of tanning liquor using the bark and wood contents from logs.</description>
+                        <ingredients>
+                            <li>
+                                <filter>
+                                    <thingDefs>
+                                        <li>WoodLog</li>
+                                        <li>RCP_WoodLog</li>
+                                        <li MayRequire="sirmashedpotato.ashlands">Mashed_Ashlands_ParasolWoodLog</li>
+                                    </thingDefs>
+                                </filter>
+                                <count>10</count>
+                            </li>
+                        </ingredients>
+                        <fixedIngredientFilter>
+                            <thingDefs>
+                                <li>WoodLog</li>
+                                <li>RCP_WoodLog</li>
+                                <li MayRequire="sirmashedpotato.ashlands">Mashed_Ashlands_ParasolWoodLog</li>
+                            </thingDefs>
+                        </fixedIngredientFilter>
+                    </RecipeDef>
+                    <RecipeDef ParentName="RCP_MakeTanningLiquorBase">
+                        <defName>RCP_MakeTanningLiquorFromFood</defName>
+                        <label>make tanning liquor from food</label>
+                        <description>Make a batch of tanning liquor using any organic ingredients known to harbor tannins.</description>
+                        <ingredients>
+                            <li>
+                                <filter>
+                                    <thingDefs>
+                                        <li>RawHops</li>
+                                        <li>RawAgave</li>
+                                        <li>RawBerries</li>
+                                        <li>RawCorn</li>
+                                    </thingDefs>
+                                </filter>
+                                <count>25</count>
+                            </li>
+                        </ingredients>
+                        <fixedIngredientFilter>
+                            <thingDefs>
+                                <li>RawHops</li>
+                                <li>RawAgave</li>
+                                <li>RawBerries</li>
+                                <li>RawCorn</li>
+                            </thingDefs>
+                        </fixedIngredientFilter>
+                    </RecipeDef>
+                    <!--hardened patchleather-->
+                    <ThingDef ParentName="LeatherBase">
+                        <defName>RCP_Leather_Hardened</defName>
+                        <label>hardened patchleather</label>
+                        <description>A hardened textile created by tanning patchleather. While the hardening process makes it quite tough compared to patchleather, it is still a poor insulator.</description>
+                        <descriptionHyperlinks>
+                            <ThingDef>Leather_Patch</ThingDef>
+                            <ThingDef>RCP_TanningLiquor</ThingDef>
+                            <ThingDef>RCP_TanningVat</ThingDef>
+                        </descriptionHyperlinks>
+                        <graphicData>
+                            <color>(72,60,48)</color>
+                        </graphicData>
+                        <statBases>
+                            <MarketValue>1.8</MarketValue>
+                            <StuffPower_Armor_Sharp>0.93</StuffPower_Armor_Sharp>
+                            <StuffPower_Insulation_Cold>9</StuffPower_Insulation_Cold>
+                            <StuffPower_Insulation_Heat>9</StuffPower_Insulation_Heat>
+                        </statBases>
+                        <stuffProps>
+                            <color>(72,60,48)</color>
+                            <commonality>0.05</commonality>
+                            <statFactors>
+                                <MaxHitPoints>1.3</MaxHitPoints>
+                                <WorkToBuild>1.3</WorkToBuild>
+                                <WorkToMake>1.3</WorkToMake>
+                            </statFactors>
+                        </stuffProps>
+                    </ThingDef>
+                    <!--item processor defs-->
+                    <ItemProcessor.CombinationDef>
+                        <defName>RCP_PatchIntoHardened</defName>
+                        <building>RCP_TanningVat</building>
+                        <items>
+                            <li>RCP_TanningLiquor</li>
+                        </items>
+                        <secondItems>
+                            <li>Leather_Patch</li>
+                        </secondItems>
+                        <amount>
+                            <li>25</li>
+                            <li>50</li>
+                        </amount>
+                        <result>RCP_Leather_Hardened</result>
+                        <yield>50</yield>
+                        <useQualityIncreasing>false</useQualityIncreasing>
+                        <singleTimeIfNotQualityIncreasing>1</singleTimeIfNotQualityIncreasing>
+                    </ItemProcessor.CombinationDef>
+                    <ItemProcessor.ItemAcceptedDef>
+                        <defName>RCP_TanningVatFirstItem</defName>
+                        <building>RCP_TanningVat</building>
+                        <slot>1</slot>
+                        <items>
+                            <li>RCP_TanningLiquor</li>
+                        </items>
+                    </ItemProcessor.ItemAcceptedDef>
+                    <ItemProcessor.ItemAcceptedDef>
+                        <defName>RCP_TanningVatSecondItem</defName>
+                        <building>RCP_TanningVat</building>
+                        <slot>2</slot>
+                        <items>
+                            <li>Leather_Patch</li>
+                        </items>
+                    </ItemProcessor.ItemAcceptedDef>
+                </value>
+            </li>
+        </operations>
+    </Operation>
+</Patch>
