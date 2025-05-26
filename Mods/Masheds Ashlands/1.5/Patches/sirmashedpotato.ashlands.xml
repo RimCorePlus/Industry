@@ -1,7 +1,11 @@
 <Patch>
-    <Operation Class="VFECore.PatchOperationToggableSequence">
-        <enabled>true</enabled>
-        <label>[Mashed's Ashlands] Parasol logs are rawWoody</label>
+    <Operation Class="ModSettingsFramework.PatchOperationModOption">
+        <defaultValue>true</defaultValue>
+        <label>[Mashed's Ashlands] Parasol logs are RawWoody</label>
+        <tooltip>Reworks parasol logs to be more in line with the wood rebalances done by this mod.</tooltip>
+        <id>RCP_IndustryMashedParasol</id>
+        <category>RCP_IndustryModPatches</category>
+        <order>10</order>
         <operations>
             <li Class="PatchOperationReplace">
                 <xpath>//ThingDef[defName="Mashed_Ashlands_ParasolWoodLog"]/stuffProps/categories/li[text()="Woody"]/text()</xpath>

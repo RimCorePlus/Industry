@@ -3,7 +3,7 @@
         <defaultValue>true</defaultValue>
         <label>Silver</label>
         <tooltip>Silver must be smelted before it can be used as currency or for crafting.</tooltip>
-        <id>RCP_ChainSilver</id>
+        <id>RCP_IndustryChainSilver</id>
         <category>RCP_IndustryChains</category>
         <order>4</order>
         <operations>

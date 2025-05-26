@@ -3,7 +3,7 @@
         <defaultValue>true</defaultValue>
         <label>Plasteel</label>
         <tooltip>Plasteel must be smelted from polyshale, iron, and coal before it can be used for crafting.</tooltip>
-        <id>RCP_ChainPlasteel</id>
+        <id>RCP_IndustryChainPlasteel</id>
         <category>RCP_IndustryChains</category>
         <order>1</order>
         <operations>

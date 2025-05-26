@@ -3,7 +3,7 @@
 		<defaultValue>false</defaultValue>
 		<label>Faster industrial components</label>
 		<tooltip>By default, components take longer to craft on the machining table. Enabling this setting will remove that debuff.</tooltip>
-		<id>RCP_FasterIndustrialComponents</id>
+		<id>RCP_IndustryFasterIndustrialComponents</id>
 		<category>RCP_IndustryPatches</category>
 		<order>0</order>
 		<operations>
@@ -17,7 +17,7 @@
 		<defaultValue>true</defaultValue>
 		<label>Beautiful gold and silver</label>
 		<tooltip>Gold and silver stockpiles have a beauty of 4 instead of making the room uglier.</tooltip>
-		<id>RCP_BeautifulGold</id>
+		<id>RCP_IndustryBeautifulGold</id>
 		<category>RCP_IndustryPatches</category>
 		<order>1</order>
 		<operations>
@@ -33,7 +33,7 @@
 		<defaultValue>true</defaultValue>
 		<label>Increase steel durability</label>
 		<tooltip>Increase steel hitpoints from 1 to 2.</tooltip>
-		<id>RCP_DurableSteel</id>
+		<id>RCP_IndustryDurableSteel</id>
 		<category>RCP_IndustryPatches</category>
 		<order>2</order>
 		<operations>
@@ -47,7 +47,7 @@
 		<defaultValue>true</defaultValue>
 		<label>Increase plasteel durability</label>
 		<tooltip>Increase plasteel hitpoints from 2.8 to 3.</tooltip>
-		<id>RCP_DurablePlasteel</id>
+		<id>RCP_IndustryDurablePlasteel</id>
 		<category>RCP_IndustryPatches</category>
 		<order>3</order>
 		<operations>
@@ -61,7 +61,7 @@
 		<defaultValue>true</defaultValue>
 		<label>Non-flammable metal</label>
 		<tooltip>Self-explanatory. Overlaps with Metal Don't Burn. Works for all resources categorized as "metallic" loaded before this mod.</tooltip>
-		<id>RCP_MetalDontBurn</id>
+		<id>RCP_IndustryMetalDontBurn</id>
 		<category>RCP_IndustryPatches</category>
 		<order>4</order>
 		<operations>
@@ -75,7 +75,7 @@
 	<Operation Class="ModSettingsFramework.PatchOperationModOption">
 		<defaultValue>true</defaultValue>
 		<label>Remove compacted machinery</label>
-		<id>RCP_CompactedMachinery</id>
+		<id>RCP_IndustryCompactedMachinery</id>
 		<category>RCP_IndustryPatches</category>
 		<order>5</order>
 		<operations>
@@ -97,7 +97,7 @@
 	<Operation Class="ModSettingsFramework.PatchOperationModOption">
 		<defaultValue>true</defaultValue>
 		<label>Remove compacted plasteel</label>
-		<id>RCP_CompactedPlasteel</id>
+		<id>RCP_IndustryCompactedPlasteel</id>
 		<category>RCP_IndustryPatches</category>
 		<order>6</order>
 		<operations>

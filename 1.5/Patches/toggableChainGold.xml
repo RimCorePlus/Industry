@@ -3,7 +3,7 @@
         <defaultValue>true</defaultValue>
         <label>Gold</label>
         <tooltip>Gold must be smelted before it can be used for crafting.</tooltip>
-        <id>RCP_ChainGold</id>
+        <id>RCP_IndustryChainGold</id>
         <category>RCP_IndustryChains</category>
         <order>3</order>
         <operations>

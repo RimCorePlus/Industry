@@ -3,7 +3,7 @@
         <defaultValue>true</defaultValue>
         <label>Cocoa</label>
         <tooltip>Cocoa trees now yield cocoa beans, which are cooked with milk to yield chocolate.</tooltip>
-        <id>RCP_ChainCocoa</id>
+        <id>RCP_IndustryChainCocoa</id>
         <category>RCP_IndustryChains</category>
         <order>0</order>
         <operations>

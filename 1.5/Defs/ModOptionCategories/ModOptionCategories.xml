@@ -10,7 +10,12 @@
     </ModSettingsFramework.ModOptionCategoryDef>
     <ModSettingsFramework.ModOptionCategoryDef ParentName="RG_ModOptionsBase">
         <defName>RCP_IndustryPatches</defName>
-        <label>Patches</label>
+        <label>Misc. Patches</label>
         <order>100</order>
+    </ModSettingsFramework.ModOptionCategoryDef>
+    <ModSettingsFramework.ModOptionCategoryDef ParentName="RG_ModOptionsBase">
+        <defName>RCP_IndustryModPatches</defName>
+        <label>Mod Patches</label>
+        <order>200</order>
     </ModSettingsFramework.ModOptionCategoryDef>
 </Defs>

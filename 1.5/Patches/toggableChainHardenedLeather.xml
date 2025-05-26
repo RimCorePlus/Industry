@@ -3,7 +3,7 @@
         <defaultValue>true</defaultValue>
         <label>Hardened patchleather</label>
         <tooltip>Adds a vat for tanning patchleather, making it significantly more durable.</tooltip>
-        <id>RCP_ChainHardenedLeather</id>
+        <id>RCP_IndustryChainHardenedLeather</id>
         <category>RCP_IndustryChains</category>
         <order>5</order>
         <operations>

@@ -125,9 +125,12 @@
 		</match>
 	</Operation>
 	<!--toggable patches-->
-	<Operation Class="VFECore.PatchOperationToggableSequence">
-		<enabled>true</enabled>
-		<label>[Combat Extended] Improvised gas mask uses coal</label>
+	<Operation Class="ModSettingsFramework.PatchOperationModOption">
+		<defaultValue>true</defaultValue>
+		<label>[Combat Extended] Improvised gas mask uses coal to match its description</label>
+		<id>RCP_IndustryCEGasMask</id>
+		<category>RCP_IndustryModPatches</category>
+		<order>0</order>
 		<operations>
 			<li Class="PatchOperationSetName">
 				<xpath>//ThingDef[defName="CE_Apparel_ImprovGasMask"]/costList/WoodLog</xpath>
