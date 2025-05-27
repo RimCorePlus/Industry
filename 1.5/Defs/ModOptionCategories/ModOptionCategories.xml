@@ -1,19 +1,19 @@
 <Defs>
-    <ModSettingsFramework.ModOptionCategoryDef Name="RG_ModOptionsBase" Abstract="True">
+    <ModSettingsFramework.ModOptionCategoryDef Name="RCP_IndustryModOptionsBase" Abstract="True">
         <modSettingsName>[RCP] Industry</modSettingsName>
         <modPackageSettingsID>RCP.Industry</modPackageSettingsID>
     </ModSettingsFramework.ModOptionCategoryDef>
-    <ModSettingsFramework.ModOptionCategoryDef ParentName="RG_ModOptionsBase">
+    <ModSettingsFramework.ModOptionCategoryDef ParentName="RCP_IndustryModOptionsBase">
         <defName>RCP_IndustryChains</defName>
         <label>Production Chains</label>
         <order>0</order>
     </ModSettingsFramework.ModOptionCategoryDef>
-    <ModSettingsFramework.ModOptionCategoryDef ParentName="RG_ModOptionsBase">
+    <ModSettingsFramework.ModOptionCategoryDef ParentName="RCP_IndustryModOptionsBase">
         <defName>RCP_IndustryPatches</defName>
         <label>Misc. Patches</label>
         <order>100</order>
     </ModSettingsFramework.ModOptionCategoryDef>
-    <ModSettingsFramework.ModOptionCategoryDef ParentName="RG_ModOptionsBase">
+    <ModSettingsFramework.ModOptionCategoryDef ParentName="RCP_IndustryModOptionsBase">
         <defName>RCP_IndustryModPatches</defName>
         <label>Mod Patches</label>
         <order>200</order>
