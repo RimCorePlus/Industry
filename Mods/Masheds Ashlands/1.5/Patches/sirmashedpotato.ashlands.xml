@@ -1,4 +1,12 @@
 <Patch>
+    <Operation Class="PatchOperationAdd">
+        <xpath>//RecipeDef[@Name="Mashed_Ashlands_WeaveBase"]/recipeUsers</xpath>
+        <value>
+            <li>RCP_SpinningWheel</li>
+            <li>RCP_ElectricSpinningWheel</li>
+        </value>
+    </Operation>
+    <!--toggable-->
     <Operation Class="ModSettingsFramework.PatchOperationModOption">
         <defaultValue>true</defaultValue>
         <label>[Mashed's Ashlands] Parasol logs are RawWoody</label>
