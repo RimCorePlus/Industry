@@ -52,6 +52,7 @@
                                 <numberOfInputs>2</numberOfInputs>
                             </li>
                         </comps>
+                        <tickerType>Rare</tickerType>
                     </ThingDef>
                     <!--tanning liquor-->
                     <ThingDef ParentName="ResourceBase">

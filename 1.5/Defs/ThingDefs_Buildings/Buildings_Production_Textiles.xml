@@ -34,7 +34,6 @@
 			<texPath>Things/Building/Production/electricWheel</texPath>
 		</graphicData>
 		<uiIconPath>Things/Building/Production/electricWheel_north</uiIconPath>
-		<altitudeLayer>Pawn</altitudeLayer>
 		<comps>
 			<li Class="CompProperties_Power">
 				<compClass>CompPowerTrader</compClass>
