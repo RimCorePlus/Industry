@@ -41,6 +41,7 @@
                             <li>Woody</li>
                         </stuffCategories>
                         <costStuffCount>20</costStuffCount>
+                        <placeWorkers Inherit="False"/>
                         <statBases>
                             <Mass>5</Mass>
                             <MaxHitPoints>90</MaxHitPoints>

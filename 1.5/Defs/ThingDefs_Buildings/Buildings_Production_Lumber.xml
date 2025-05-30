@@ -44,6 +44,7 @@
 			</li>
 		</comps>
 		<costStuffCount>10</costStuffCount>
+		<placeWorkers Inherit="False"/>
 		<rotatable>false</rotatable>
 		<statBases>
 			<Mass>4</Mass>
