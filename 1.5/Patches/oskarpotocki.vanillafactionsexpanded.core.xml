@@ -1,0 +1,19 @@
+<Patch>
+    <Operation Class="ModSettingsFramework.PatchOperationModOption">
+        <defaultValue>true</defaultValue>
+        <label>Change VEF item processor work type</label>
+        <tooltip>Highly recommended. Changes the work type for unloading item processors like the lumber rack from hauling to general. Since this is instant (like flicking a switch) and the finished product is likely a prerequisite for other jobs like construction and crafting, there is virtually no downside to keeping this enabled.</tooltip>
+        <id>RCP_IndustryProcessorWorktype</id>
+        <category>RCP_IndustryPatches</category>
+        <order>20</order>
+        <operations>
+            <li Class="PatchOperationConditional">
+                <xpath>//WorkGiverDef[defName="IP_RemoveProduct"]/workType[text()="BasicWorker"]</xpath>
+                <nomatch Class="PatchOperationReplace">
+                    <xpath>//WorkGiverDef[defName="IP_RemoveProduct"]/workType/text()</xpath>
+                    <value>BasicWorker</value>
+                </nomatch>
+            </li>
+        </operations>
+    </Operation>
+</Patch>
