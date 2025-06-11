@@ -19,7 +19,6 @@
 		<li>aoba.fortress.industrial.citadel</li>
 		<li>ceteam.combatextended</li>
 		<li>RCP.Empire</li>
-		<li>RCP.Genes.Elves</li>
 		<li>OskarPotocki.VanillaFactionsExpanded.Core</li>
 	</loadAfter>
 	<incompatibleWith>
